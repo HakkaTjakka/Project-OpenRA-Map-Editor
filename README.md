@@ -32,3 +32,8 @@ Filesize of "BattleStart3/map.bin" is: 115537 bytes. malloc()=0x0x5643eeaf66e0, 
 size_x= 152 (0098)
 size_y= 152 (0098)
 bin=( 152 x 152 ) x 5 + 17 = 115537 bytes.
+
+***
+![clipboard_small](https://github.com/HakkaTjakka/Project-OpenRA-Map-Editor/blob/main/RAEDITOR/Untitled.png)
+***
+
