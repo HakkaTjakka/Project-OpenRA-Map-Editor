@@ -3,6 +3,31 @@
 
 Created under Ubuntu Linux.
 
+```
+latest:
+	Added a 251 x 251 (249 x 249) map MAZE
+	program now converts output33.txt and adds this maze to the map.bin file.
+	Then writes new bin file and outputs some actor data for the map.yaml file.
+	
+	./red_alert readbin MAZE/map.bin > output.txt 
+	
+	Creates output.txt with actor data for mines for the map.yaml file,
+		put the right lines under actors in the map.yaml file for mines.
+
+	Creates modified map.bin.new file with the changed map.bin data,
+		rename the map.bin.new to map.bin
+
+	Dut dir (or .zip to .oramap inside the dir...) into right place of OpenRA,
+		and test pathfinder with the new version with improved pathfinder code.
+
+```
+# New version: playtest-20221203
+(https://www.openra.net/download/)
+
+
+
+
+
 Needed:
 CodeBlocks ide
 Compilers, some libs (z, X11, sfml, search on how to get / install)
