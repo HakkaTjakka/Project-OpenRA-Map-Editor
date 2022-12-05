@@ -37,7 +37,7 @@ bin=( 152 x 152 ) x 5 + 17 = 115537 bytes.
 ![clipboard_small](https://github.com/HakkaTjakka/Project-OpenRA-Map-Editor/blob/main/RAEDITOR/Untitled.png)
 ***
 
-
+```
 Some info on the .bin file:
 
 // File layout .bin file (inside the .oramap files, .zip file...)
@@ -79,4 +79,4 @@ Some info on the .bin file:
 // From there (byte 17 + 3 bytes * size_x * size_y)
 //      Every 2 bytes: One 16 bit integer for the tile status, like emerald or shroud / damage stuff or so.
 //      Values need to be determined what is what. On map with no spice they are all 0x0000 (hex)
-
+```
