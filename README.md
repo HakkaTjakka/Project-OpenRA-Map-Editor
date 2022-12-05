@@ -63,6 +63,10 @@ bin=( 152 x 152 ) x 5 + 17 = 115537 bytes.
 ***
 ![clipboard_small](https://github.com/HakkaTjakka/Project-OpenRA-Map-Editor/blob/main/RAEDITOR/Untitled.png)
 ***
+![clipboard_small](https://github.com/HakkaTjakka/Project-OpenRA-Map-Editor/blob/main/input.png)
+***
+![clipboard_small](https://github.com/HakkaTjakka/Project-OpenRA-Map-Editor/blob/main/output.png)
+***
 
 Some info on the .bin file:
 ```
