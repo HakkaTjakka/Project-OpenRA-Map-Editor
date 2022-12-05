@@ -1,5 +1,5 @@
 # Project OpenRA Map Editor
- c/c++ code (Linux, CodeBlocks) reading .oramap .bin .yaml of OpenRA Red Alert
+ c/c++ code (Linux, CodeBlocks) reading / writing / editing .oramap .bin .yaml of OpenRA Red Alert
 
 Created under Ubuntu Linux.
 
