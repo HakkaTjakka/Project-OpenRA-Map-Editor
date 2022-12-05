@@ -37,9 +37,8 @@ bin=( 152 x 152 ) x 5 + 17 = 115537 bytes.
 ![clipboard_small](https://github.com/HakkaTjakka/Project-OpenRA-Map-Editor/blob/main/RAEDITOR/Untitled.png)
 ***
 
-```
 Some info on the .bin file:
-
+```
 // File layout .bin file (inside the .oramap files, .zip file...)
 // First 17 bytes: map info
 //      Byte 1+2: 16 bit integer x-size map
@@ -54,7 +53,8 @@ Some info on the .bin file:
 //      File: OpenRA/mods/ra/tilesets/interior.yaml
 //      GitHub source: https://github.com/OpenRA/OpenRA/mods/ra/tilesets/interior.yaml
 //      And looks like:
-//      ...
+/*
+    ...
 	Template@350:                   // one tile tile
 		Id: 350                     // 16 bit integer from .bin
 		Images: wall0022.int
@@ -71,7 +71,8 @@ Some info on the .bin file:
 			0: Wall                 // upper left  (0,0)
 			1: Wall                 // upper right (0,1)
 			2: Wall                 // lower left  (1,0) (3 would be 1,1)
-//      ...
+    ...
+*/
 //
 //      Starting with the interior tiles: (there are also winter desert etc.)
 //      Tiles: the .png tiles comes from some .mix file of the OpenRA (interior.mix) found in the gamedir,
