@@ -22,6 +22,7 @@ Please leave idea's to implement.
 
 Commander.
 
+The XCC Utilities runs under Windows or with wine or mono under Ubuntu.
 
 ./red_alert readbin BattleStart3/map.bin
 
