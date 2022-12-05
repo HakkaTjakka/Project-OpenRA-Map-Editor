@@ -4,6 +4,34 @@
 #include <SFML/Graphics.hpp>
 #include <SFML/Graphics/Sprite.hpp>
 
+long main_readbin(int argc, char ** argv, unsigned char* &bin) {
+    long size;
+
+    if (argc<3) {
+        printf("%s option <filename>'\n",argv[0]);
+        return -2;
+    } else {
+        if ( ( size = read_bin_file( std::string() + argv[2], bin ) ) >= 0 ) {
+//                printf( "%ld bytes read.\n", size );
+        } else {
+            printf("Error %ld reading file %s\n", size, argv[2]);
+            if ( bin != NULL ) free( bin );
+            return (int)size;
+        }
+    }
+//        printf( "bin=0x%p filesize=%ld\n", bin, size );
+
+    if ( bin == NULL ) {
+        printf("Error %ld no bin %s\n", size, argv[2]);
+        return -1;
+    }
+    if ( size == 0 ) {
+        printf("Error. File is empty: %s\n", argv[2]);
+        return -3;
+    }
+    return size;
+}
+
 // File layout .bin file (inside the .oramap files, .zip file...)
 // First 17 bytes: map info
 //      Byte 1+2: 16 bit integer x-size map
@@ -43,6 +71,7 @@
 //      Tiles: the .png tiles comes from some .mix file of the OpenRA (interior.mix) found in the gamedir,
 //           and where extracted with a tool called XCC to .png
 // From there (byte 17 + 3 bytes * size_x * size_y)
+//      Total: 2 bytes * size_x * size_y
 //      Every 2 bytes: One 16 bit integer for the tile status, like emerald or shroud / damage stuff or so.
 //      Values need to be determined what is what. On map with no spice they are all 0x0000 (hex)
 
@@ -60,7 +89,7 @@ void edit_bin(unsigned char* bin, long filesize) {
 
     printf("size_x=%4d (%04X)\nsize_y=%4d (%04X)\n", size_x, size_y, size_x, size_y);
     int bytes=17 + 5 * size_x * size_y;
-    if ( filesize!= bytes ) {
+    if ( filesize != bytes ) {
         printf("bin=( %d x %d ) x 5 + 17 = %d bytes. FAIL!!!\n", size_x, size_y, bytes);
         printf("Filesize does not match map resolution.\n");
     } else {

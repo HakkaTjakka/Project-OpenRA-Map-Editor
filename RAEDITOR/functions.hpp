@@ -22,6 +22,7 @@ using namespace std;
 
 
 long int read_bin_file( string filename, unsigned char* &mem);
+long main_readbin(int argc, char ** argv, unsigned char* &bin);
 int main2();
 bool file_exists(const char * filename);
 void edit_bin(unsigned char* bin, long size);
