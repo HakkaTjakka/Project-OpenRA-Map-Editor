@@ -1,20 +1,34 @@
 #include <functions.hpp>
 
 int main(int argc, char ** argv) {
+
     if (argc<2) {
         printf("%s option <filename>'\n",argv[0]);
         return -1;
     }
+
     std::string option=std::string() + argv[1];
     transform(option.begin(), option.end(), option.begin(), ::tolower);
 
     if (option == "readbin") {
+
         unsigned char* bin = NULL;
         long size;
+
         if ( ( size = main_readbin( argc, argv, bin ) ) > 0 ) {
-            edit_bin( bin, size );
+
+            int ret = edit_bin( bin, size );
+            if ( ret != 0 ) {
+                printf( "Error map-size vs. file-size\n" );
+                return ret;
+            }
+            make_bin( bin, size );
+            save_bin( bin, size );
             if ( bin != NULL ) free( bin );
 
+        } else {
+            if ( bin != NULL ) free( bin );
+            return size;
         }
 
     } else {
@@ -27,9 +41,6 @@ int main(int argc, char ** argv) {
     }
     return 0;
 }
-
-
-
 
 int main2()
 {

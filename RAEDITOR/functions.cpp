@@ -1,5 +1,5 @@
-
 #include <functions.hpp>
+
 #include <SFML/System/Thread.hpp>
 #include <SFML/Graphics.hpp>
 #include <SFML/Graphics/Sprite.hpp>
@@ -8,28 +8,22 @@ long main_readbin(int argc, char ** argv, unsigned char* &bin) {
     long size;
 
     if (argc<3) {
+
         printf("%s option <filename>'\n",argv[0]);
         return -2;
+
     } else {
+
         if ( ( size = read_bin_file( std::string() + argv[2], bin ) ) >= 0 ) {
 //                printf( "%ld bytes read.\n", size );
+            return size;
         } else {
             printf("Error %ld reading file %s\n", size, argv[2]);
             if ( bin != NULL ) free( bin );
             return (int)size;
         }
-    }
-//        printf( "bin=0x%p filesize=%ld\n", bin, size );
 
-    if ( bin == NULL ) {
-        printf("Error %ld no bin %s\n", size, argv[2]);
-        return -1;
     }
-    if ( size == 0 ) {
-        printf("Error. File is empty: %s\n", argv[2]);
-        return -3;
-    }
-    return size;
 }
 
 // File layout .bin file (inside the .oramap files, .zip file...)
@@ -76,7 +70,7 @@ long main_readbin(int argc, char ** argv, unsigned char* &bin) {
 //      Values need to be determined what is what. On map with no spice they are all 0x0000 (hex)
 
 
-void edit_bin(unsigned char* bin, long filesize) {
+int edit_bin(unsigned char* bin, long filesize) {
 //    printf( "bin=0x%p filesize=%ld\n", bin, filesize );
     for ( int n=0; n<17; n++ ) {
         if ( n>0 && n<17 ) printf(" ");
@@ -88,112 +82,328 @@ void edit_bin(unsigned char* bin, long filesize) {
     int16_t size_y = *(int16_t*)(bin + 3);
 
     printf("size_x=%4d (%04X)\nsize_y=%4d (%04X)\n", size_x, size_y, size_x, size_y);
+
     int bytes=17 + 5 * size_x * size_y;
+
     if ( filesize != bytes ) {
-        printf("bin=( %d x %d ) x 5 + 17 = %d bytes. FAIL!!!\n", size_x, size_y, bytes);
-        printf("Filesize does not match map resolution.\n");
+
+        printf( "bin=( %d x %d ) x 5 + 17 = %d bytes. FAIL!!!\n", size_x, size_y, bytes );
+
+        printf( "Filesize does not match map resolution.\n" );
+
+        return -1;
+
     } else {
-        printf("bin=( %d x %d ) x 5 + 17 = %d bytes. OK!\n", size_x, size_y, bytes);
+
+        printf( "bin=( %d x %d ) x 5 + 17 = %d bytes. OK!\n", size_x, size_y, bytes );
+
     }
+
     sf::Image image;
-    image.create( size_x,  size_y, sf::Color(255,0,0,255));
-    sf::Color color=sf::Color(0,0,0,0);
+    image.create( size_x,  size_y, sf::Color( 255, 0, 0, 255 ) );
+    sf::Color color = sf::Color( 0, 0, 0, 0 );
 
 //    unsigned char* val1a_ptr = ( bin + 17 );
 //    unsigned char* val1b_ptr = ( bin + 17 + 2 );
 //    unsigned char* val2_ptr  = ( bin + 17 + ( size_x * size_y ) * 3 );
 
+    unsigned int offset;
+    uint16_t val1a;
+    uint8_t  val1b;
+    uint16_t val2;
 
-    int16_t offset;
-    int16_t val1a;
-    int8_t  val1b;
-    int16_t val2;
+    FILE* scan;
+    char str[4096];
 
+    if ( ( scan = fopen( "scan.txt", "w" ) ) == NULL ) {
 
+        printf( "Can't open %s for writing.\n", "scan.txt " );
+        return -1;
+
+    }
     for (int y=0; y < size_y; y++) {
+
+        fprintf( scan, "%04d ", y );
+
         for (int x=0; x < size_x; x++) {
             offset = x + size_x * y;
 
-            val1a = (int16_t) ( *( (int16_t*) ( bin + 17                            + offset*3  )  ) );
-            val1b = (int8_t)  ( *( (int16_t*) ( bin + 17 + 2                        + offset*3  )  ) );
-            val2  = (int16_t) ( *( (int16_t*) ( bin + 17 + ( size_x * size_y ) * 3  + offset*3  )  ) );
-
-//            val1a = (int16_t) ( *( val1a_ptr  ) );
-//            val1b = (int8_t)  ( *( val1b_ptr  ) );
-//            val2  = (int16_t) ( *( val2_ptr   ) );
+            val1a = (int16_t) ( *( (uint16_t*) ( bin + 17                            + offset*3  )  ) );
+            val1b = (int8_t)  ( *( (uint8_t*)  ( bin + 17 + 2                        + offset*3  )  ) );
+            val2  = (int16_t) ( *( (uint16_t*) ( bin + 17 + ( size_x * size_y ) * 3  + offset*3  )  ) );
 
 
-//            val1a = (int16_t) ( (int16_t)  *( val1a_ptr + offset*3 ) );
-//            val1b = (int8_t)  ( (int8_t)   *( val1b_ptr + offset*3 ) );
-//            val2  = (int16_t) ( (int16_t)  *( val2_ptr  + offset*2 ) );
-//            val1a = (int16_t) ( *( val1a_ptr + offset*3 ) );
-//            val1b = (int8_t)  ( *( val1b_ptr + offset*3 ) );
-//            val2  = (int16_t) ( *( val2_ptr  + offset*2 ) );
-//            if ( val1a == 385 ) {
-                if (val1a == 275) {
-                    printf(".");
+            if ( val1a >= 351 && val1a <= 377 ) {
+
+                fprintf( scan, "*%04X-%02X",  val1a, val1b );
+
+            } else {
+
+                fprintf( scan, "|%04X-%02X",  val1a, val1b );
+
+            }
+
+            if ( val1a == 275 ) {
+
+                printf( "." );
+
+            } else {
+
+                if ( val1a >= 351 && val1a <= 377 ) {
+//                    printf("x=%4d y=%4d val1a=%04X=%5d val1b=%02X=%3d val2=%04X=%5d\n", x, y, val1a, val1a, val1b, val1b, val2, val2 );
+
+                    sprintf( str, "echo \"| x=%4d y=%4d | val1a=0x%04X (%5d) | val1b=0x%02X (%3d) | val2=0x%04X (%5d) |\" >> fail.txt\n", x, y, val1a, val1a, val1b, val1b, val2, val2 );
+                    int ret = system( str );
+                    if ( ret != 0 ) printf( "Error system( %s )\n" ,str);
+
+                    printf( "\033[1;31m*\033[0m" );
+
                 } else {
-                    printf("*");
+
+                    printf( "*" );
+
                 }
-//            if ( x==1 && y==1 ) {
-//                printf("x=%4d y=%4d val1a=%04X=%5d val1b=%02X=%3d val2=%04X=%5d\n", x, y, val1a, val1a, val1b, val1b, val2, val2 );
-//            }
+
+            }
         }
-        printf("\n");
+        printf( "\n" );
+        fprintf( scan, "|\n" );
     }
 
+    fclose( scan );
+    return 0;
 }
 
 long read_bin_file( string filename, unsigned char* &mem) {
+
 //    printf( "filename: %s\n", filename.c_str() );
 //    char* mem=bin;
+
     if ( file_exists( filename.c_str() ) ) {
+
         std::filesystem::path p{ filename.c_str() };
         long fz = std::filesystem::file_size(p);
+
         printf(
             "Filesize of \"%s\" is: %lu bytes. malloc()="
             ,filename.c_str()
             ,fz
         );
         fflush(stdout);
+
         if (FILE* file = fopen(filename.c_str(), "r")) {
+
             long n;
 
             mem=(unsigned char*)	calloc(fz,1);
+
             if (mem==NULL) {
+
                 printf("ERROR ALLECATING MEMORY\n");
                 return -10;
+
             } else {
+
                 printf( "0x%p, reading, ", mem );
                 fflush( stdout );
+
             }
 
             if ( ( n = (long) fread( mem, 1, fz, file ) ) != fz ) {
+
                 printf( "FATAL ERROR: unable to read file \"%s\".\n", filename.c_str() );
                 free(mem);
                 mem=NULL;
                 fclose( file );
                 return -11;
+
             } else {
+
                 printf( "%lu bytes read, ", n );
                 fflush( stdout );
                 fclose( file );
                 printf( "ok.\n" );
                 return n;
+
             }
+
         } else {
+
             printf( "ERROR OPENING FILE: %s\n", filename.c_str() );
             return -12;
+
         }
+
     } else {
+
         printf( "File \"%s\" does not exist.\n", filename.c_str() );
         return -13;
+
     }
 }
 
+int make_bin(unsigned char* bin, long size) {
+    char map[1000][1000];
+    FILE* names;
+
+    int16_t size_x = *(int16_t*)(bin + 1);
+    int16_t size_y = *(int16_t*)(bin + 3);
+
+    // wall 340-346
+    if ((names = fopen("output33.txt","r"))!=NULL)
+    {
+        char line[65000];
+        int xx,yy=0;
+        int len=0;
+        while (fgets(line,65000,names)!=NULL) {
+            xx=0;
+            printf("%s",line);
+            len=strlen(line);
+//        printf("len=%d\n",len);
+            for (int n=0; n<len; n++) {
+
+                if (line[n]==' ') {
+                    map[xx][yy]=' ';
+                } else if (line[n]=='x') {
+                    map[xx][yy]='x';
+                } else {
+                    map[xx][yy]='O';
+                }
+                xx++;
+            }
+            yy++;
+        }
+        printf("\n");
+
+        int y_len=yy;
+
+        for (yy=0; yy<y_len; yy++) {
+            printf("%3d ",yy);
+            for (xx=0; xx<len; xx++) {
+                printf("%c",map[xx][yy]);
+            }
+            printf("\n");
+        }
+
+/*
+        for (yy=0; yy<y_len; yy++) {
+            for (xx=0; xx<len; xx++) {
+
+                if ( ! (xx==0 || xx==len-1 || yy==0 || yy==y_len-1) ) {
+                    if (map[xx][yy]=='O') {
+                        int f=0;
+                        for (int y1=-1; y1<=1; y1++) {
+                            for (int x1=-1; x1<=1; x1++) {
+                                if (map[xx+x1][yy+y1]==' ' || map[xx+x1][yy+y1]=='x') {
+                                    f=1;
+                                }
+                            }
+                        }
+                        if (f==1) {
+                            map[xx][yy]='O';
+                        } else {
+                            map[xx][yy]='.';
+                        }
+                    }
+                } else {
+                    map[xx][yy]='O';
+                }
+                printf("%c",map[xx][yy]);
+            }
+            printf("\n");
+        }
+*/
+        uint16_t* val1a_ptr;
+        uint8_t*  val1b_ptr;
+//        uint16_t* val2_ptr;
+
+        printf("\nx=%d y=%d\n",len,y_len);
+        int actor=0;
+
+        unsigned int offset;
+
+        for (yy=0; yy<y_len; yy++) {
+            for (xx=0; xx<len; xx++) {
+
+                offset = xx + size_x * yy;
+
+//                val1a = (int16_t) ( *( (uint16_t*) ( bin + 17                            + offset*3  )  ) );
+//                val1b = (int8_t)  ( *( (uint8_t*)  ( bin + 17 + 2                        + offset*3  )  ) );
+
+                val1a_ptr =    (uint16_t*) ( bin + 17                            + offset*3  )  ;
+                val1b_ptr =    (uint8_t*)  ( bin + 17 + 2                        + offset*3  )  ;
+//                val2  = (int16_t) ( *( (uint16_t*) ( bin + 17 + ( size_x * size_y ) * 3  + offset*3  )  ) );
+
+
+                if (map[xx][yy]=='O') {
+    // wall 340-346 0
+                    *val1a_ptr = (uint16_t) ( 340 + ( rand() % 7 ) );
+                    *val1b_ptr = (uint8_t) ( 0 );
+//                    printf("	Actor%d: brik\n",actor);
+//                    printf("		Owner: Neutral\n");
+//                    printf("		Location: %d,%d\n",xx,yy);
+//                    actor++;
+//                } else if (map[xx][yy]=='.' && (xx==1 || yy==1 || xx==len-2 || yy==y_len-2) ) {
+//                    printf("	Actor%d: brik\n",actor);
+//                    printf("	Actor%d: minv\n",actor);
+//                    printf("		Owner: Neutral\n");
+//                    printf("		Location: %d,%d\n",xx,yy);
+//                    actor++;
+                } else if (map[xx][yy]==' ') {
+
+    // floor 268 0-11
+                    *val1a_ptr = (uint16_t) ( 268 );
+                    *val1b_ptr = (uint8_t) (  ( rand() % 12 )  );
+
+                } else if (map[xx][yy]=='x') {
+
+                    *val1a_ptr = (uint16_t) ( 268 );
+                    *val1b_ptr = (uint8_t) (  ( rand() % 12 )  );
+
+                    if ((xx%8)==5 && (yy%8)==5) {
+                        printf("	Actor%d: gmine\n",actor);
+                        printf("		Owner: Neutral\n");
+                        printf("		Location: %d,%d\n",xx,yy);
+                        actor++;
+                    }
+                }
+            }
+//            printf("\n");
+        }
+
+    }
+
+    cout << "Hello world!" << endl;
+    return 0;
+}
+
+
+int save_bin(unsigned char* bin, long filesize) {
+    FILE* f_ptr;
+
+    if ( ( f_ptr = fopen( "map.bin.new", "w" ) ) == NULL ) {
+
+        printf( "Error opening %s for writing.\n", "map.bin.new" );
+        return -1;
+
+    } else {
+
+        size_t bytes = fwrite( bin, 1, filesize, f_ptr );
+
+        printf( "File %s %lu bytes written\n", "map.bin.new", bytes );
+        fclose( f_ptr );
+        return 0;
+
+    }
+}
+
+
+
 bool file_exists( const char * filename ) {
+
     struct stat stat_buffer;
-    if ( stat(filename,&stat_buffer) == 0 ) return true;
+
+    if ( stat( filename, &stat_buffer ) == 0 ) return true;
     return false;
 }
 
