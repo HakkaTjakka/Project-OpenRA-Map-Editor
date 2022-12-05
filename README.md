@@ -17,7 +17,8 @@ latest:
 	Creates modified map.bin.new file with the changed map.bin data,
 		rename the map.bin.new to map.bin
 
-	Dut dir (or .zip to .oramap inside the dir...) into right place of OpenRA,
+	Put dir (or .zip to .oramap inside the dir...) into right place of OpenRA,
+		(something like: ~/snap/openra/1359/.config/openra/maps/ra/release-20210321)
 		and test pathfinder with the new version with improved pathfinder code.
 
 ```
