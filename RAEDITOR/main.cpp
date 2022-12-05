@@ -1,6 +1,38 @@
 #include <functions.hpp>
 
 
+int main_readbin(int argc, char ** argv) {
+    unsigned char* bin=NULL;
+    long size;
+
+    if (argc<3) {
+        printf("%s option <filename>'\n",argv[0]);
+        return -2;
+    } else {
+        if ( ( size = read_bin_file( std::string() + argv[2], bin ) ) >= 0 ) {
+//                printf( "%ld bytes read.\n", size );
+        } else {
+            printf("Error %ld reading file %s\n", size, argv[2]);
+            if ( bin != NULL ) free( bin );
+            return (int)size;
+        }
+    }
+//        printf( "bin=0x%p filesize=%ld\n", bin, size );
+
+    if ( bin == NULL ) {
+        printf("Error %ld no bin %s\n", size, argv[2]);
+        return -1;
+    }
+    if ( size == 0 ) {
+        printf("Error. File is empty: %s\n", argv[2]);
+        return -3;
+    }
+
+    edit_bin(bin, size);
+
+    free( bin );
+    return 0;
+}
 
 int main(int argc, char ** argv) {
     if (argc<2) {
@@ -9,32 +41,10 @@ int main(int argc, char ** argv) {
     }
     std::string option=std::string() + argv[1];
     transform(option.begin(), option.end(), option.begin(), ::tolower);
+
     if (option == "readbin") {
-        unsigned char* bin=NULL;
-        long size;
+        main_readbin(argc, argv);
 
-        if (argc<3) {
-            printf("%s option <filename>'\n",argv[0]);
-            return -2;
-        } else {
-            if ( ( size = read_bin_file( std::string() + argv[2], bin ) ) >= 0 ) {
-//                printf( "%ld bytes read.\n", size );
-            } else {
-                printf("Error %ld reading file %s\n", size, argv[2]);
-                if ( bin != NULL ) free( bin );
-                return (int)size;
-            }
-        }
-//        printf( "bin=0x%p filesize=%ld\n", bin, size );
-
-        if ( bin == NULL ) {
-            return -1;
-        }
-
-        edit_bin(bin, size);
-
-        free( bin );
-        return 0;
     } else {
         printf("%s option <filename>'\n",argv[0]);
         printf("Where option is: readbin\n");
