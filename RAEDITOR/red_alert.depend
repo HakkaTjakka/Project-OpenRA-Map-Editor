@@ -14,10 +14,10 @@
 	<sys/stat.h>
 	<filesystem>
 
-1670277094 source:/home/pacman/snap/openra/1359/.config/openra/maps/ra/release-20210321/RAEDITOR/main.cpp
+1670355784 source:/home/pacman/snap/openra/1359/.config/openra/maps/ra/release-20210321/RAEDITOR/main.cpp
 	<functions.hpp>
 
-1670277121 /home/pacman/snap/openra/1359/.config/openra/maps/ra/release-20210321/RAEDITOR/functions.hpp
+1670357058 /home/pacman/snap/openra/1359/.config/openra/maps/ra/release-20210321/RAEDITOR/functions.hpp
 	<iostream>
 	<algorithm>
 	<stdlib.h>
@@ -25,11 +25,13 @@
 	<string.h>
 	<sys/stat.h>
 	<filesystem>
+	<map>
+	<vector>
 	<SFML/System/Thread.hpp>
 	<SFML/Graphics.hpp>
 	<SFML/Graphics/Sprite.hpp>
 
-1670277773 source:/home/pacman/snap/openra/1359/.config/openra/maps/ra/release-20210321/RAEDITOR/functions.cpp
+1670360987 source:/home/pacman/snap/openra/1359/.config/openra/maps/ra/release-20210321/RAEDITOR/functions.cpp
 	<functions.hpp>
 	<SFML/System/Thread.hpp>
 	<SFML/Graphics.hpp>

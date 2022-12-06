@@ -1,4 +1,4 @@
-Filesize of "MAZE/map.bin" is: 315022 bytes. malloc()=0x0x7f5c8462a010, reading, 315022 bytes read, ok.
+Filesize of "MAZETEST_CURRENT/map.bin" is: 315022 bytes. malloc()=0x0x7f31fcdc1010, reading, 315022 bytes read, ok.
 02 FB 00 FB 00 11 00 00 00 00 00 00 00 5C E2 02 00
 size_x= 251 (00FB)
 size_y= 251 (00FB)

@@ -99,9 +99,9 @@ int edit_bin(unsigned char* bin, long filesize) {
 
     }
 
-    sf::Image image;
-    image.create( size_x,  size_y, sf::Color( 255, 0, 0, 255 ) );
-    sf::Color color = sf::Color( 0, 0, 0, 0 );
+//    sf::Image image;
+//    image.create( size_x,  size_y, sf::Color( 255, 0, 0, 255 ) );
+//    sf::Color color = sf::Color( 0, 0, 0, 0 );
 
 //    unsigned char* val1a_ptr = ( bin + 17 );
 //    unsigned char* val1b_ptr = ( bin + 17 + 2 );
@@ -242,47 +242,50 @@ long read_bin_file( string filename, unsigned char* &mem) {
     }
 }
 
-int make_bin(unsigned char* bin, long size) {
+int make_bin( unsigned char* bin, long size ) {
+
     char map[1000][1000];
     FILE* names;
 
-    int16_t size_x = *(int16_t*)(bin + 1);
-    int16_t size_y = *(int16_t*)(bin + 3);
+    int16_t size_x = *(int16_t*) (bin + 1);
+//    int16_t size_y = *(int16_t*) (bin + 3);
 
     // wall 340-346
-    if ((names = fopen("output33.txt","r"))!=NULL)
+    if ( ( names = fopen( "output33.txt", "r" ) ) != NULL )
     {
         char line[65000];
-        int xx,yy=0;
-        int len=0;
-        while (fgets(line,65000,names)!=NULL) {
-            xx=0;
-            printf("%s",line);
-            len=strlen(line);
-//        printf("len=%d\n",len);
-            for (int n=0; n<len; n++) {
+        int xx, yy = 0;
+        int len = 0;
 
-                if (line[n]==' ') {
-                    map[xx][yy]=' ';
-                } else if (line[n]=='x') {
-                    map[xx][yy]='x';
+        while ( fgets( line, 65000, names ) != NULL ) {
+
+            xx = 0;
+            printf( "%s", line );
+            len = strlen( line );
+//        printf("len=%d\n",len);
+            for ( int n = 0; n < len; n++ ) {
+
+                if ( line[n] == ' ' ) {
+                    map[xx][yy] = ' ';
+                } else if ( line[n] == 'x' ) {
+                    map[xx][yy] = 'x';
                 } else {
-                    map[xx][yy]='O';
+                    map[xx][yy] = 'O';
                 }
                 xx++;
             }
             yy++;
         }
-        printf("\n");
+        printf( "\n" );
 
-        int y_len=yy;
+        int y_len = yy;
 
-        for (yy=0; yy<y_len; yy++) {
-            printf("%3d ",yy);
-            for (xx=0; xx<len; xx++) {
-                printf("%c",map[xx][yy]);
+        for ( yy = 0; yy < y_len; yy++) {
+            printf( "%3d ", yy);
+            for ( xx = 0; xx < len; xx++ ) {
+                printf( "%c", map[xx][yy] );
             }
-            printf("\n");
+            printf( "\n" );
         }
 
 /*
@@ -317,13 +320,13 @@ int make_bin(unsigned char* bin, long size) {
         uint8_t*  val1b_ptr;
 //        uint16_t* val2_ptr;
 
-        printf("\nx=%d y=%d\n",len,y_len);
-        int actor=0;
+        printf( "\nx=%d y=%d\n", len,y_len );
+        int actor = 0;
 
         unsigned int offset;
 
-        for (yy=0; yy<y_len; yy++) {
-            for (xx=0; xx<len; xx++) {
+        for (yy = 0; yy < y_len; yy++ ) {
+            for ( xx = 0; xx < len; xx++ ) {
 
                 offset = xx + size_x * yy;
 
@@ -360,10 +363,10 @@ int make_bin(unsigned char* bin, long size) {
                     *val1a_ptr = (uint16_t) ( 268 );
                     *val1b_ptr = (uint8_t) (  ( rand() % 12 )  );
 
-                    if ((xx%8)==5 && (yy%8)==5) {
-                        printf("	Actor%d: gmine\n",actor);
-                        printf("		Owner: Neutral\n");
-                        printf("		Location: %d,%d\n",xx,yy);
+                    if ( (xx % 8 ) == 5 && ( yy % 8 ) == 5 ) {
+                        printf( "	Actor%d: gmine\n", actor );
+                        printf( "		Owner: Neutral\n" );
+                        printf( "		Location: %d,%d\n", xx, yy);
                         actor++;
                     }
                 }
@@ -397,6 +400,183 @@ int save_bin(unsigned char* bin, long filesize) {
     }
 }
 
+//	Template@362:
+//		Id: 362
+//		Images: wall0034.int
+//		Size: 2,2
+//		Categories: Wall
+//		Tiles:
+//			0: Wall
+//			2: Wall
+//			3: Wall
+
+struct Template {
+
+    int Id;
+    std::string Images;
+    sf::Vector2i Size;
+    std::string Catagories;
+    std::map< int, std::string > Tiles;
+    sf::Image Image;
+
+    bool operator < (const Template &B) const
+    {
+        return Id < B.Id;
+    }
+
+};
+
+struct model_list {
+    std::map<std::string, int> models;
+};
+
+int main_readtileset(char* filename) {
+
+//    std::vector< struct Template > Templates;
+//    std::vector< struct Template >::iterator it_Templates;
+
+    struct Template Template;
+    std::map< int, struct Template> Templates;
+    std::map< int, struct Template>::iterator it_Templates;
+    std::map< int, std::string>::iterator it_Tiles;
+
+    if ( !file_exists( filename ) ) {
+
+        printf( "File does not exist: %s\n", filename );
+        return -1;
+
+    }
+
+    printf( "Filename: %s\n", filename );
+
+    FILE* f;
+
+    if ( ( f = fopen( filename, "r" ) ) == NULL ) {
+
+        printf( "Can not open file: %s\n", filename );
+        return -1;
+
+    } else {
+
+        char line[65000];
+        int n = 1;
+        char a[5][50];
+        bool tiles = false;
+
+        while ( fgets( line, 65000, f ) != NULL ) {
+//            printf( "%d: ", 0);
+//            printf( "%s", line );
+//            n++;
+
+            int num=sscanf( line, "%50[\t]%50[^ ] %50[^ ] %50[^ ] %50[^ ] %50[^ ]", a[0], a[1], a[2], a[3], a[4], a[5] );
+
+            printf( "%3d: %s", n, a[0] );
+
+            a[ num - 1 ][ strcspn( a[ num-1 ], "\n" ) ]  = 0;
+
+            for ( int i = 1; i < num ; i++) {
+
+                sprintf( line, "\033[1;%lum%s\033[0m" , 31 + (strlen( a[0] ) + i*2 +1) % 6 , a[i] );
+                printf( "%s ", line);
+//                printf( "%s ", a[i]);
+            }
+            printf("\n");
+
+            if ( strcmp( a[1], "Id:" ) == 0 ) {
+
+                if ( tiles == true ) {
+                    tiles = false;
+                    Templates.insert( std::make_pair( Template.Id, Template ) );
+                    Template.Tiles.clear();
+                }
+
+                tiles = false;
+                printf( "Id: %s\n", a[2] );
+                Template.Id = atoi(a[2]);
+
+            } else if ( strcmp( a[1], "Images:" ) == 0 ) {
+
+                tiles = false;
+                Template.Images = std::string() + a[2];
+                printf( "Images: %s\n", a[2] );
+
+            } else if ( strcmp( a[1], "Size:") == 0) {
+
+                tiles = false;
+                sscanf( a[2], "%d,%d", &(Template.Size.x), &(Template.Size.y ) );
+                printf( "Size: %d,%d\n", Template.Size.x, Template.Size.y );
+
+            } else if ( strcmp( a[1], "Tiles:") == 0) {
+
+                tiles = true;
+
+            } else if ( tiles == true) {
+
+                printf( "%s %s\n", a[1], a[2] );
+                Template.Tiles.insert( std::make_pair( atoi( a[1] ), a[2] ) );
+
+            }
+            n++;
+        }
+        if ( tiles == true ) {
+            tiles = false;
+            Templates.insert( std::make_pair( Template.Id, Template ) );
+        }
+
+        fclose( f );
+        printf( "\n" );
+        printf( "SIZE=%lu\n", Templates.size() );
+
+        int error = 0;
+        int loaded = 0;
+
+        for (it_Templates = Templates.begin(); it_Templates != Templates.end(); it_Templates++) {
+
+            Template = it_Templates->second;
+
+            printf( "Id: %5d     Size: %d,%d     Images: %15s ",
+                Template.Id,
+                Template.Size.x,
+                Template.Size.y,
+                Template.Images.c_str()
+            );
+            for (it_Tiles = Template.Tiles.begin(); it_Tiles != Template.Tiles.end(); it_Tiles++) {
+                if (  it_Tiles != Template.Tiles.begin() ) {
+                    printf( "                                                    " );
+                }
+                printf( "%2d: %s\n", it_Tiles->first, it_Tiles->second.c_str()  );
+            }
+            std::string path=std::string() + "tiles/" + Template.Images;
+
+            if ( path.find_last_of( "." ) != std::string::npos ) {
+                path = path.substr( 0, path. find_last_of( "." ) ) + ".png";
+            }
+//            path = "tiles/" + Template.Images;
+            if ( file_exists( path.c_str() ) ) {
+                printf( "Loading image Id: %d  %s ", Template.Id, path.c_str() );
+                if ( Template.Image.loadFromFile( path.c_str() ) ) {
+                    printf( "Ok. Resolution: %d x %d\n", Template.Image.getSize().x,  Template.Image.getSize().y );
+                    loaded++;
+                } else {
+                    printf( "Error.\n" );
+                    error++;
+                }
+
+            } else {
+                printf( "File does noet exist: %s\n", path.c_str() );
+                error++;
+            }
+//            printf( "\n" );
+//    std::map< int, std::string>::iterator it_tiles;
+
+
+
+        }
+        printf( "%d errors loading %d images.\n", error, loaded );
+
+    }
+    return 0;
+}
 
 
 bool file_exists( const char * filename ) {

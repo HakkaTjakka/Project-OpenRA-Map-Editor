@@ -10,6 +10,8 @@
 #include <string.h>
 #include <sys/stat.h>
 #include <filesystem>
+#include <map>
+#include <vector>
 
 #include <SFML/System/Thread.hpp>
 #include <SFML/Graphics.hpp>
@@ -29,6 +31,8 @@ bool file_exists(const char * filename);
 int edit_bin(unsigned char* bin, long size);
 int make_bin(unsigned char* bin, long size);
 int save_bin(unsigned char* bin, long size);
+int main_readtileset(char* filename);
+
 
 
 

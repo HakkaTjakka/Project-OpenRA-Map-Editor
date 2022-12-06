@@ -1,0 +1,32 @@
+MapFormat: 11
+
+RequiresMod: ra
+
+Title: release-20210321
+
+Author: Pacman Graphics
+
+Tileset: INTERIOR
+
+MapSize: 251,251
+
+Bounds: 1,1,249,249
+
+Visibility: Lobby
+
+Categories: Conquest
+
+Players:
+	PlayerReference@Neutral:
+		Name: Neutral
+		OwnsWorld: True
+		NonCombatant: True
+		Faction: england
+	PlayerReference@Creeps:
+		Name: Creeps
+		NonCombatant: True
+		Faction: england
+
+Actors:
+
+Rules:

@@ -31,10 +31,22 @@ int main(int argc, char ** argv) {
             return size;
         }
 
+    } else if ( option == "readtileset" ) {
+
+        if (argc<3) {
+            printf("%s readtileset <filename>'\n",argv[0]);
+            printf("Example: %s readtileset tilesets/interior.yaml>'\n",argv[0]);
+
+            return -1;
+        }
+
+        main_readtileset(argv[2]);
+
     } else {
 
-        printf("%s option <filename>'\n",argv[0]);
-        printf("Where option is: readbin\n");
+        printf( "%s readbin <path_to_map.bin>'\n", argv[0] );
+        printf( "%s readtileset <path_to_map.yaml>'\n", argv[0] );
+
         return -3;
 
         //printf("\n");
