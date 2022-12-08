@@ -14,10 +14,10 @@
 	<sys/stat.h>
 	<filesystem>
 
-1670509845 source:/home/pacman/snap/openra/1359/.config/openra/maps/ra/release-20210321/RAEDITOR/main.cpp
+1670515212 source:/home/pacman/snap/openra/1359/.config/openra/maps/ra/release-20210321/RAEDITOR/main.cpp
 	<functions.hpp>
 
-1670509845 /home/pacman/snap/openra/1359/.config/openra/maps/ra/release-20210321/RAEDITOR/functions.hpp
+1670516342 /home/pacman/snap/openra/1359/.config/openra/maps/ra/release-20210321/RAEDITOR/functions.hpp
 	<iostream>
 	<algorithm>
 	<stdlib.h>
@@ -30,8 +30,9 @@
 	<SFML/System/Thread.hpp>
 	<SFML/Graphics.hpp>
 	<SFML/Graphics/Sprite.hpp>
+	<X11/Xlib.h>
 
-1670506621 source:/home/pacman/snap/openra/1359/.config/openra/maps/ra/release-20210321/RAEDITOR/functions.cpp
+1670516329 source:/home/pacman/snap/openra/1359/.config/openra/maps/ra/release-20210321/RAEDITOR/functions.cpp
 	<functions.hpp>
 	<SFML/System/Thread.hpp>
 	<SFML/Graphics.hpp>
@@ -449,8 +450,11 @@
 1670508185 source:/home/pacman/snap/openra/1359/.config/openra/maps/ra/release-20210321/RAEDITOR/trans.cpp
 	<SFML/Graphics.hpp>
 
-1670509276 source:/home/pacman/snap/openra/1359/.config/openra/maps/ra/release-20210321/RAEDITOR/trans2.cpp
+1670511698 source:/home/pacman/snap/openra/1359/.config/openra/maps/ra/release-20210321/RAEDITOR/trans2.cpp
+
+1670516298 source:/home/pacman/snap/openra/1359/.config/openra/maps/ra/release-20210321/RAEDITOR/transparant.cpp
 	<SFML/Graphics.hpp>
+	<functions.hpp>
 	<windows.h>
 	<X11/Xatom.h>
 	<X11/extensions/shape.h>

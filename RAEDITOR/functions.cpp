@@ -435,9 +435,11 @@ int main_readtileset(char* filename) {
 //    std::vector< struct Template >::iterator it_Templates;
 
     struct Template Template;
-    std::map< int, struct Template> Templates;
-    std::map< int, struct Template>::iterator it_Templates;
-    std::map< int, std::string>::iterator it_Tiles;
+    struct Tileset Tile;
+    std::map<int, struct Template> Templates;
+    std::map<int, struct Template>::iterator it_Templates;
+    std::map<int, std::string>::iterator it_Tiles;
+    std::vector<struct Tileset> Tileset;
 
     if ( !file_exists( filename ) ) {
 
@@ -584,12 +586,18 @@ int main_readtileset(char* filename) {
 
 
         }
-
+         sf::RenderTexture my_rendertexture;
+        my_rendertexture.create( 32 * 24, 32 * 24 );
+//my_rendertexture.create()
+        my_rendertexture.clear(sf::Color(0,0,0,0));
+        sf::Sprite my_sprite;
+        sf::Texture my_texture;
+        int tile_num = 0;
         for (it_Templates = Templates.begin(); it_Templates != Templates.end(); it_Templates++) {
 
             Template = it_Templates->second;
-
-
+            my_texture.loadFromImage(Template.Image);
+            my_sprite.setTexture(my_texture);
 
             printf( "Id: %5d\tSize: %d,%d / %d,%d \tResolution: %d x %d\n",
                 Template.Id,
@@ -604,33 +612,49 @@ int main_readtileset(char* filename) {
                 int X_START = ( it_Tiles->first % Template.Realsize.x ) * 24;
                 int Y_START = (int)( it_Tiles->first / Template.Realsize.x ) * 24;
 
+                my_sprite.setTextureRect( { X_START, Y_START, 24, 24 } );
+
+                int x_pos = tile_num % 32;
+                int y_pos = tile_num / 32;
+
+                my_sprite.setPosition( x_pos * 24, y_pos * 24 );
+                my_rendertexture.draw(my_sprite);
+
+                Tile.Lookup = Template.Id * 256 + it_Tiles->first;
+                Tileset.push_back(Tile);
 //                if (  it_Tiles == Template.Tiles.begin() ) {
                     printf( "                                                    " );
 //                }
                 printf( "%2d: pos(%3d,%3d) %s\n", it_Tiles->first, X_START, Y_START, it_Tiles->second.c_str()  );
+
+                tile_num++;
             }
 
-
         }
-
+        my_rendertexture.display();
+        my_rendertexture.getTexture().copyToImage().saveToFile("out.png");
+        my_window_update = 1;
         printf( "%d errors loading %d images.\n", error, loaded );
 
         printf("Templates.size()=%lu\n",Templates.size());
 
+        int n1=Tileset.size();
+        for ( int n2=0; n2 < n1; n2++ ) {
+            Tile = Tileset[ n2 ];
+            printf( "Tile #%d = 0x%06X\n", n2, (int)Tile.Lookup );
+        }
+/*
         int n1=Templates.size();
-
         it_Templates=Templates.begin();
-
         for ( int n2=0; n2 < n1; n2++ ) {
 
             struct Template* Template_ptr;
             Template_ptr = &(it_Templates->second);
-
             printf("n2=%d Id=%d\n",n2,Template_ptr->Id);
-
             it_Templates++;
 
         }
+*/
 
 
 //        for ( long unsigned int i=0; i < Templates.size(); i++ ) {

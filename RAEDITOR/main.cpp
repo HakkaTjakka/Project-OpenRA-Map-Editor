@@ -1,9 +1,11 @@
 #include <functions.hpp>
 
 int main(int argc, char ** argv) {
+    XInitThreads();
 
     if (argc<2) {
         printf("%s option <filename>'\n",argv[0]);
+        launch_my_window();
         return -1;
     }
 
@@ -12,7 +14,7 @@ int main(int argc, char ** argv) {
 
 //    printf("option=\"%s\"\n",option.c_str());
     if ( option == "test2" ) {
-        main4();
+        launch_my_window();
         return 0;
     }
 
@@ -45,13 +47,15 @@ int main(int argc, char ** argv) {
 
             return -1;
         }
-
+        launch_my_window();
+//        sf::sleep(sf::seconds(2.0));
         main_readtileset(argv[2]);
 
     } else {
 
         printf( "%s readbin <path_to_map.bin>'\n", argv[0] );
         printf( "%s readtileset <path_to_map.yaml>'\n", argv[0] );
+        launch_my_window();
 
         return -3;
 

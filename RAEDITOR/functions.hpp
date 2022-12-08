@@ -16,7 +16,7 @@
 #include <SFML/System/Thread.hpp>
 #include <SFML/Graphics.hpp>
 #include <SFML/Graphics/Sprite.hpp>
-
+#include <X11/Xlib.h>
 
 
 using namespace std;
@@ -26,7 +26,11 @@ using namespace std;
 long int read_bin_file( string filename, unsigned char* &mem);
 long main_readbin(int argc, char ** argv, unsigned char* &bin);
 
-int main4();
+int do_window();
+void launch_my_window();
+
+
+extern int my_window_update;
 int main2();
 bool file_exists(const char * filename);
 int edit_bin(unsigned char* bin, long size);

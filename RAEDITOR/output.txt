@@ -1,4 +1,4 @@
-Filesize of "release-20210321/map.bin" is: 315022 bytes. malloc()=0x0x7f5260dae010, reading, 315022 bytes read, ok.
+Filesize of "release-20210321/map.bin" is: 315022 bytes. malloc()=0x0x7fed999fb010, reading, 315022 bytes read, ok.
 02 FB 00 FB 00 11 00 00 00 00 00 00 00 5C E2 02 00
 size_x= 251 (00FB)
 size_y= 251 (00FB)
