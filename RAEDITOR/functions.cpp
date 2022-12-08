@@ -411,10 +411,10 @@ int save_bin(unsigned char* bin, long filesize) {
 //			3: Wall
 
 struct Template {
-
     int Id;
     std::string Images;
     sf::Vector2i Size;
+    sf::Vector2i Realsize;
     std::string Catagories;
     std::map< int, std::string > Tiles;
     sf::Image Image;
@@ -423,11 +423,10 @@ struct Template {
     {
         return Id < B.Id;
     }
-
 };
 
-struct model_list {
-    std::map<std::string, int> models;
+struct Tileset {
+    long Lookup;    // id * 256 + tile (3 bytes ( * (x + x*y) ) from first block (offset 17) from .bin file)
 };
 
 int main_readtileset(char* filename) {
@@ -555,13 +554,26 @@ int main_readtileset(char* filename) {
             if ( file_exists( path.c_str() ) ) {
                 printf( "Loading image Id: %d  %s ", Template.Id, path.c_str() );
                 if ( Template.Image.loadFromFile( path.c_str() ) ) {
-                    printf( "Ok. Resolution: %d x %d\n", Template.Image.getSize().x,  Template.Image.getSize().y );
+                    int x,y;
+                    x = Template.Image.getSize().x / 24;
+                    y = Template.Image.getSize().y / 24;
+                    Template.Realsize.x = x;
+                    Template.Realsize.y = y;
+                    printf( "Ok. Size: %d,%d / %d,%d  Resolution: %d x %d\n",
+                        Template.Size.x,
+                        Template.Size.y,
+                        Template.Realsize.x,
+                        Template.Realsize.y,
+                        Template.Image.getSize().x,
+                        Template.Image.getSize().y
+                    );
                     loaded++;
+
                 } else {
                     printf( "Error.\n" );
                     error++;
                 }
-
+                it_Templates->second = Template;
             } else {
                 printf( "File does noet exist: %s\n", path.c_str() );
                 error++;
@@ -572,7 +584,59 @@ int main_readtileset(char* filename) {
 
 
         }
+
+        for (it_Templates = Templates.begin(); it_Templates != Templates.end(); it_Templates++) {
+
+            Template = it_Templates->second;
+
+
+
+            printf( "Id: %5d\tSize: %d,%d / %d,%d \tResolution: %d x %d\n",
+                Template.Id,
+                Template.Size.x,
+                Template.Size.y,
+                Template.Realsize.x,
+                Template.Realsize.y,
+                Template.Image.getSize().x,
+                Template.Image.getSize().y
+            );
+            for (it_Tiles = Template.Tiles.begin(); it_Tiles != Template.Tiles.end(); it_Tiles++) {
+                int X_START = ( it_Tiles->first % Template.Realsize.x ) * 24;
+                int Y_START = (int)( it_Tiles->first / Template.Realsize.x ) * 24;
+
+//                if (  it_Tiles == Template.Tiles.begin() ) {
+                    printf( "                                                    " );
+//                }
+                printf( "%2d: pos(%3d,%3d) %s\n", it_Tiles->first, X_START, Y_START, it_Tiles->second.c_str()  );
+            }
+
+
+        }
+
         printf( "%d errors loading %d images.\n", error, loaded );
+
+        printf("Templates.size()=%lu\n",Templates.size());
+
+        int n1=Templates.size();
+
+        it_Templates=Templates.begin();
+
+        for ( int n2=0; n2 < n1; n2++ ) {
+
+            struct Template* Template_ptr;
+            Template_ptr = &(it_Templates->second);
+
+            printf("n2=%d Id=%d\n",n2,Template_ptr->Id);
+
+            it_Templates++;
+
+        }
+
+
+//        for ( long unsigned int i=0; i < Templates.size(); i++ ) {
+//            Template = Templates[i];
+//            printf("i=%lu Id=%d\n",i,Templates[i].Id);
+//        }
 
     }
     return 0;

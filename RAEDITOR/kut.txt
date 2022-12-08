@@ -1,0 +1,3836 @@
+Filename: tilesets/interior.yaml
+  1: 
+  2: 	[1;35mName:[0m [1;31mInterior[0m 
+  3: 	[1;35mId:[0m [1;31mINTERIOR[0m 
+Id: INTERIOR
+  4: 	[1;35mEditorTemplateOrder:[0m [1;31mFloor,[0m [1;33mWall[0m 
+  5: 	[1;35mHeightDebugColors:[0m [1;31m880000[0m 
+  6: 	
+  7: 	
+  8: 	[1;35mTerrainType@Clear:[0m 
+  9: 		[1;36mType:[0m [1;32mClear[0m 
+ 10: 		[1;36mTargetTypes:[0m [1;32mGround[0m 
+ 11: 		[1;36mAcceptsSmudgeType:[0m [1;32mCrater,[0m [1;34mScorch[0m 
+ 12: 		[1;36mColor:[0m [1;32m000000[0m 
+ 13: 	[1;35mTerrainType@ClearNoSmudges:[0m 
+ 14: 		[1;36mType:[0m [1;32mClearNoSmudges[0m 
+ 15: 		[1;36mTargetTypes:[0m [1;32mGround[0m 
+ 16: 		[1;36mColor:[0m [1;32m000000[0m 
+ 17: 	[1;35mTerrainType@Gems:[0m 
+ 18: 		[1;36mType:[0m [1;32mGems[0m 
+ 19: 		[1;36mTargetTypes:[0m [1;32mGround[0m 
+ 20: 		[1;36mAcceptsSmudgeType:[0m [1;32mCrater,[0m [1;34mScorch[0m 
+ 21: 		[1;36mColor:[0m [1;32m8470FF[0m 
+ 22: 		[1;36mRestrictPlayerColor:[0m [1;32mtrue[0m 
+ 23: 	[1;35mTerrainType@Ore:[0m 
+ 24: 		[1;36mType:[0m [1;32mOre[0m 
+ 25: 		[1;36mTargetTypes:[0m [1;32mGround[0m 
+ 26: 		[1;36mAcceptsSmudgeType:[0m [1;32mCrater,[0m [1;34mScorch[0m 
+ 27: 		[1;36mColor:[0m [1;32m948060[0m 
+ 28: 		[1;36mRestrictPlayerColor:[0m [1;32mtrue[0m 
+ 29: 	[1;35mTerrainType@Tree:[0m 
+ 30: 		[1;36mType:[0m [1;32mTree[0m 
+ 31: 		[1;36mTargetTypes:[0m [1;32mGround[0m 
+ 32: 		[1;36mColor:[0m [1;32m1C2024[0m 
+ 33: 	[1;35mTerrainType@Wall:[0m 
+ 34: 		[1;36mType:[0m [1;32mWall[0m 
+ 35: 		[1;36mTargetTypes:[0m [1;32mGround[0m 
+ 36: 		[1;36mColor:[0m [1;32mD0C0A0[0m 
+ 37: 		[1;36mRestrictPlayerColor:[0m [1;32mtrue[0m 
+ 38: 		
+ 39: 		
+ 40: 	[1;35mTemplate@255:[0m 
+ 41: 		[1;36mId:[0m [1;32m255[0m 
+Id: 255
+ 42: 		[1;36mImages:[0m [1;32mclear1.int[0m 
+Images: clear1.int
+ 43: 		[1;36mSize:[0m [1;32m1,1[0m 
+Size: 1,1
+ 44: 		[1;36mPickAny:[0m [1;32mTrue[0m 
+ 45: 		[1;36mCategories:[0m [1;32mFloor[0m 
+ 46: 		[1;36mTiles:[0m 
+ 47: 			[1;31m0:[0m [1;33mClearNoSmudges[0m 
+0: ClearNoSmudges
+ 48: 			[1;31m1:[0m [1;33mClearNoSmudges[0m 
+1: ClearNoSmudges
+ 49: 			[1;31m2:[0m [1;33mClearNoSmudges[0m 
+2: ClearNoSmudges
+ 50: 			[1;31m3:[0m [1;33mClearNoSmudges[0m 
+3: ClearNoSmudges
+ 51: 			[1;31m4:[0m [1;33mClearNoSmudges[0m 
+4: ClearNoSmudges
+ 52: 			[1;31m5:[0m [1;33mClearNoSmudges[0m 
+5: ClearNoSmudges
+ 53: 			[1;31m6:[0m [1;33mClearNoSmudges[0m 
+6: ClearNoSmudges
+ 54: 			[1;31m7:[0m [1;33mClearNoSmudges[0m 
+7: ClearNoSmudges
+ 55: 			[1;31m8:[0m [1;33mClearNoSmudges[0m 
+8: ClearNoSmudges
+ 56: 			[1;31m9:[0m [1;33mClearNoSmudges[0m 
+9: ClearNoSmudges
+ 57: 			[1;31m10:[0m [1;33mClearNoSmudges[0m 
+10: ClearNoSmudges
+ 58: 			[1;31m11:[0m [1;33mClearNoSmudges[0m 
+11: ClearNoSmudges
+ 59: 			[1;31m12:[0m [1;33mClearNoSmudges[0m 
+12: ClearNoSmudges
+ 60: 			[1;31m13:[0m [1;33mClearNoSmudges[0m 
+13: ClearNoSmudges
+ 61: 			[1;31m14:[0m [1;33mClearNoSmudges[0m 
+14: ClearNoSmudges
+ 62: 			[1;31m15:[0m [1;33mClearNoSmudges[0m 
+15: ClearNoSmudges
+ 63: 	[1;35mTemplate@65535:[0m 
+Template@65535: ClearNoSmudges
+ 64: 		[1;36mId:[0m [1;32m65535[0m 
+Id: 65535
+ 65: 		[1;36mImages:[0m [1;32mclear1.int[0m 
+Images: clear1.int
+ 66: 		[1;36mSize:[0m [1;32m1,1[0m 
+Size: 1,1
+ 67: 		[1;36mPickAny:[0m [1;32mTrue[0m 
+ 68: 		[1;36mCategories:[0m [1;32mFloor[0m 
+ 69: 		[1;36mTiles:[0m 
+ 70: 			[1;31m0:[0m [1;33mClearNoSmudges[0m 
+0: ClearNoSmudges
+ 71: 			[1;31m1:[0m [1;33mClearNoSmudges[0m 
+1: ClearNoSmudges
+ 72: 			[1;31m2:[0m [1;33mClearNoSmudges[0m 
+2: ClearNoSmudges
+ 73: 			[1;31m3:[0m [1;33mClearNoSmudges[0m 
+3: ClearNoSmudges
+ 74: 			[1;31m4:[0m [1;33mClearNoSmudges[0m 
+4: ClearNoSmudges
+ 75: 			[1;31m5:[0m [1;33mClearNoSmudges[0m 
+5: ClearNoSmudges
+ 76: 			[1;31m6:[0m [1;33mClearNoSmudges[0m 
+6: ClearNoSmudges
+ 77: 			[1;31m7:[0m [1;33mClearNoSmudges[0m 
+7: ClearNoSmudges
+ 78: 			[1;31m8:[0m [1;33mClearNoSmudges[0m 
+8: ClearNoSmudges
+ 79: 			[1;31m9:[0m [1;33mClearNoSmudges[0m 
+9: ClearNoSmudges
+ 80: 			[1;31m10:[0m [1;33mClearNoSmudges[0m 
+10: ClearNoSmudges
+ 81: 			[1;31m11:[0m [1;33mClearNoSmudges[0m 
+11: ClearNoSmudges
+ 82: 			[1;31m12:[0m [1;33mClearNoSmudges[0m 
+12: ClearNoSmudges
+ 83: 			[1;31m13:[0m [1;33mClearNoSmudges[0m 
+13: ClearNoSmudges
+ 84: 			[1;31m14:[0m [1;33mClearNoSmudges[0m 
+14: ClearNoSmudges
+ 85: 			[1;31m15:[0m [1;33mClearNoSmudges[0m 
+15: ClearNoSmudges
+ 86: 	[1;35mTemplate@329:[0m 
+Template@329: ClearNoSmudges
+ 87: 		[1;36mId:[0m [1;32m329[0m 
+Id: 329
+ 88: 		[1;36mImages:[0m [1;32mwall0001.int[0m 
+Images: wall0001.int
+ 89: 		[1;36mSize:[0m [1;32m1,1[0m 
+Size: 1,1
+ 90: 		[1;36mCategories:[0m [1;32mWall[0m 
+ 91: 		[1;36mTiles:[0m 
+ 92: 			[1;31m0:[0m [1;33mWall[0m 
+0: Wall
+ 93: 	[1;35mTemplate@330:[0m 
+Template@330: Wall
+ 94: 		[1;36mId:[0m [1;32m330[0m 
+Id: 330
+ 95: 		[1;36mImages:[0m [1;32mwall0002.int[0m 
+Images: wall0002.int
+ 96: 		[1;36mSize:[0m [1;32m1,1[0m 
+Size: 1,1
+ 97: 		[1;36mCategories:[0m [1;32mWall[0m 
+ 98: 		[1;36mTiles:[0m 
+ 99: 			[1;31m0:[0m [1;33mWall[0m 
+0: Wall
+100: 	[1;35mTemplate@331:[0m 
+Template@331: Wall
+101: 		[1;36mId:[0m [1;32m331[0m 
+Id: 331
+102: 		[1;36mImages:[0m [1;32mwall0003.int[0m 
+Images: wall0003.int
+103: 		[1;36mSize:[0m [1;32m1,1[0m 
+Size: 1,1
+104: 		[1;36mCategories:[0m [1;32mWall[0m 
+105: 		[1;36mTiles:[0m 
+106: 			[1;31m0:[0m [1;33mWall[0m 
+0: Wall
+107: 	[1;35mTemplate@332:[0m 
+Template@332: Wall
+108: 		[1;36mId:[0m [1;32m332[0m 
+Id: 332
+109: 		[1;36mImages:[0m [1;32mwall0004.int[0m 
+Images: wall0004.int
+110: 		[1;36mSize:[0m [1;32m1,1[0m 
+Size: 1,1
+111: 		[1;36mCategories:[0m [1;32mWall[0m 
+112: 		[1;36mTiles:[0m 
+113: 			[1;31m0:[0m [1;33mWall[0m 
+0: Wall
+114: 	[1;35mTemplate@333:[0m 
+Template@333: Wall
+115: 		[1;36mId:[0m [1;32m333[0m 
+Id: 333
+116: 		[1;36mImages:[0m [1;32mwall0005.int[0m 
+Images: wall0005.int
+117: 		[1;36mSize:[0m [1;32m1,1[0m 
+Size: 1,1
+118: 		[1;36mCategories:[0m [1;32mWall[0m 
+119: 		[1;36mTiles:[0m 
+120: 			[1;31m0:[0m [1;33mWall[0m 
+0: Wall
+121: 	[1;35mTemplate@334:[0m 
+Template@334: Wall
+122: 		[1;36mId:[0m [1;32m334[0m 
+Id: 334
+123: 		[1;36mImages:[0m [1;32mwall0006.int[0m 
+Images: wall0006.int
+124: 		[1;36mSize:[0m [1;32m1,1[0m 
+Size: 1,1
+125: 		[1;36mCategories:[0m [1;32mWall[0m 
+126: 		[1;36mTiles:[0m 
+127: 			[1;31m0:[0m [1;33mWall[0m 
+0: Wall
+128: 	[1;35mTemplate@335:[0m 
+Template@335: Wall
+129: 		[1;36mId:[0m [1;32m335[0m 
+Id: 335
+130: 		[1;36mImages:[0m [1;32mwall0007.int[0m 
+Images: wall0007.int
+131: 		[1;36mSize:[0m [1;32m1,1[0m 
+Size: 1,1
+132: 		[1;36mCategories:[0m [1;32mWall[0m 
+133: 		[1;36mTiles:[0m 
+134: 			[1;31m0:[0m [1;33mWall[0m 
+0: Wall
+135: 	[1;35mTemplate@336:[0m 
+Template@336: Wall
+136: 		[1;36mId:[0m [1;32m336[0m 
+Id: 336
+137: 		[1;36mImages:[0m [1;32mwall0008.int[0m 
+Images: wall0008.int
+138: 		[1;36mSize:[0m [1;32m1,1[0m 
+Size: 1,1
+139: 		[1;36mCategories:[0m [1;32mWall[0m 
+140: 		[1;36mTiles:[0m 
+141: 			[1;31m0:[0m [1;33mWall[0m 
+0: Wall
+142: 	[1;35mTemplate@337:[0m 
+Template@337: Wall
+143: 		[1;36mId:[0m [1;32m337[0m 
+Id: 337
+144: 		[1;36mImages:[0m [1;32mwall0009.int[0m 
+Images: wall0009.int
+145: 		[1;36mSize:[0m [1;32m1,1[0m 
+Size: 1,1
+146: 		[1;36mCategories:[0m [1;32mWall[0m 
+147: 		[1;36mTiles:[0m 
+148: 			[1;31m0:[0m [1;33mWall[0m 
+0: Wall
+149: 	[1;35mTemplate@338:[0m 
+Template@338: Wall
+150: 		[1;36mId:[0m [1;32m338[0m 
+Id: 338
+151: 		[1;36mImages:[0m [1;32mwall0010.int[0m 
+Images: wall0010.int
+152: 		[1;36mSize:[0m [1;32m1,1[0m 
+Size: 1,1
+153: 		[1;36mCategories:[0m [1;32mWall[0m 
+154: 		[1;36mTiles:[0m 
+155: 			[1;31m0:[0m [1;33mWall[0m 
+0: Wall
+156: 	[1;35mTemplate@339:[0m 
+Template@339: Wall
+157: 		[1;36mId:[0m [1;32m339[0m 
+Id: 339
+158: 		[1;36mImages:[0m [1;32mwall0011.int[0m 
+Images: wall0011.int
+159: 		[1;36mSize:[0m [1;32m1,1[0m 
+Size: 1,1
+160: 		[1;36mCategories:[0m [1;32mWall[0m 
+161: 		[1;36mTiles:[0m 
+162: 			[1;31m0:[0m [1;33mWall[0m 
+0: Wall
+163: 	[1;35mTemplate@340:[0m 
+Template@340: Wall
+164: 		[1;36mId:[0m [1;32m340[0m 
+Id: 340
+165: 		[1;36mImages:[0m [1;32mwall0012.int[0m 
+Images: wall0012.int
+166: 		[1;36mSize:[0m [1;32m1,1[0m 
+Size: 1,1
+167: 		[1;36mCategories:[0m [1;32mWall[0m 
+168: 		[1;36mTiles:[0m 
+169: 			[1;31m0:[0m [1;33mWall[0m 
+0: Wall
+170: 	[1;35mTemplate@341:[0m 
+Template@341: Wall
+171: 		[1;36mId:[0m [1;32m341[0m 
+Id: 341
+172: 		[1;36mImages:[0m [1;32mwall0013.int[0m 
+Images: wall0013.int
+173: 		[1;36mSize:[0m [1;32m1,1[0m 
+Size: 1,1
+174: 		[1;36mCategories:[0m [1;32mWall[0m 
+175: 		[1;36mTiles:[0m 
+176: 			[1;31m0:[0m [1;33mWall[0m 
+0: Wall
+177: 	[1;35mTemplate@342:[0m 
+Template@342: Wall
+178: 		[1;36mId:[0m [1;32m342[0m 
+Id: 342
+179: 		[1;36mImages:[0m [1;32mwall0014.int[0m 
+Images: wall0014.int
+180: 		[1;36mSize:[0m [1;32m1,1[0m 
+Size: 1,1
+181: 		[1;36mCategories:[0m [1;32mWall[0m 
+182: 		[1;36mTiles:[0m 
+183: 			[1;31m0:[0m [1;33mWall[0m 
+0: Wall
+184: 	[1;35mTemplate@343:[0m 
+Template@343: Wall
+185: 		[1;36mId:[0m [1;32m343[0m 
+Id: 343
+186: 		[1;36mImages:[0m [1;32mwall0015.int[0m 
+Images: wall0015.int
+187: 		[1;36mSize:[0m [1;32m1,1[0m 
+Size: 1,1
+188: 		[1;36mCategories:[0m [1;32mWall[0m 
+189: 		[1;36mTiles:[0m 
+190: 			[1;31m0:[0m [1;33mWall[0m 
+0: Wall
+191: 	[1;35mTemplate@344:[0m 
+Template@344: Wall
+192: 		[1;36mId:[0m [1;32m344[0m 
+Id: 344
+193: 		[1;36mImages:[0m [1;32mwall0016.int[0m 
+Images: wall0016.int
+194: 		[1;36mSize:[0m [1;32m1,1[0m 
+Size: 1,1
+195: 		[1;36mCategories:[0m [1;32mWall[0m 
+196: 		[1;36mTiles:[0m 
+197: 			[1;31m0:[0m [1;33mWall[0m 
+0: Wall
+198: 	[1;35mTemplate@345:[0m 
+Template@345: Wall
+199: 		[1;36mId:[0m [1;32m345[0m 
+Id: 345
+200: 		[1;36mImages:[0m [1;32mwall0017.int[0m 
+Images: wall0017.int
+201: 		[1;36mSize:[0m [1;32m1,1[0m 
+Size: 1,1
+202: 		[1;36mCategories:[0m [1;32mWall[0m 
+203: 		[1;36mTiles:[0m 
+204: 			[1;31m0:[0m [1;33mWall[0m 
+0: Wall
+205: 	[1;35mTemplate@346:[0m 
+Template@346: Wall
+206: 		[1;36mId:[0m [1;32m346[0m 
+Id: 346
+207: 		[1;36mImages:[0m [1;32mwall0018.int[0m 
+Images: wall0018.int
+208: 		[1;36mSize:[0m [1;32m1,1[0m 
+Size: 1,1
+209: 		[1;36mCategories:[0m [1;32mWall[0m 
+210: 		[1;36mTiles:[0m 
+211: 			[1;31m0:[0m [1;33mWall[0m 
+0: Wall
+212: 	[1;35mTemplate@347:[0m 
+Template@347: Wall
+213: 		[1;36mId:[0m [1;32m347[0m 
+Id: 347
+214: 		[1;36mImages:[0m [1;32mwall0019.int[0m 
+Images: wall0019.int
+215: 		[1;36mSize:[0m [1;32m1,1[0m 
+Size: 1,1
+216: 		[1;36mCategories:[0m [1;32mWall[0m 
+217: 		[1;36mTiles:[0m 
+218: 			[1;31m0:[0m [1;33mWall[0m 
+0: Wall
+219: 	[1;35mTemplate@348:[0m 
+Template@348: Wall
+220: 		[1;36mId:[0m [1;32m348[0m 
+Id: 348
+221: 		[1;36mImages:[0m [1;32mwall0020.int[0m 
+Images: wall0020.int
+222: 		[1;36mSize:[0m [1;32m1,1[0m 
+Size: 1,1
+223: 		[1;36mCategories:[0m [1;32mWall[0m 
+224: 		[1;36mTiles:[0m 
+225: 			[1;31m0:[0m [1;33mWall[0m 
+0: Wall
+226: 	[1;35mTemplate@349:[0m 
+Template@349: Wall
+227: 		[1;36mId:[0m [1;32m349[0m 
+Id: 349
+228: 		[1;36mImages:[0m [1;32mwall0021.int[0m 
+Images: wall0021.int
+229: 		[1;36mSize:[0m [1;32m1,1[0m 
+Size: 1,1
+230: 		[1;36mCategories:[0m [1;32mWall[0m 
+231: 		[1;36mTiles:[0m 
+232: 			[1;31m0:[0m [1;33mWall[0m 
+0: Wall
+233: 	[1;35mTemplate@350:[0m 
+Template@350: Wall
+234: 		[1;36mId:[0m [1;32m350[0m 
+Id: 350
+235: 		[1;36mImages:[0m [1;32mwall0022.int[0m 
+Images: wall0022.int
+236: 		[1;36mSize:[0m [1;32m1,1[0m 
+Size: 1,1
+237: 		[1;36mCategories:[0m [1;32mWall[0m 
+238: 		[1;36mTiles:[0m 
+239: 			[1;31m0:[0m [1;33mWall[0m 
+0: Wall
+240: 	[1;35mTemplate@351:[0m 
+Template@351: Wall
+241: 		[1;36mId:[0m [1;32m351[0m 
+Id: 351
+242: 		[1;36mImages:[0m [1;32mwall0023.int[0m 
+Images: wall0023.int
+243: 		[1;36mSize:[0m [1;32m2,2[0m 
+Size: 2,2
+244: 		[1;36mCategories:[0m [1;32mWall[0m 
+245: 		[1;36mTiles:[0m 
+246: 			[1;31m0:[0m [1;33mWall[0m 
+0: Wall
+247: 			[1;31m1:[0m [1;33mWall[0m 
+1: Wall
+248: 			[1;31m2:[0m [1;33mWall[0m 
+2: Wall
+249: 	[1;35mTemplate@352:[0m 
+Template@352: Wall
+250: 		[1;36mId:[0m [1;32m352[0m 
+Id: 352
+251: 		[1;36mImages:[0m [1;32mwall0024.int[0m 
+Images: wall0024.int
+252: 		[1;36mSize:[0m [1;32m2,2[0m 
+Size: 2,2
+253: 		[1;36mCategories:[0m [1;32mWall[0m 
+254: 		[1;36mTiles:[0m 
+255: 			[1;31m0:[0m [1;33mWall[0m 
+0: Wall
+256: 			[1;31m1:[0m [1;33mWall[0m 
+1: Wall
+257: 			[1;31m2:[0m [1;33mWall[0m 
+2: Wall
+258: 	[1;35mTemplate@353:[0m 
+Template@353: Wall
+259: 		[1;36mId:[0m [1;32m353[0m 
+Id: 353
+260: 		[1;36mImages:[0m [1;32mwall0025.int[0m 
+Images: wall0025.int
+261: 		[1;36mSize:[0m [1;32m2,2[0m 
+Size: 2,2
+262: 		[1;36mCategories:[0m [1;32mWall[0m 
+263: 		[1;36mTiles:[0m 
+264: 			[1;31m0:[0m [1;33mWall[0m 
+0: Wall
+265: 			[1;31m1:[0m [1;33mWall[0m 
+1: Wall
+266: 			[1;31m2:[0m [1;33mWall[0m 
+2: Wall
+267: 	[1;35mTemplate@354:[0m 
+Template@354: Wall
+268: 		[1;36mId:[0m [1;32m354[0m 
+Id: 354
+269: 		[1;36mImages:[0m [1;32mwall0026.int[0m 
+Images: wall0026.int
+270: 		[1;36mSize:[0m [1;32m2,2[0m 
+Size: 2,2
+271: 		[1;36mCategories:[0m [1;32mWall[0m 
+272: 		[1;36mTiles:[0m 
+273: 			[1;31m0:[0m [1;33mWall[0m 
+0: Wall
+274: 			[1;31m1:[0m [1;33mWall[0m 
+1: Wall
+275: 			[1;31m2:[0m [1;33mWall[0m 
+2: Wall
+276: 	[1;35mTemplate@355:[0m 
+Template@355: Wall
+277: 		[1;36mId:[0m [1;32m355[0m 
+Id: 355
+278: 		[1;36mImages:[0m [1;32mwall0027.int[0m 
+Images: wall0027.int
+279: 		[1;36mSize:[0m [1;32m2,2[0m 
+Size: 2,2
+280: 		[1;36mCategories:[0m [1;32mWall[0m 
+281: 		[1;36mTiles:[0m 
+282: 			[1;31m0:[0m [1;33mWall[0m 
+0: Wall
+283: 			[1;31m1:[0m [1;33mWall[0m 
+1: Wall
+284: 			[1;31m3:[0m [1;33mWall[0m 
+3: Wall
+285: 	[1;35mTemplate@356:[0m 
+Template@356: Wall
+286: 		[1;36mId:[0m [1;32m356[0m 
+Id: 356
+287: 		[1;36mImages:[0m [1;32mwall0028.int[0m 
+Images: wall0028.int
+288: 		[1;36mSize:[0m [1;32m2,2[0m 
+Size: 2,2
+289: 		[1;36mCategories:[0m [1;32mWall[0m 
+290: 		[1;36mTiles:[0m 
+291: 			[1;31m0:[0m [1;33mWall[0m 
+0: Wall
+292: 			[1;31m1:[0m [1;33mWall[0m 
+1: Wall
+293: 			[1;31m3:[0m [1;33mWall[0m 
+3: Wall
+294: 	[1;35mTemplate@357:[0m 
+Template@357: Wall
+295: 		[1;36mId:[0m [1;32m357[0m 
+Id: 357
+296: 		[1;36mImages:[0m [1;32mwall0029.int[0m 
+Images: wall0029.int
+297: 		[1;36mSize:[0m [1;32m2,2[0m 
+Size: 2,2
+298: 		[1;36mCategories:[0m [1;32mWall[0m 
+299: 		[1;36mTiles:[0m 
+300: 			[1;31m0:[0m [1;33mWall[0m 
+0: Wall
+301: 			[1;31m1:[0m [1;33mWall[0m 
+1: Wall
+302: 			[1;31m3:[0m [1;33mWall[0m 
+3: Wall
+303: 	[1;35mTemplate@358:[0m 
+Template@358: Wall
+304: 		[1;36mId:[0m [1;32m358[0m 
+Id: 358
+305: 		[1;36mImages:[0m [1;32mwall0030.int[0m 
+Images: wall0030.int
+306: 		[1;36mSize:[0m [1;32m2,2[0m 
+Size: 2,2
+307: 		[1;36mCategories:[0m [1;32mWall[0m 
+308: 		[1;36mTiles:[0m 
+309: 			[1;31m0:[0m [1;33mWall[0m 
+0: Wall
+310: 			[1;31m1:[0m [1;33mWall[0m 
+1: Wall
+311: 			[1;31m3:[0m [1;33mWall[0m 
+3: Wall
+312: 	[1;35mTemplate@359:[0m 
+Template@359: Wall
+313: 		[1;36mId:[0m [1;32m359[0m 
+Id: 359
+314: 		[1;36mImages:[0m [1;32mwall0031.int[0m 
+Images: wall0031.int
+315: 		[1;36mSize:[0m [1;32m2,2[0m 
+Size: 2,2
+316: 		[1;36mCategories:[0m [1;32mWall[0m 
+317: 		[1;36mTiles:[0m 
+318: 			[1;31m0:[0m [1;33mWall[0m 
+0: Wall
+319: 			[1;31m2:[0m [1;33mWall[0m 
+2: Wall
+320: 			[1;31m3:[0m [1;33mWall[0m 
+3: Wall
+321: 	[1;35mTemplate@360:[0m 
+Template@360: Wall
+322: 		[1;36mId:[0m [1;32m360[0m 
+Id: 360
+323: 		[1;36mImages:[0m [1;32mwall0032.int[0m 
+Images: wall0032.int
+324: 		[1;36mSize:[0m [1;32m2,2[0m 
+Size: 2,2
+325: 		[1;36mCategories:[0m [1;32mWall[0m 
+326: 		[1;36mTiles:[0m 
+327: 			[1;31m0:[0m [1;33mWall[0m 
+0: Wall
+328: 			[1;31m2:[0m [1;33mWall[0m 
+2: Wall
+329: 			[1;31m3:[0m [1;33mWall[0m 
+3: Wall
+330: 	[1;35mTemplate@361:[0m 
+Template@361: Wall
+331: 		[1;36mId:[0m [1;32m361[0m 
+Id: 361
+332: 		[1;36mImages:[0m [1;32mwall0033.int[0m 
+Images: wall0033.int
+333: 		[1;36mSize:[0m [1;32m2,2[0m 
+Size: 2,2
+334: 		[1;36mCategories:[0m [1;32mWall[0m 
+335: 		[1;36mTiles:[0m 
+336: 			[1;31m0:[0m [1;33mWall[0m 
+0: Wall
+337: 			[1;31m2:[0m [1;33mWall[0m 
+2: Wall
+338: 			[1;31m3:[0m [1;33mWall[0m 
+3: Wall
+339: 	[1;35mTemplate@362:[0m 
+Template@362: Wall
+340: 		[1;36mId:[0m [1;32m362[0m 
+Id: 362
+341: 		[1;36mImages:[0m [1;32mwall0034.int[0m 
+Images: wall0034.int
+342: 		[1;36mSize:[0m [1;32m2,2[0m 
+Size: 2,2
+343: 		[1;36mCategories:[0m [1;32mWall[0m 
+344: 		[1;36mTiles:[0m 
+345: 			[1;31m0:[0m [1;33mWall[0m 
+0: Wall
+346: 			[1;31m2:[0m [1;33mWall[0m 
+2: Wall
+347: 			[1;31m3:[0m [1;33mWall[0m 
+3: Wall
+348: 	[1;35mTemplate@363:[0m 
+Template@363: Wall
+349: 		[1;36mId:[0m [1;32m363[0m 
+Id: 363
+350: 		[1;36mImages:[0m [1;32mwall0035.int[0m 
+Images: wall0035.int
+351: 		[1;36mSize:[0m [1;32m2,2[0m 
+Size: 2,2
+352: 		[1;36mCategories:[0m [1;32mWall[0m 
+353: 		[1;36mTiles:[0m 
+354: 			[1;31m1:[0m [1;33mWall[0m 
+1: Wall
+355: 			[1;31m2:[0m [1;33mWall[0m 
+2: Wall
+356: 			[1;31m3:[0m [1;33mWall[0m 
+3: Wall
+357: 	[1;35mTemplate@364:[0m 
+Template@364: Wall
+358: 		[1;36mId:[0m [1;32m364[0m 
+Id: 364
+359: 		[1;36mImages:[0m [1;32mwall0036.int[0m 
+Images: wall0036.int
+360: 		[1;36mSize:[0m [1;32m2,2[0m 
+Size: 2,2
+361: 		[1;36mCategories:[0m [1;32mWall[0m 
+362: 		[1;36mTiles:[0m 
+363: 			[1;31m1:[0m [1;33mWall[0m 
+1: Wall
+364: 			[1;31m2:[0m [1;33mWall[0m 
+2: Wall
+365: 			[1;31m3:[0m [1;33mWall[0m 
+3: Wall
+366: 	[1;35mTemplate@365:[0m 
+Template@365: Wall
+367: 		[1;36mId:[0m [1;32m365[0m 
+Id: 365
+368: 		[1;36mImages:[0m [1;32mwall0037.int[0m 
+Images: wall0037.int
+369: 		[1;36mSize:[0m [1;32m2,2[0m 
+Size: 2,2
+370: 		[1;36mCategories:[0m [1;32mWall[0m 
+371: 		[1;36mTiles:[0m 
+372: 			[1;31m1:[0m [1;33mWall[0m 
+1: Wall
+373: 			[1;31m2:[0m [1;33mWall[0m 
+2: Wall
+374: 			[1;31m3:[0m [1;33mWall[0m 
+3: Wall
+375: 	[1;35mTemplate@366:[0m 
+Template@366: Wall
+376: 		[1;36mId:[0m [1;32m366[0m 
+Id: 366
+377: 		[1;36mImages:[0m [1;32mwall0038.int[0m 
+Images: wall0038.int
+378: 		[1;36mSize:[0m [1;32m2,2[0m 
+Size: 2,2
+379: 		[1;36mCategories:[0m [1;32mWall[0m 
+380: 		[1;36mTiles:[0m 
+381: 			[1;31m1:[0m [1;33mWall[0m 
+1: Wall
+382: 			[1;31m2:[0m [1;33mWall[0m 
+2: Wall
+383: 			[1;31m3:[0m [1;33mWall[0m 
+3: Wall
+384: 	[1;35mTemplate@367:[0m 
+Template@367: Wall
+385: 		[1;36mId:[0m [1;32m367[0m 
+Id: 367
+386: 		[1;36mImages:[0m [1;32mwall0039.int[0m 
+Images: wall0039.int
+387: 		[1;36mSize:[0m [1;32m2,3[0m 
+Size: 2,3
+388: 		[1;36mCategories:[0m [1;32mWall[0m 
+389: 		[1;36mTiles:[0m 
+390: 			[1;31m0:[0m [1;33mWall[0m 
+0: Wall
+391: 			[1;31m2:[0m [1;33mWall[0m 
+2: Wall
+392: 			[1;31m3:[0m [1;33mWall[0m 
+3: Wall
+393: 			[1;31m4:[0m [1;33mWall[0m 
+4: Wall
+394: 	[1;35mTemplate@368:[0m 
+Template@368: Wall
+395: 		[1;36mId:[0m [1;32m368[0m 
+Id: 368
+396: 		[1;36mImages:[0m [1;32mwall0040.int[0m 
+Images: wall0040.int
+397: 		[1;36mSize:[0m [1;32m2,3[0m 
+Size: 2,3
+398: 		[1;36mCategories:[0m [1;32mWall[0m 
+399: 		[1;36mTiles:[0m 
+400: 			[1;31m0:[0m [1;33mWall[0m 
+0: Wall
+401: 			[1;31m2:[0m [1;33mWall[0m 
+2: Wall
+402: 			[1;31m3:[0m [1;33mWall[0m 
+3: Wall
+403: 			[1;31m4:[0m [1;33mWall[0m 
+4: Wall
+404: 	[1;35mTemplate@369:[0m 
+Template@369: Wall
+405: 		[1;36mId:[0m [1;32m369[0m 
+Id: 369
+406: 		[1;36mImages:[0m [1;32mwall0041.int[0m 
+Images: wall0041.int
+407: 		[1;36mSize:[0m [1;32m2,3[0m 
+Size: 2,3
+408: 		[1;36mCategories:[0m [1;32mWall[0m 
+409: 		[1;36mTiles:[0m 
+410: 			[1;31m1:[0m [1;33mWall[0m 
+1: Wall
+411: 			[1;31m2:[0m [1;33mWall[0m 
+2: Wall
+412: 			[1;31m3:[0m [1;33mWall[0m 
+3: Wall
+413: 			[1;31m5:[0m [1;33mWall[0m 
+5: Wall
+414: 	[1;35mTemplate@370:[0m 
+Template@370: Wall
+415: 		[1;36mId:[0m [1;32m370[0m 
+Id: 370
+416: 		[1;36mImages:[0m [1;32mwall0042.int[0m 
+Images: wall0042.int
+417: 		[1;36mSize:[0m [1;32m2,3[0m 
+Size: 2,3
+418: 		[1;36mCategories:[0m [1;32mWall[0m 
+419: 		[1;36mTiles:[0m 
+420: 			[1;31m1:[0m [1;33mWall[0m 
+1: Wall
+421: 			[1;31m2:[0m [1;33mWall[0m 
+2: Wall
+422: 			[1;31m3:[0m [1;33mWall[0m 
+3: Wall
+423: 			[1;31m5:[0m [1;33mWall[0m 
+5: Wall
+424: 	[1;35mTemplate@371:[0m 
+Template@371: Wall
+425: 		[1;36mId:[0m [1;32m371[0m 
+Id: 371
+426: 		[1;36mImages:[0m [1;32mwall0043.int[0m 
+Images: wall0043.int
+427: 		[1;36mSize:[0m [1;32m3,2[0m 
+Size: 3,2
+428: 		[1;36mCategories:[0m [1;32mWall[0m 
+429: 		[1;36mTiles:[0m 
+430: 			[1;31m1:[0m [1;33mWall[0m 
+1: Wall
+431: 			[1;31m3:[0m [1;33mWall[0m 
+3: Wall
+432: 			[1;31m4:[0m [1;33mWall[0m 
+4: Wall
+433: 			[1;31m5:[0m [1;33mWall[0m 
+5: Wall
+434: 	[1;35mTemplate@372:[0m 
+Template@372: Wall
+435: 		[1;36mId:[0m [1;32m372[0m 
+Id: 372
+436: 		[1;36mImages:[0m [1;32mwall0044.int[0m 
+Images: wall0044.int
+437: 		[1;36mSize:[0m [1;32m3,2[0m 
+Size: 3,2
+438: 		[1;36mCategories:[0m [1;32mWall[0m 
+439: 		[1;36mTiles:[0m 
+440: 			[1;31m1:[0m [1;33mWall[0m 
+1: Wall
+441: 			[1;31m3:[0m [1;33mWall[0m 
+3: Wall
+442: 			[1;31m4:[0m [1;33mWall[0m 
+4: Wall
+443: 			[1;31m5:[0m [1;33mWall[0m 
+5: Wall
+444: 	[1;35mTemplate@373:[0m 
+Template@373: Wall
+445: 		[1;36mId:[0m [1;32m373[0m 
+Id: 373
+446: 		[1;36mImages:[0m [1;32mwall0045.int[0m 
+Images: wall0045.int
+447: 		[1;36mSize:[0m [1;32m3,2[0m 
+Size: 3,2
+448: 		[1;36mCategories:[0m [1;32mWall[0m 
+449: 		[1;36mTiles:[0m 
+450: 			[1;31m1:[0m [1;33mWall[0m 
+1: Wall
+451: 			[1;31m3:[0m [1;33mWall[0m 
+3: Wall
+452: 			[1;31m4:[0m [1;33mWall[0m 
+4: Wall
+453: 			[1;31m5:[0m [1;33mWall[0m 
+5: Wall
+454: 	[1;35mTemplate@374:[0m 
+Template@374: Wall
+455: 		[1;36mId:[0m [1;32m374[0m 
+Id: 374
+456: 		[1;36mImages:[0m [1;32mwall0046.int[0m 
+Images: wall0046.int
+457: 		[1;36mSize:[0m [1;32m3,2[0m 
+Size: 3,2
+458: 		[1;36mCategories:[0m [1;32mWall[0m 
+459: 		[1;36mTiles:[0m 
+460: 			[1;31m1:[0m [1;33mWall[0m 
+1: Wall
+461: 			[1;31m3:[0m [1;33mWall[0m 
+3: Wall
+462: 			[1;31m4:[0m [1;33mWall[0m 
+4: Wall
+463: 			[1;31m5:[0m [1;33mWall[0m 
+5: Wall
+464: 	[1;35mTemplate@375:[0m 
+Template@375: Wall
+465: 		[1;36mId:[0m [1;32m375[0m 
+Id: 375
+466: 		[1;36mImages:[0m [1;32mwall0047.int[0m 
+Images: wall0047.int
+467: 		[1;36mSize:[0m [1;32m3,2[0m 
+Size: 3,2
+468: 		[1;36mCategories:[0m [1;32mWall[0m 
+469: 		[1;36mTiles:[0m 
+470: 			[1;31m0:[0m [1;33mWall[0m 
+0: Wall
+471: 			[1;31m1:[0m [1;33mWall[0m 
+1: Wall
+472: 			[1;31m2:[0m [1;33mWall[0m 
+2: Wall
+473: 			[1;31m4:[0m [1;33mWall[0m 
+4: Wall
+474: 	[1;35mTemplate@376:[0m 
+Template@376: Wall
+475: 		[1;36mId:[0m [1;32m376[0m 
+Id: 376
+476: 		[1;36mImages:[0m [1;32mwall0048.int[0m 
+Images: wall0048.int
+477: 		[1;36mSize:[0m [1;32m3,2[0m 
+Size: 3,2
+478: 		[1;36mCategories:[0m [1;32mWall[0m 
+479: 		[1;36mTiles:[0m 
+480: 			[1;31m0:[0m [1;33mWall[0m 
+0: Wall
+481: 			[1;31m1:[0m [1;33mWall[0m 
+1: Wall
+482: 			[1;31m2:[0m [1;33mWall[0m 
+2: Wall
+483: 			[1;31m4:[0m [1;33mWall[0m 
+4: Wall
+484: 	[1;35mTemplate@377:[0m 
+Template@377: Wall
+485: 		[1;36mId:[0m [1;32m377[0m 
+Id: 377
+486: 		[1;36mImages:[0m [1;32mwall0049.int[0m 
+Images: wall0049.int
+487: 		[1;36mSize:[0m [1;32m3,3[0m 
+Size: 3,3
+488: 		[1;36mCategories:[0m [1;32mWall[0m 
+489: 		[1;36mTiles:[0m 
+490: 			[1;31m1:[0m [1;33mWall[0m 
+1: Wall
+491: 			[1;31m3:[0m [1;33mWall[0m 
+3: Wall
+492: 			[1;31m4:[0m [1;33mWall[0m 
+4: Wall
+493: 			[1;31m5:[0m [1;33mWall[0m 
+5: Wall
+494: 			[1;31m7:[0m [1;33mWall[0m 
+7: Wall
+495: 	[1;35mTemplate@268:[0m 
+Template@268: Wall
+496: 		[1;36mId:[0m [1;32m268[0m 
+Id: 268
+497: 		[1;36mImages:[0m [1;32mflor0001.int[0m 
+Images: flor0001.int
+498: 		[1;36mSize:[0m [1;32m1,1[0m 
+Size: 1,1
+499: 		[1;36mPickAny:[0m [1;32mTrue[0m 
+500: 		[1;36mCategories:[0m [1;32mFloor[0m 
+501: 		[1;36mTiles:[0m 
+502: 			[1;31m0:[0m [1;33mClear[0m 
+0: Clear
+503: 			[1;31m1:[0m [1;33mClear[0m 
+1: Clear
+504: 			[1;31m2:[0m [1;33mClear[0m 
+2: Clear
+505: 			[1;31m3:[0m [1;33mClear[0m 
+3: Clear
+506: 			[1;31m4:[0m [1;33mClear[0m 
+4: Clear
+507: 			[1;31m5:[0m [1;33mClear[0m 
+5: Clear
+508: 			[1;31m6:[0m [1;33mClear[0m 
+6: Clear
+509: 			[1;31m7:[0m [1;33mClear[0m 
+7: Clear
+510: 			[1;31m8:[0m [1;33mClear[0m 
+8: Clear
+511: 			[1;31m9:[0m [1;33mClear[0m 
+9: Clear
+512: 			[1;31m10:[0m [1;33mClear[0m 
+10: Clear
+513: 			[1;31m11:[0m [1;33mClear[0m 
+11: Clear
+514: 	[1;35mTemplate@269:[0m 
+Template@269: Clear
+515: 		[1;36mId:[0m [1;32m269[0m 
+Id: 269
+516: 		[1;36mImages:[0m [1;32mflor0002.int[0m 
+Images: flor0002.int
+517: 		[1;36mSize:[0m [1;32m1,1[0m 
+Size: 1,1
+518: 		[1;36mPickAny:[0m [1;32mTrue[0m 
+519: 		[1;36mCategories:[0m [1;32mFloor[0m 
+520: 		[1;36mTiles:[0m 
+521: 			[1;31m0:[0m [1;33mClear[0m 
+0: Clear
+522: 			[1;31m1:[0m [1;33mClear[0m 
+1: Clear
+523: 			[1;31m2:[0m [1;33mClear[0m 
+2: Clear
+524: 			[1;31m3:[0m [1;33mClear[0m 
+3: Clear
+525: 			[1;31m4:[0m [1;33mClear[0m 
+4: Clear
+526: 			[1;31m5:[0m [1;33mClear[0m 
+5: Clear
+527: 			[1;31m6:[0m [1;33mClear[0m 
+6: Clear
+528: 			[1;31m7:[0m [1;33mClear[0m 
+7: Clear
+529: 			[1;31m8:[0m [1;33mClear[0m 
+8: Clear
+530: 			[1;31m9:[0m [1;33mClear[0m 
+9: Clear
+531: 			[1;31m10:[0m [1;33mClear[0m 
+10: Clear
+532: 			[1;31m11:[0m [1;33mClear[0m 
+11: Clear
+533: 	[1;35mTemplate@270:[0m 
+Template@270: Clear
+534: 		[1;36mId:[0m [1;32m270[0m 
+Id: 270
+535: 		[1;36mImages:[0m [1;32mflor0003.int[0m 
+Images: flor0003.int
+536: 		[1;36mSize:[0m [1;32m1,1[0m 
+Size: 1,1
+537: 		[1;36mPickAny:[0m [1;32mTrue[0m 
+538: 		[1;36mCategories:[0m [1;32mFloor[0m 
+539: 		[1;36mTiles:[0m 
+540: 			[1;31m0:[0m [1;33mClear[0m 
+0: Clear
+541: 			[1;31m1:[0m [1;33mClear[0m 
+1: Clear
+542: 			[1;31m2:[0m [1;33mClear[0m 
+2: Clear
+543: 			[1;31m3:[0m [1;33mClear[0m 
+3: Clear
+544: 			[1;31m4:[0m [1;33mClear[0m 
+4: Clear
+545: 			[1;31m5:[0m [1;33mClear[0m 
+5: Clear
+546: 			[1;31m6:[0m [1;33mClear[0m 
+6: Clear
+547: 			[1;31m7:[0m [1;33mClear[0m 
+7: Clear
+548: 			[1;31m8:[0m [1;33mClear[0m 
+8: Clear
+549: 			[1;31m9:[0m [1;33mClear[0m 
+9: Clear
+550: 			[1;31m10:[0m [1;33mClear[0m 
+10: Clear
+551: 			[1;31m11:[0m [1;33mClear[0m 
+11: Clear
+552: 	[1;35mTemplate@271:[0m 
+Template@271: Clear
+553: 		[1;36mId:[0m [1;32m271[0m 
+Id: 271
+554: 		[1;36mImages:[0m [1;32mflor0004.int[0m 
+Images: flor0004.int
+555: 		[1;36mSize:[0m [1;32m1,1[0m 
+Size: 1,1
+556: 		[1;36mPickAny:[0m [1;32mTrue[0m 
+557: 		[1;36mCategories:[0m [1;32mFloor[0m 
+558: 		[1;36mTiles:[0m 
+559: 			[1;31m0:[0m [1;33mClear[0m 
+0: Clear
+560: 			[1;31m1:[0m [1;33mClear[0m 
+1: Clear
+561: 			[1;31m2:[0m [1;33mClear[0m 
+2: Clear
+562: 			[1;31m3:[0m [1;33mClear[0m 
+3: Clear
+563: 			[1;31m4:[0m [1;33mClear[0m 
+4: Clear
+564: 			[1;31m5:[0m [1;33mClear[0m 
+5: Clear
+565: 			[1;31m6:[0m [1;33mClear[0m 
+6: Clear
+566: 			[1;31m7:[0m [1;33mClear[0m 
+7: Clear
+567: 			[1;31m8:[0m [1;33mClear[0m 
+8: Clear
+568: 			[1;31m9:[0m [1;33mClear[0m 
+9: Clear
+569: 			[1;31m10:[0m [1;33mClear[0m 
+10: Clear
+570: 			[1;31m11:[0m [1;33mClear[0m 
+11: Clear
+571: 	[1;35mTemplate@272:[0m 
+Template@272: Clear
+572: 		[1;36mId:[0m [1;32m272[0m 
+Id: 272
+573: 		[1;36mImages:[0m [1;32mflor0005.int[0m 
+Images: flor0005.int
+574: 		[1;36mSize:[0m [1;32m1,1[0m 
+Size: 1,1
+575: 		[1;36mPickAny:[0m [1;32mTrue[0m 
+576: 		[1;36mCategories:[0m [1;32mFloor[0m 
+577: 		[1;36mTiles:[0m 
+578: 			[1;31m0:[0m [1;33mClear[0m 
+0: Clear
+579: 			[1;31m1:[0m [1;33mClear[0m 
+1: Clear
+580: 			[1;31m2:[0m [1;33mClear[0m 
+2: Clear
+581: 			[1;31m3:[0m [1;33mClear[0m 
+3: Clear
+582: 			[1;31m4:[0m [1;33mClear[0m 
+4: Clear
+583: 			[1;31m5:[0m [1;33mClear[0m 
+5: Clear
+584: 			[1;31m6:[0m [1;33mClear[0m 
+6: Clear
+585: 			[1;31m7:[0m [1;33mClear[0m 
+7: Clear
+586: 			[1;31m8:[0m [1;33mClear[0m 
+8: Clear
+587: 			[1;31m9:[0m [1;33mClear[0m 
+9: Clear
+588: 			[1;31m10:[0m [1;33mClear[0m 
+10: Clear
+589: 			[1;31m11:[0m [1;33mClear[0m 
+11: Clear
+590: 	[1;35mTemplate@273:[0m 
+Template@273: Clear
+591: 		[1;36mId:[0m [1;32m273[0m 
+Id: 273
+592: 		[1;36mImages:[0m [1;32mflor0006.int[0m 
+Images: flor0006.int
+593: 		[1;36mSize:[0m [1;32m1,1[0m 
+Size: 1,1
+594: 		[1;36mPickAny:[0m [1;32mTrue[0m 
+595: 		[1;36mCategories:[0m [1;32mFloor[0m 
+596: 		[1;36mTiles:[0m 
+597: 			[1;31m0:[0m [1;33mClear[0m 
+0: Clear
+598: 			[1;31m1:[0m [1;33mClear[0m 
+1: Clear
+599: 			[1;31m2:[0m [1;33mClear[0m 
+2: Clear
+600: 			[1;31m3:[0m [1;33mClear[0m 
+3: Clear
+601: 			[1;31m4:[0m [1;33mClear[0m 
+4: Clear
+602: 			[1;31m5:[0m [1;33mClear[0m 
+5: Clear
+603: 			[1;31m6:[0m [1;33mClear[0m 
+6: Clear
+604: 			[1;31m7:[0m [1;33mClear[0m 
+7: Clear
+605: 			[1;31m8:[0m [1;33mClear[0m 
+8: Clear
+606: 			[1;31m9:[0m [1;33mClear[0m 
+9: Clear
+607: 			[1;31m10:[0m [1;33mClear[0m 
+10: Clear
+608: 			[1;31m11:[0m [1;33mClear[0m 
+11: Clear
+609: 	[1;35mTemplate@274:[0m 
+Template@274: Clear
+610: 		[1;36mId:[0m [1;32m274[0m 
+Id: 274
+611: 		[1;36mImages:[0m [1;32mflor0007.int[0m 
+Images: flor0007.int
+612: 		[1;36mSize:[0m [1;32m1,1[0m 
+Size: 1,1
+613: 		[1;36mPickAny:[0m [1;32mTrue[0m 
+614: 		[1;36mCategories:[0m [1;32mFloor[0m 
+615: 		[1;36mTiles:[0m 
+616: 			[1;31m0:[0m [1;33mClear[0m 
+0: Clear
+617: 			[1;31m1:[0m [1;33mClear[0m 
+1: Clear
+618: 			[1;31m2:[0m [1;33mClear[0m 
+2: Clear
+619: 			[1;31m3:[0m [1;33mClear[0m 
+3: Clear
+620: 			[1;31m4:[0m [1;33mClear[0m 
+4: Clear
+621: 			[1;31m5:[0m [1;33mClear[0m 
+5: Clear
+622: 			[1;31m6:[0m [1;33mClear[0m 
+6: Clear
+623: 			[1;31m7:[0m [1;33mClear[0m 
+7: Clear
+624: 			[1;31m8:[0m [1;33mClear[0m 
+8: Clear
+625: 			[1;31m9:[0m [1;33mClear[0m 
+9: Clear
+626: 			[1;31m10:[0m [1;33mClear[0m 
+10: Clear
+627: 			[1;31m11:[0m [1;33mClear[0m 
+11: Clear
+628: 	[1;35mTemplate@384:[0m 
+Template@384: Clear
+629: 		[1;36mId:[0m [1;32m384[0m 
+Id: 384
+630: 		[1;36mImages:[0m [1;32mxtra0001.int[0m 
+Images: xtra0001.int
+631: 		[1;36mSize:[0m [1;32m1,1[0m 
+Size: 1,1
+632: 		[1;36mCategories:[0m [1;32mWall[0m 
+633: 		[1;36mTiles:[0m 
+634: 			[1;31m0:[0m [1;33mWall[0m 
+0: Wall
+635: 	[1;35mTemplate@385:[0m 
+Template@385: Wall
+636: 		[1;36mId:[0m [1;32m385[0m 
+Id: 385
+637: 		[1;36mImages:[0m [1;32mxtra0002.int[0m 
+Images: xtra0002.int
+638: 		[1;36mSize:[0m [1;32m2,1[0m 
+Size: 2,1
+639: 		[1;36mCategories:[0m [1;32mWall[0m 
+640: 		[1;36mTiles:[0m 
+641: 			[1;31m0:[0m [1;33mWall[0m 
+0: Wall
+642: 			[1;31m1:[0m [1;33mClear[0m 
+1: Clear
+643: 	[1;35mTemplate@386:[0m 
+Template@386: Clear
+644: 		[1;36mId:[0m [1;32m386[0m 
+Id: 386
+645: 		[1;36mImages:[0m [1;32mxtra0003.int[0m 
+Images: xtra0003.int
+646: 		[1;36mSize:[0m [1;32m1,1[0m 
+Size: 1,1
+647: 		[1;36mCategories:[0m [1;32mWall[0m 
+648: 		[1;36mTiles:[0m 
+649: 			[1;31m0:[0m [1;33mWall[0m 
+0: Wall
+650: 	[1;35mTemplate@387:[0m 
+Template@387: Wall
+651: 		[1;36mId:[0m [1;32m387[0m 
+Id: 387
+652: 		[1;36mImages:[0m [1;32mxtra0004.int[0m 
+Images: xtra0004.int
+653: 		[1;36mSize:[0m [1;32m1,2[0m 
+Size: 1,2
+654: 		[1;36mCategories:[0m [1;32mWall[0m 
+655: 		[1;36mTiles:[0m 
+656: 			[1;31m0:[0m [1;33mWall[0m 
+0: Wall
+657: 			[1;31m1:[0m [1;33mClear[0m 
+1: Clear
+658: 	[1;35mTemplate@388:[0m 
+Template@388: Clear
+659: 		[1;36mId:[0m [1;32m388[0m 
+Id: 388
+660: 		[1;36mImages:[0m [1;32mxtra0005.int[0m 
+Images: xtra0005.int
+661: 		[1;36mSize:[0m [1;32m1,1[0m 
+Size: 1,1
+662: 		[1;36mCategories:[0m [1;32mWall[0m 
+663: 		[1;36mTiles:[0m 
+664: 			[1;31m0:[0m [1;33mWall[0m 
+0: Wall
+665: 	[1;35mTemplate@389:[0m 
+Template@389: Wall
+666: 		[1;36mId:[0m [1;32m389[0m 
+Id: 389
+667: 		[1;36mImages:[0m [1;32mxtra0006.int[0m 
+Images: xtra0006.int
+668: 		[1;36mSize:[0m [1;32m2,1[0m 
+Size: 2,1
+669: 		[1;36mCategories:[0m [1;32mWall[0m 
+670: 		[1;36mTiles:[0m 
+671: 			[1;31m0:[0m [1;33mWall[0m 
+0: Wall
+672: 			[1;31m1:[0m [1;33mClear[0m 
+1: Clear
+673: 	[1;35mTemplate@390:[0m 
+Template@390: Clear
+674: 		[1;36mId:[0m [1;32m390[0m 
+Id: 390
+675: 		[1;36mImages:[0m [1;32mxtra0007.int[0m 
+Images: xtra0007.int
+676: 		[1;36mSize:[0m [1;32m1,1[0m 
+Size: 1,1
+677: 		[1;36mCategories:[0m [1;32mWall[0m 
+678: 		[1;36mTiles:[0m 
+679: 			[1;31m0:[0m [1;33mWall[0m 
+0: Wall
+680: 	[1;35mTemplate@391:[0m 
+Template@391: Wall
+681: 		[1;36mId:[0m [1;32m391[0m 
+Id: 391
+682: 		[1;36mImages:[0m [1;32mxtra0008.int[0m 
+Images: xtra0008.int
+683: 		[1;36mSize:[0m [1;32m1,2[0m 
+Size: 1,2
+684: 		[1;36mCategories:[0m [1;32mWall[0m 
+685: 		[1;36mTiles:[0m 
+686: 			[1;31m0:[0m [1;33mWall[0m 
+0: Wall
+687: 			[1;31m1:[0m [1;33mClear[0m 
+1: Clear
+688: 	[1;35mTemplate@392:[0m 
+Template@392: Clear
+689: 		[1;36mId:[0m [1;32m392[0m 
+Id: 392
+690: 		[1;36mImages:[0m [1;32mxtra0009.int[0m 
+Images: xtra0009.int
+691: 		[1;36mSize:[0m [1;32m1,1[0m 
+Size: 1,1
+692: 		[1;36mCategories:[0m [1;32mWall[0m 
+693: 		[1;36mTiles:[0m 
+694: 			[1;31m0:[0m [1;33mWall[0m 
+0: Wall
+695: 	[1;35mTemplate@393:[0m 
+Template@393: Wall
+696: 		[1;36mId:[0m [1;32m393[0m 
+Id: 393
+697: 		[1;36mImages:[0m [1;32mxtra0010.int[0m 
+Images: xtra0010.int
+698: 		[1;36mSize:[0m [1;32m1,1[0m 
+Size: 1,1
+699: 		[1;36mCategories:[0m [1;32mWall[0m 
+700: 		[1;36mTiles:[0m 
+701: 			[1;31m0:[0m [1;33mWall[0m 
+0: Wall
+702: 	[1;35mTemplate@394:[0m 
+Template@394: Wall
+703: 		[1;36mId:[0m [1;32m394[0m 
+Id: 394
+704: 		[1;36mImages:[0m [1;32mxtra0011.int[0m 
+Images: xtra0011.int
+705: 		[1;36mSize:[0m [1;32m1,1[0m 
+Size: 1,1
+706: 		[1;36mCategories:[0m [1;32mWall[0m 
+707: 		[1;36mTiles:[0m 
+708: 			[1;31m0:[0m [1;33mWall[0m 
+0: Wall
+709: 	[1;35mTemplate@395:[0m 
+Template@395: Wall
+710: 		[1;36mId:[0m [1;32m395[0m 
+Id: 395
+711: 		[1;36mImages:[0m [1;32mxtra0012.int[0m 
+Images: xtra0012.int
+712: 		[1;36mSize:[0m [1;32m1,2[0m 
+Size: 1,2
+713: 		[1;36mCategories:[0m [1;32mWall[0m 
+714: 		[1;36mTiles:[0m 
+715: 			[1;31m0:[0m [1;33mWall[0m 
+0: Wall
+716: 			[1;31m1:[0m [1;33mClear[0m 
+1: Clear
+717: 	[1;35mTemplate@396:[0m 
+Template@396: Clear
+718: 		[1;36mId:[0m [1;32m396[0m 
+Id: 396
+719: 		[1;36mImages:[0m [1;32mxtra0013.int[0m 
+Images: xtra0013.int
+720: 		[1;36mSize:[0m [1;32m1,2[0m 
+Size: 1,2
+721: 		[1;36mCategories:[0m [1;32mWall[0m 
+722: 		[1;36mTiles:[0m 
+723: 			[1;31m0:[0m [1;33mWall[0m 
+0: Wall
+724: 			[1;31m1:[0m [1;33mClear[0m 
+1: Clear
+725: 	[1;35mTemplate@397:[0m 
+Template@397: Clear
+726: 		[1;36mId:[0m [1;32m397[0m 
+Id: 397
+727: 		[1;36mImages:[0m [1;32mxtra0014.int[0m 
+Images: xtra0014.int
+728: 		[1;36mSize:[0m [1;32m3,2[0m 
+Size: 3,2
+729: 		[1;36mCategories:[0m [1;32mWall[0m 
+730: 		[1;36mTiles:[0m 
+731: 			[1;31m0:[0m [1;33mClear[0m 
+0: Clear
+732: 			[1;31m1:[0m [1;33mWall[0m 
+1: Wall
+733: 			[1;31m2:[0m [1;33mClear[0m 
+2: Clear
+734: 			[1;31m3:[0m [1;33mClear[0m 
+3: Clear
+735: 			[1;31m4:[0m [1;33mClear[0m 
+4: Clear
+736: 			[1;31m5:[0m [1;33mClear[0m 
+5: Clear
+737: 	[1;35mTemplate@398:[0m 
+Template@398: Clear
+738: 		[1;36mId:[0m [1;32m398[0m 
+Id: 398
+739: 		[1;36mImages:[0m [1;32mxtra0015.int[0m 
+Images: xtra0015.int
+740: 		[1;36mSize:[0m [1;32m3,2[0m 
+Size: 3,2
+741: 		[1;36mCategories:[0m [1;32mWall[0m 
+742: 		[1;36mTiles:[0m 
+743: 			[1;31m0:[0m [1;33mWall[0m 
+0: Wall
+744: 			[1;31m1:[0m [1;33mWall[0m 
+1: Wall
+745: 			[1;31m2:[0m [1;33mWall[0m 
+2: Wall
+746: 			[1;31m3:[0m [1;33mWall[0m 
+3: Wall
+747: 			[1;31m4:[0m [1;33mWall[0m 
+4: Wall
+748: 			[1;31m5:[0m [1;33mWall[0m 
+5: Wall
+749: 	[1;35mTemplate@399:[0m 
+Template@399: Wall
+750: 		[1;36mId:[0m [1;32m399[0m 
+Id: 399
+751: 		[1;36mImages:[0m [1;32mxtra0016.int[0m 
+Images: xtra0016.int
+752: 		[1;36mSize:[0m [1;32m2,4[0m 
+Size: 2,4
+753: 		[1;36mCategories:[0m [1;32mWall[0m 
+754: 		[1;36mTiles:[0m 
+755: 			[1;31m0:[0m [1;33mWall[0m 
+0: Wall
+756: 			[1;31m1:[0m [1;33mWall[0m 
+1: Wall
+757: 			[1;31m2:[0m [1;33mWall[0m 
+2: Wall
+758: 			[1;31m3:[0m [1;33mWall[0m 
+3: Wall
+759: 			[1;31m4:[0m [1;33mWall[0m 
+4: Wall
+760: 			[1;31m5:[0m [1;33mWall[0m 
+5: Wall
+761: 			[1;31m6:[0m [1;33mWall[0m 
+6: Wall
+762: 			[1;31m7:[0m [1;33mWall[0m 
+7: Wall
+763: 	[1;35mTemplate@318:[0m 
+Template@318: Wall
+764: 		[1;36mId:[0m [1;32m318[0m 
+Id: 318
+765: 		[1;36mImages:[0m [1;32mstrp0001.int[0m 
+Images: strp0001.int
+766: 		[1;36mSize:[0m [1;32m1,1[0m 
+Size: 1,1
+767: 		[1;36mPickAny:[0m [1;32mTrue[0m 
+768: 		[1;36mCategories:[0m [1;32mFloor[0m 
+769: 		[1;36mTiles:[0m 
+770: 			[1;31m0:[0m [1;33mClear[0m 
+0: Clear
+771: 			[1;31m1:[0m [1;33mClear[0m 
+1: Clear
+772: 			[1;31m2:[0m [1;33mClear[0m 
+2: Clear
+773: 			[1;31m3:[0m [1;33mClear[0m 
+3: Clear
+774: 			[1;31m4:[0m [1;33mClear[0m 
+4: Clear
+775: 			[1;31m5:[0m [1;33mClear[0m 
+5: Clear
+776: 			[1;31m6:[0m [1;33mClear[0m 
+6: Clear
+777: 			[1;31m7:[0m [1;33mClear[0m 
+7: Clear
+778: 			[1;31m8:[0m [1;33mClear[0m 
+8: Clear
+779: 			[1;31m9:[0m [1;33mClear[0m 
+9: Clear
+780: 			[1;31m10:[0m [1;33mClear[0m 
+10: Clear
+781: 			[1;31m11:[0m [1;33mClear[0m 
+11: Clear
+782: 	[1;35mTemplate@319:[0m 
+Template@319: Clear
+783: 		[1;36mId:[0m [1;32m319[0m 
+Id: 319
+784: 		[1;36mImages:[0m [1;32mstrp0002.int[0m 
+Images: strp0002.int
+785: 		[1;36mSize:[0m [1;32m1,1[0m 
+Size: 1,1
+786: 		[1;36mPickAny:[0m [1;32mTrue[0m 
+787: 		[1;36mCategories:[0m [1;32mFloor[0m 
+788: 		[1;36mTiles:[0m 
+789: 			[1;31m0:[0m [1;33mClear[0m 
+0: Clear
+790: 			[1;31m1:[0m [1;33mClear[0m 
+1: Clear
+791: 			[1;31m2:[0m [1;33mClear[0m 
+2: Clear
+792: 			[1;31m3:[0m [1;33mClear[0m 
+3: Clear
+793: 			[1;31m4:[0m [1;33mClear[0m 
+4: Clear
+794: 			[1;31m5:[0m [1;33mClear[0m 
+5: Clear
+795: 			[1;31m6:[0m [1;33mClear[0m 
+6: Clear
+796: 			[1;31m7:[0m [1;33mClear[0m 
+7: Clear
+797: 			[1;31m8:[0m [1;33mClear[0m 
+8: Clear
+798: 			[1;31m9:[0m [1;33mClear[0m 
+9: Clear
+799: 			[1;31m10:[0m [1;33mClear[0m 
+10: Clear
+800: 			[1;31m11:[0m [1;33mClear[0m 
+11: Clear
+801: 	[1;35mTemplate@320:[0m 
+Template@320: Clear
+802: 		[1;36mId:[0m [1;32m320[0m 
+Id: 320
+803: 		[1;36mImages:[0m [1;32mstrp0003.int[0m 
+Images: strp0003.int
+804: 		[1;36mSize:[0m [1;32m1,1[0m 
+Size: 1,1
+805: 		[1;36mCategories:[0m [1;32mFloor[0m 
+806: 		[1;36mTiles:[0m 
+807: 			[1;31m0:[0m [1;33mClear[0m 
+0: Clear
+808: 	[1;35mTemplate@321:[0m 
+Template@321: Clear
+809: 		[1;36mId:[0m [1;32m321[0m 
+Id: 321
+810: 		[1;36mImages:[0m [1;32mstrp0004.int[0m 
+Images: strp0004.int
+811: 		[1;36mSize:[0m [1;32m1,1[0m 
+Size: 1,1
+812: 		[1;36mCategories:[0m [1;32mFloor[0m 
+813: 		[1;36mTiles:[0m 
+814: 			[1;31m0:[0m [1;33mClear[0m 
+0: Clear
+815: 	[1;35mTemplate@322:[0m 
+Template@322: Clear
+816: 		[1;36mId:[0m [1;32m322[0m 
+Id: 322
+817: 		[1;36mImages:[0m [1;32mstrp0005.int[0m 
+Images: strp0005.int
+818: 		[1;36mSize:[0m [1;32m1,1[0m 
+Size: 1,1
+819: 		[1;36mCategories:[0m [1;32mFloor[0m 
+820: 		[1;36mTiles:[0m 
+821: 			[1;31m0:[0m [1;33mClear[0m 
+0: Clear
+822: 	[1;35mTemplate@323:[0m 
+Template@323: Clear
+823: 		[1;36mId:[0m [1;32m323[0m 
+Id: 323
+824: 		[1;36mImages:[0m [1;32mstrp0006.int[0m 
+Images: strp0006.int
+825: 		[1;36mSize:[0m [1;32m1,1[0m 
+Size: 1,1
+826: 		[1;36mCategories:[0m [1;32mFloor[0m 
+827: 		[1;36mTiles:[0m 
+828: 			[1;31m0:[0m [1;33mClear[0m 
+0: Clear
+829: 	[1;35mTemplate@324:[0m 
+Template@324: Clear
+830: 		[1;36mId:[0m [1;32m324[0m 
+Id: 324
+831: 		[1;36mImages:[0m [1;32mstrp0007.int[0m 
+Images: strp0007.int
+832: 		[1;36mSize:[0m [1;32m1,1[0m 
+Size: 1,1
+833: 		[1;36mCategories:[0m [1;32mFloor[0m 
+834: 		[1;36mTiles:[0m 
+835: 			[1;31m0:[0m [1;33mClear[0m 
+0: Clear
+836: 	[1;35mTemplate@325:[0m 
+Template@325: Clear
+837: 		[1;36mId:[0m [1;32m325[0m 
+Id: 325
+838: 		[1;36mImages:[0m [1;32mstrp0008.int[0m 
+Images: strp0008.int
+839: 		[1;36mSize:[0m [1;32m1,1[0m 
+Size: 1,1
+840: 		[1;36mCategories:[0m [1;32mFloor[0m 
+841: 		[1;36mTiles:[0m 
+842: 			[1;31m0:[0m [1;33mClear[0m 
+0: Clear
+843: 	[1;35mTemplate@326:[0m 
+Template@326: Clear
+844: 		[1;36mId:[0m [1;32m326[0m 
+Id: 326
+845: 		[1;36mImages:[0m [1;32mstrp0009.int[0m 
+Images: strp0009.int
+846: 		[1;36mSize:[0m [1;32m1,1[0m 
+Size: 1,1
+847: 		[1;36mCategories:[0m [1;32mFloor[0m 
+848: 		[1;36mTiles:[0m 
+849: 			[1;31m0:[0m [1;33mClear[0m 
+0: Clear
+850: 	[1;35mTemplate@327:[0m 
+Template@327: Clear
+851: 		[1;36mId:[0m [1;32m327[0m 
+Id: 327
+852: 		[1;36mImages:[0m [1;32mstrp0010.int[0m 
+Images: strp0010.int
+853: 		[1;36mSize:[0m [1;32m1,1[0m 
+Size: 1,1
+854: 		[1;36mCategories:[0m [1;32mFloor[0m 
+855: 		[1;36mTiles:[0m 
+856: 			[1;31m0:[0m [1;33mClear[0m 
+0: Clear
+857: 	[1;35mTemplate@328:[0m 
+Template@328: Clear
+858: 		[1;36mId:[0m [1;32m328[0m 
+Id: 328
+859: 		[1;36mImages:[0m [1;32mstrp0011.int[0m 
+Images: strp0011.int
+860: 		[1;36mSize:[0m [1;32m1,1[0m 
+Size: 1,1
+861: 		[1;36mCategories:[0m [1;32mFloor[0m 
+862: 		[1;36mTiles:[0m 
+863: 			[1;31m0:[0m [1;33mClear[0m 
+0: Clear
+864: 	[1;35mTemplate@253:[0m 
+Template@253: Clear
+865: 		[1;36mId:[0m [1;32m253[0m 
+Id: 253
+866: 		[1;36mImages:[0m [1;32marro0001.int[0m 
+Images: arro0001.int
+867: 		[1;36mSize:[0m [1;32m1,1[0m 
+Size: 1,1
+868: 		[1;36mPickAny:[0m [1;32mTrue[0m 
+869: 		[1;36mCategories:[0m [1;32mFloor[0m 
+870: 		[1;36mTiles:[0m 
+871: 			[1;31m0:[0m [1;33mClear[0m 
+0: Clear
+872: 			[1;31m1:[0m [1;33mClear[0m 
+1: Clear
+873: 			[1;31m2:[0m [1;33mClear[0m 
+2: Clear
+874: 			[1;31m3:[0m [1;33mClear[0m 
+3: Clear
+875: 			[1;31m4:[0m [1;33mClear[0m 
+4: Clear
+876: 			[1;31m5:[0m [1;33mClear[0m 
+5: Clear
+877: 	[1;35mTemplate@254:[0m 
+Template@254: Clear
+878: 		[1;36mId:[0m [1;32m254[0m 
+Id: 254
+879: 		[1;36mImages:[0m [1;32marro0002.int[0m 
+Images: arro0002.int
+880: 		[1;36mSize:[0m [1;32m1,1[0m 
+Size: 1,1
+881: 		[1;36mPickAny:[0m [1;32mTrue[0m 
+882: 		[1;36mCategories:[0m [1;32mFloor[0m 
+883: 		[1;36mTiles:[0m 
+884: 			[1;31m0:[0m [1;33mClear[0m 
+0: Clear
+885: 			[1;31m1:[0m [1;33mClear[0m 
+1: Clear
+886: 			[1;31m2:[0m [1;33mClear[0m 
+2: Clear
+887: 			[1;31m3:[0m [1;33mClear[0m 
+3: Clear
+888: 			[1;31m4:[0m [1;33mClear[0m 
+4: Clear
+889: 			[1;31m5:[0m [1;33mClear[0m 
+5: Clear
+890: 	[1;35mTemplate@256:[0m 
+Template@256: Clear
+891: 		[1;36mId:[0m [1;32m256[0m 
+Id: 256
+892: 		[1;36mImages:[0m [1;32marro0004.int[0m 
+Images: arro0004.int
+893: 		[1;36mSize:[0m [1;32m1,1[0m 
+Size: 1,1
+894: 		[1;36mPickAny:[0m [1;32mTrue[0m 
+895: 		[1;36mCategories:[0m [1;32mFloor[0m 
+896: 		[1;36mTiles:[0m 
+897: 			[1;31m0:[0m [1;33mClear[0m 
+0: Clear
+898: 			[1;31m1:[0m [1;33mClear[0m 
+1: Clear
+899: 			[1;31m2:[0m [1;33mClear[0m 
+2: Clear
+900: 			[1;31m3:[0m [1;33mClear[0m 
+3: Clear
+901: 			[1;31m4:[0m [1;33mClear[0m 
+4: Clear
+902: 			[1;31m5:[0m [1;33mClear[0m 
+5: Clear
+903: 	[1;35mTemplate@257:[0m 
+Template@257: Clear
+904: 		[1;36mId:[0m [1;32m257[0m 
+Id: 257
+905: 		[1;36mImages:[0m [1;32marro0005.int[0m 
+Images: arro0005.int
+906: 		[1;36mSize:[0m [1;32m1,1[0m 
+Size: 1,1
+907: 		[1;36mPickAny:[0m [1;32mTrue[0m 
+908: 		[1;36mCategories:[0m [1;32mFloor[0m 
+909: 		[1;36mTiles:[0m 
+910: 			[1;31m0:[0m [1;33mClear[0m 
+0: Clear
+911: 			[1;31m1:[0m [1;33mClear[0m 
+1: Clear
+912: 			[1;31m2:[0m [1;33mClear[0m 
+2: Clear
+913: 			[1;31m3:[0m [1;33mClear[0m 
+3: Clear
+914: 			[1;31m4:[0m [1;33mClear[0m 
+4: Clear
+915: 			[1;31m5:[0m [1;33mClear[0m 
+5: Clear
+916: 	[1;35mTemplate@258:[0m 
+Template@258: Clear
+917: 		[1;36mId:[0m [1;32m258[0m 
+Id: 258
+918: 		[1;36mImages:[0m [1;32marro0006.int[0m 
+Images: arro0006.int
+919: 		[1;36mSize:[0m [1;32m1,1[0m 
+Size: 1,1
+920: 		[1;36mPickAny:[0m [1;32mTrue[0m 
+921: 		[1;36mCategories:[0m [1;32mFloor[0m 
+922: 		[1;36mTiles:[0m 
+923: 			[1;31m0:[0m [1;33mClear[0m 
+0: Clear
+924: 			[1;31m1:[0m [1;33mClear[0m 
+1: Clear
+925: 			[1;31m2:[0m [1;33mClear[0m 
+2: Clear
+926: 			[1;31m3:[0m [1;33mClear[0m 
+3: Clear
+927: 			[1;31m4:[0m [1;33mClear[0m 
+4: Clear
+928: 			[1;31m5:[0m [1;33mClear[0m 
+5: Clear
+929: 	[1;35mTemplate@259:[0m 
+Template@259: Clear
+930: 		[1;36mId:[0m [1;32m259[0m 
+Id: 259
+931: 		[1;36mImages:[0m [1;32marro0007.int[0m 
+Images: arro0007.int
+932: 		[1;36mSize:[0m [1;32m1,1[0m 
+Size: 1,1
+933: 		[1;36mCategories:[0m [1;32mFloor[0m 
+934: 		[1;36mTiles:[0m 
+935: 			[1;31m0:[0m [1;33mClear[0m 
+0: Clear
+936: 	[1;35mTemplate@260:[0m 
+Template@260: Clear
+937: 		[1;36mId:[0m [1;32m260[0m 
+Id: 260
+938: 		[1;36mImages:[0m [1;32marro0008.int[0m 
+Images: arro0008.int
+939: 		[1;36mSize:[0m [1;32m1,1[0m 
+Size: 1,1
+940: 		[1;36mCategories:[0m [1;32mFloor[0m 
+941: 		[1;36mTiles:[0m 
+942: 			[1;31m0:[0m [1;33mClear[0m 
+0: Clear
+943: 	[1;35mTemplate@261:[0m 
+Template@261: Clear
+944: 		[1;36mId:[0m [1;32m261[0m 
+Id: 261
+945: 		[1;36mImages:[0m [1;32marro0009.int[0m 
+Images: arro0009.int
+946: 		[1;36mSize:[0m [1;32m1,1[0m 
+Size: 1,1
+947: 		[1;36mCategories:[0m [1;32mFloor[0m 
+948: 		[1;36mTiles:[0m 
+949: 			[1;31m0:[0m [1;33mClear[0m 
+0: Clear
+950: 	[1;35mTemplate@262:[0m 
+Template@262: Clear
+951: 		[1;36mId:[0m [1;32m262[0m 
+Id: 262
+952: 		[1;36mImages:[0m [1;32marro0010.int[0m 
+Images: arro0010.int
+953: 		[1;36mSize:[0m [1;32m1,1[0m 
+Size: 1,1
+954: 		[1;36mCategories:[0m [1;32mFloor[0m 
+955: 		[1;36mTiles:[0m 
+956: 			[1;31m0:[0m [1;33mClear[0m 
+0: Clear
+957: 	[1;35mTemplate@263:[0m 
+Template@263: Clear
+958: 		[1;36mId:[0m [1;32m263[0m 
+Id: 263
+959: 		[1;36mImages:[0m [1;32marro0011.int[0m 
+Images: arro0011.int
+960: 		[1;36mSize:[0m [1;32m1,1[0m 
+Size: 1,1
+961: 		[1;36mCategories:[0m [1;32mFloor[0m 
+962: 		[1;36mTiles:[0m 
+963: 			[1;31m0:[0m [1;33mClear[0m 
+0: Clear
+964: 	[1;35mTemplate@264:[0m 
+Template@264: Clear
+965: 		[1;36mId:[0m [1;32m264[0m 
+Id: 264
+966: 		[1;36mImages:[0m [1;32marro0012.int[0m 
+Images: arro0012.int
+967: 		[1;36mSize:[0m [1;32m1,1[0m 
+Size: 1,1
+968: 		[1;36mCategories:[0m [1;32mFloor[0m 
+969: 		[1;36mTiles:[0m 
+970: 			[1;31m0:[0m [1;33mClear[0m 
+0: Clear
+971: 	[1;35mTemplate@265:[0m 
+Template@265: Clear
+972: 		[1;36mId:[0m [1;32m265[0m 
+Id: 265
+973: 		[1;36mImages:[0m [1;32marro0013.int[0m 
+Images: arro0013.int
+974: 		[1;36mSize:[0m [1;32m1,1[0m 
+Size: 1,1
+975: 		[1;36mCategories:[0m [1;32mFloor[0m 
+976: 		[1;36mTiles:[0m 
+977: 			[1;31m0:[0m [1;33mClear[0m 
+0: Clear
+978: 	[1;35mTemplate@266:[0m 
+Template@266: Clear
+979: 		[1;36mId:[0m [1;32m266[0m 
+Id: 266
+980: 		[1;36mImages:[0m [1;32marro0014.int[0m 
+Images: arro0014.int
+981: 		[1;36mSize:[0m [1;32m1,1[0m 
+Size: 1,1
+982: 		[1;36mCategories:[0m [1;32mFloor[0m 
+983: 		[1;36mTiles:[0m 
+984: 			[1;31m0:[0m [1;33mClear[0m 
+0: Clear
+985: 	[1;35mTemplate@267:[0m 
+Template@267: Clear
+986: 		[1;36mId:[0m [1;32m267[0m 
+Id: 267
+987: 		[1;36mImages:[0m [1;32marro0015.int[0m 
+Images: arro0015.int
+988: 		[1;36mSize:[0m [1;32m1,1[0m 
+Size: 1,1
+989: 		[1;36mCategories:[0m [1;32mFloor[0m 
+990: 		[1;36mTiles:[0m 
+991: 			[1;31m0:[0m [1;33mClear[0m 
+0: Clear
+992: 	[1;35mTemplate@275:[0m 
+Template@275: Clear
+993: 		[1;36mId:[0m [1;32m275[0m 
+Id: 275
+994: 		[1;36mImages:[0m [1;32mgflr0001.int[0m 
+Images: gflr0001.int
+995: 		[1;36mSize:[0m [1;32m1,1[0m 
+Size: 1,1
+996: 		[1;36mPickAny:[0m [1;32mTrue[0m 
+997: 		[1;36mCategories:[0m [1;32mFloor[0m 
+998: 		[1;36mTiles:[0m 
+999: 			[1;31m0:[0m [1;33mClear[0m 
+0: Clear
+1000: 			[1;31m1:[0m [1;33mClear[0m 
+1: Clear
+1001: 			[1;31m2:[0m [1;33mClear[0m 
+2: Clear
+1002: 			[1;31m3:[0m [1;33mClear[0m 
+3: Clear
+1003: 			[1;31m4:[0m [1;33mClear[0m 
+4: Clear
+1004: 			[1;31m5:[0m [1;33mClear[0m 
+5: Clear
+1005: 			[1;31m6:[0m [1;33mClear[0m 
+6: Clear
+1006: 			[1;31m7:[0m [1;33mClear[0m 
+7: Clear
+1007: 			[1;31m8:[0m [1;33mClear[0m 
+8: Clear
+1008: 			[1;31m9:[0m [1;33mClear[0m 
+9: Clear
+1009: 			[1;31m10:[0m [1;33mClear[0m 
+10: Clear
+1010: 			[1;31m11:[0m [1;33mClear[0m 
+11: Clear
+1011: 			[1;31m12:[0m [1;33mClear[0m 
+12: Clear
+1012: 	[1;35mTemplate@276:[0m 
+Template@276: Clear
+1013: 		[1;36mId:[0m [1;32m276[0m 
+Id: 276
+1014: 		[1;36mImages:[0m [1;32mgflr0002.int[0m 
+Images: gflr0002.int
+1015: 		[1;36mSize:[0m [1;32m1,1[0m 
+Size: 1,1
+1016: 		[1;36mPickAny:[0m [1;32mTrue[0m 
+1017: 		[1;36mCategories:[0m [1;32mFloor[0m 
+1018: 		[1;36mTiles:[0m 
+1019: 			[1;31m0:[0m [1;33mClear[0m 
+0: Clear
+1020: 			[1;31m1:[0m [1;33mClear[0m 
+1: Clear
+1021: 			[1;31m2:[0m [1;33mClear[0m 
+2: Clear
+1022: 			[1;31m3:[0m [1;33mClear[0m 
+3: Clear
+1023: 			[1;31m4:[0m [1;33mClear[0m 
+4: Clear
+1024: 			[1;31m5:[0m [1;33mClear[0m 
+5: Clear
+1025: 			[1;31m6:[0m [1;33mClear[0m 
+6: Clear
+1026: 			[1;31m7:[0m [1;33mClear[0m 
+7: Clear
+1027: 			[1;31m8:[0m [1;33mClear[0m 
+8: Clear
+1028: 			[1;31m9:[0m [1;33mClear[0m 
+9: Clear
+1029: 			[1;31m10:[0m [1;33mClear[0m 
+10: Clear
+1030: 			[1;31m11:[0m [1;33mClear[0m 
+11: Clear
+1031: 			[1;31m12:[0m [1;33mClear[0m 
+12: Clear
+1032: 	[1;35mTemplate@277:[0m 
+Template@277: Clear
+1033: 		[1;36mId:[0m [1;32m277[0m 
+Id: 277
+1034: 		[1;36mImages:[0m [1;32mgflr0003.int[0m 
+Images: gflr0003.int
+1035: 		[1;36mSize:[0m [1;32m1,1[0m 
+Size: 1,1
+1036: 		[1;36mPickAny:[0m [1;32mTrue[0m 
+1037: 		[1;36mCategories:[0m [1;32mFloor[0m 
+1038: 		[1;36mTiles:[0m 
+1039: 			[1;31m0:[0m [1;33mClear[0m 
+0: Clear
+1040: 			[1;31m1:[0m [1;33mClear[0m 
+1: Clear
+1041: 			[1;31m2:[0m [1;33mClear[0m 
+2: Clear
+1042: 			[1;31m3:[0m [1;33mClear[0m 
+3: Clear
+1043: 			[1;31m4:[0m [1;33mClear[0m 
+4: Clear
+1044: 			[1;31m5:[0m [1;33mClear[0m 
+5: Clear
+1045: 			[1;31m6:[0m [1;33mClear[0m 
+6: Clear
+1046: 			[1;31m7:[0m [1;33mClear[0m 
+7: Clear
+1047: 			[1;31m8:[0m [1;33mClear[0m 
+8: Clear
+1048: 			[1;31m9:[0m [1;33mClear[0m 
+9: Clear
+1049: 			[1;31m10:[0m [1;33mClear[0m 
+10: Clear
+1050: 			[1;31m11:[0m [1;33mClear[0m 
+11: Clear
+1051: 			[1;31m12:[0m [1;33mClear[0m 
+12: Clear
+1052: 	[1;35mTemplate@278:[0m 
+Template@278: Clear
+1053: 		[1;36mId:[0m [1;32m278[0m 
+Id: 278
+1054: 		[1;36mImages:[0m [1;32mgflr0004.int[0m 
+Images: gflr0004.int
+1055: 		[1;36mSize:[0m [1;32m1,1[0m 
+Size: 1,1
+1056: 		[1;36mPickAny:[0m [1;32mTrue[0m 
+1057: 		[1;36mCategories:[0m [1;32mFloor[0m 
+1058: 		[1;36mTiles:[0m 
+1059: 			[1;31m0:[0m [1;33mClear[0m 
+0: Clear
+1060: 			[1;31m1:[0m [1;33mClear[0m 
+1: Clear
+1061: 			[1;31m2:[0m [1;33mClear[0m 
+2: Clear
+1062: 			[1;31m3:[0m [1;33mClear[0m 
+3: Clear
+1063: 			[1;31m4:[0m [1;33mClear[0m 
+4: Clear
+1064: 			[1;31m5:[0m [1;33mClear[0m 
+5: Clear
+1065: 			[1;31m6:[0m [1;33mClear[0m 
+6: Clear
+1066: 			[1;31m7:[0m [1;33mClear[0m 
+7: Clear
+1067: 			[1;31m8:[0m [1;33mClear[0m 
+8: Clear
+1068: 			[1;31m9:[0m [1;33mClear[0m 
+9: Clear
+1069: 			[1;31m10:[0m [1;33mClear[0m 
+10: Clear
+1070: 			[1;31m11:[0m [1;33mClear[0m 
+11: Clear
+1071: 			[1;31m12:[0m [1;33mClear[0m 
+12: Clear
+1072: 	[1;35mTemplate@279:[0m 
+Template@279: Clear
+1073: 		[1;36mId:[0m [1;32m279[0m 
+Id: 279
+1074: 		[1;36mImages:[0m [1;32mgflr0005.int[0m 
+Images: gflr0005.int
+1075: 		[1;36mSize:[0m [1;32m1,1[0m 
+Size: 1,1
+1076: 		[1;36mPickAny:[0m [1;32mTrue[0m 
+1077: 		[1;36mCategories:[0m [1;32mFloor[0m 
+1078: 		[1;36mTiles:[0m 
+1079: 			[1;31m0:[0m [1;33mClear[0m 
+0: Clear
+1080: 			[1;31m1:[0m [1;33mClear[0m 
+1: Clear
+1081: 			[1;31m2:[0m [1;33mClear[0m 
+2: Clear
+1082: 			[1;31m3:[0m [1;33mClear[0m 
+3: Clear
+1083: 			[1;31m4:[0m [1;33mClear[0m 
+4: Clear
+1084: 			[1;31m5:[0m [1;33mClear[0m 
+5: Clear
+1085: 			[1;31m6:[0m [1;33mClear[0m 
+6: Clear
+1086: 			[1;31m7:[0m [1;33mClear[0m 
+7: Clear
+1087: 			[1;31m8:[0m [1;33mClear[0m 
+8: Clear
+1088: 			[1;31m9:[0m [1;33mClear[0m 
+9: Clear
+1089: 			[1;31m10:[0m [1;33mClear[0m 
+10: Clear
+1090: 			[1;31m11:[0m [1;33mClear[0m 
+11: Clear
+1091: 			[1;31m12:[0m [1;33mClear[0m 
+12: Clear
+1092: 	[1;35mTemplate@280:[0m 
+Template@280: Clear
+1093: 		[1;36mId:[0m [1;32m280[0m 
+Id: 280
+1094: 		[1;36mImages:[0m [1;32mgstr0001.int[0m 
+Images: gstr0001.int
+1095: 		[1;36mSize:[0m [1;32m1,1[0m 
+Size: 1,1
+1096: 		[1;36mPickAny:[0m [1;32mTrue[0m 
+1097: 		[1;36mCategories:[0m [1;32mFloor[0m 
+1098: 		[1;36mTiles:[0m 
+1099: 			[1;31m0:[0m [1;33mClear[0m 
+0: Clear
+1100: 			[1;31m1:[0m [1;33mClear[0m 
+1: Clear
+1101: 			[1;31m2:[0m [1;33mClear[0m 
+2: Clear
+1102: 			[1;31m3:[0m [1;33mClear[0m 
+3: Clear
+1103: 			[1;31m4:[0m [1;33mClear[0m 
+4: Clear
+1104: 			[1;31m5:[0m [1;33mClear[0m 
+5: Clear
+1105: 	[1;35mTemplate@281:[0m 
+Template@281: Clear
+1106: 		[1;36mId:[0m [1;32m281[0m 
+Id: 281
+1107: 		[1;36mImages:[0m [1;32mgstr0002.int[0m 
+Images: gstr0002.int
+1108: 		[1;36mSize:[0m [1;32m1,1[0m 
+Size: 1,1
+1109: 		[1;36mPickAny:[0m [1;32mTrue[0m 
+1110: 		[1;36mCategories:[0m [1;32mFloor[0m 
+1111: 		[1;36mTiles:[0m 
+1112: 			[1;31m0:[0m [1;33mClear[0m 
+0: Clear
+1113: 			[1;31m1:[0m [1;33mClear[0m 
+1: Clear
+1114: 			[1;31m2:[0m [1;33mClear[0m 
+2: Clear
+1115: 			[1;31m3:[0m [1;33mClear[0m 
+3: Clear
+1116: 			[1;31m4:[0m [1;33mClear[0m 
+4: Clear
+1117: 			[1;31m5:[0m [1;33mClear[0m 
+5: Clear
+1118: 			[1;31m6:[0m [1;33mClear[0m 
+6: Clear
+1119: 			[1;31m7:[0m [1;33mClear[0m 
+7: Clear
+1120: 	[1;35mTemplate@282:[0m 
+Template@282: Clear
+1121: 		[1;36mId:[0m [1;32m282[0m 
+Id: 282
+1122: 		[1;36mImages:[0m [1;32mgstr0003.int[0m 
+Images: gstr0003.int
+1123: 		[1;36mSize:[0m [1;32m1,1[0m 
+Size: 1,1
+1124: 		[1;36mCategories:[0m [1;32mFloor[0m 
+1125: 		[1;36mTiles:[0m 
+1126: 			[1;31m0:[0m [1;33mClear[0m 
+0: Clear
+1127: 	[1;35mTemplate@283:[0m 
+Template@283: Clear
+1128: 		[1;36mId:[0m [1;32m283[0m 
+Id: 283
+1129: 		[1;36mImages:[0m [1;32mgstr0004.int[0m 
+Images: gstr0004.int
+1130: 		[1;36mSize:[0m [1;32m1,1[0m 
+Size: 1,1
+1131: 		[1;36mCategories:[0m [1;32mFloor[0m 
+1132: 		[1;36mTiles:[0m 
+1133: 			[1;31m0:[0m [1;33mClear[0m 
+0: Clear
+1134: 	[1;35mTemplate@284:[0m 
+Template@284: Clear
+1135: 		[1;36mId:[0m [1;32m284[0m 
+Id: 284
+1136: 		[1;36mImages:[0m [1;32mgstr0005.int[0m 
+Images: gstr0005.int
+1137: 		[1;36mSize:[0m [1;32m1,1[0m 
+Size: 1,1
+1138: 		[1;36mCategories:[0m [1;32mFloor[0m 
+1139: 		[1;36mTiles:[0m 
+1140: 			[1;31m0:[0m [1;33mClear[0m 
+0: Clear
+1141: 	[1;35mTemplate@285:[0m 
+Template@285: Clear
+1142: 		[1;36mId:[0m [1;32m285[0m 
+Id: 285
+1143: 		[1;36mImages:[0m [1;32mgstr0006.int[0m 
+Images: gstr0006.int
+1144: 		[1;36mSize:[0m [1;32m1,1[0m 
+Size: 1,1
+1145: 		[1;36mCategories:[0m [1;32mFloor[0m 
+1146: 		[1;36mTiles:[0m 
+1147: 			[1;31m0:[0m [1;33mClear[0m 
+0: Clear
+1148: 	[1;35mTemplate@286:[0m 
+Template@286: Clear
+1149: 		[1;36mId:[0m [1;32m286[0m 
+Id: 286
+1150: 		[1;36mImages:[0m [1;32mgstr0007.int[0m 
+Images: gstr0007.int
+1151: 		[1;36mSize:[0m [1;32m1,1[0m 
+Size: 1,1
+1152: 		[1;36mCategories:[0m [1;32mFloor[0m 
+1153: 		[1;36mTiles:[0m 
+1154: 			[1;31m0:[0m [1;33mClear[0m 
+0: Clear
+1155: 	[1;35mTemplate@287:[0m 
+Template@287: Clear
+1156: 		[1;36mId:[0m [1;32m287[0m 
+Id: 287
+1157: 		[1;36mImages:[0m [1;32mgstr0008.int[0m 
+Images: gstr0008.int
+1158: 		[1;36mSize:[0m [1;32m1,1[0m 
+Size: 1,1
+1159: 		[1;36mCategories:[0m [1;32mFloor[0m 
+1160: 		[1;36mTiles:[0m 
+1161: 			[1;31m0:[0m [1;33mClear[0m 
+0: Clear
+1162: 	[1;35mTemplate@288:[0m 
+Template@288: Clear
+1163: 		[1;36mId:[0m [1;32m288[0m 
+Id: 288
+1164: 		[1;36mImages:[0m [1;32mgstr0009.int[0m 
+Images: gstr0009.int
+1165: 		[1;36mSize:[0m [1;32m1,1[0m 
+Size: 1,1
+1166: 		[1;36mCategories:[0m [1;32mFloor[0m 
+1167: 		[1;36mTiles:[0m 
+1168: 			[1;31m0:[0m [1;33mClear[0m 
+0: Clear
+1169: 	[1;35mTemplate@289:[0m 
+Template@289: Clear
+1170: 		[1;36mId:[0m [1;32m289[0m 
+Id: 289
+1171: 		[1;36mImages:[0m [1;32mgstr0010.int[0m 
+Images: gstr0010.int
+1172: 		[1;36mSize:[0m [1;32m1,1[0m 
+Size: 1,1
+1173: 		[1;36mCategories:[0m [1;32mFloor[0m 
+1174: 		[1;36mTiles:[0m 
+1175: 			[1;31m0:[0m [1;33mClear[0m 
+0: Clear
+1176: 	[1;35mTemplate@290:[0m 
+Template@290: Clear
+1177: 		[1;36mId:[0m [1;32m290[0m 
+Id: 290
+1178: 		[1;36mImages:[0m [1;32mgstr0011.int[0m 
+Images: gstr0011.int
+1179: 		[1;36mSize:[0m [1;32m1,1[0m 
+Size: 1,1
+1180: 		[1;36mCategories:[0m [1;32mFloor[0m 
+1181: 		[1;36mTiles:[0m 
+1182: 			[1;31m0:[0m [1;33mClear[0m 
+0: Clear
+1183: 	[1;35mTemplate@291:[0m 
+Template@291: Clear
+1184: 		[1;36mId:[0m [1;32m291[0m 
+Id: 291
+1185: 		[1;36mImages:[0m [1;32mlwal0001.int[0m 
+Images: lwal0001.int
+1186: 		[1;36mSize:[0m [1;32m1,1[0m 
+Size: 1,1
+1187: 		[1;36mPickAny:[0m [1;32mTrue[0m 
+1188: 		[1;36mCategories:[0m [1;32mWall[0m 
+1189: 		[1;36mTiles:[0m 
+1190: 			[1;31m0:[0m [1;33mWall[0m 
+0: Wall
+1191: 			[1;31m1:[0m [1;33mWall[0m 
+1: Wall
+1192: 			[1;31m2:[0m [1;33mWall[0m 
+2: Wall
+1193: 			[1;31m3:[0m [1;33mWall[0m 
+3: Wall
+1194: 	[1;35mTemplate@292:[0m 
+Template@292: Wall
+1195: 		[1;36mId:[0m [1;32m292[0m 
+Id: 292
+1196: 		[1;36mImages:[0m [1;32mlwal0002.int[0m 
+Images: lwal0002.int
+1197: 		[1;36mSize:[0m [1;32m1,1[0m 
+Size: 1,1
+1198: 		[1;36mPickAny:[0m [1;32mTrue[0m 
+1199: 		[1;36mCategories:[0m [1;32mWall[0m 
+1200: 		[1;36mTiles:[0m 
+1201: 			[1;31m0:[0m [1;33mWall[0m 
+0: Wall
+1202: 			[1;31m1:[0m [1;33mWall[0m 
+1: Wall
+1203: 			[1;31m2:[0m [1;33mWall[0m 
+2: Wall
+1204: 			[1;31m3:[0m [1;33mWall[0m 
+3: Wall
+1205: 	[1;35mTemplate@293:[0m 
+Template@293: Wall
+1206: 		[1;36mId:[0m [1;32m293[0m 
+Id: 293
+1207: 		[1;36mImages:[0m [1;32mlwal0003.int[0m 
+Images: lwal0003.int
+1208: 		[1;36mSize:[0m [1;32m1,1[0m 
+Size: 1,1
+1209: 		[1;36mPickAny:[0m [1;32mTrue[0m 
+1210: 		[1;36mCategories:[0m [1;32mWall[0m 
+1211: 		[1;36mTiles:[0m 
+1212: 			[1;31m0:[0m [1;33mWall[0m 
+0: Wall
+1213: 			[1;31m1:[0m [1;33mWall[0m 
+1: Wall
+1214: 			[1;31m2:[0m [1;33mWall[0m 
+2: Wall
+1215: 			[1;31m3:[0m [1;33mWall[0m 
+3: Wall
+1216: 	[1;35mTemplate@294:[0m 
+Template@294: Wall
+1217: 		[1;36mId:[0m [1;32m294[0m 
+Id: 294
+1218: 		[1;36mImages:[0m [1;32mlwal0004.int[0m 
+Images: lwal0004.int
+1219: 		[1;36mSize:[0m [1;32m1,1[0m 
+Size: 1,1
+1220: 		[1;36mPickAny:[0m [1;32mTrue[0m 
+1221: 		[1;36mCategories:[0m [1;32mWall[0m 
+1222: 		[1;36mTiles:[0m 
+1223: 			[1;31m0:[0m [1;33mWall[0m 
+0: Wall
+1224: 			[1;31m1:[0m [1;33mWall[0m 
+1: Wall
+1225: 			[1;31m2:[0m [1;33mWall[0m 
+2: Wall
+1226: 			[1;31m3:[0m [1;33mWall[0m 
+3: Wall
+1227: 	[1;35mTemplate@295:[0m 
+Template@295: Wall
+1228: 		[1;36mId:[0m [1;32m295[0m 
+Id: 295
+1229: 		[1;36mImages:[0m [1;32mlwal0005.int[0m 
+Images: lwal0005.int
+1230: 		[1;36mSize:[0m [1;32m1,1[0m 
+Size: 1,1
+1231: 		[1;36mPickAny:[0m [1;32mTrue[0m 
+1232: 		[1;36mCategories:[0m [1;32mWall[0m 
+1233: 		[1;36mTiles:[0m 
+1234: 			[1;31m0:[0m [1;33mWall[0m 
+0: Wall
+1235: 			[1;31m1:[0m [1;33mWall[0m 
+1: Wall
+1236: 			[1;31m2:[0m [1;33mWall[0m 
+2: Wall
+1237: 			[1;31m3:[0m [1;33mWall[0m 
+3: Wall
+1238: 			[1;31m4:[0m [1;33mWall[0m 
+4: Wall
+1239: 			[1;31m5:[0m [1;33mWall[0m 
+5: Wall
+1240: 	[1;35mTemplate@296:[0m 
+Template@296: Wall
+1241: 		[1;36mId:[0m [1;32m296[0m 
+Id: 296
+1242: 		[1;36mImages:[0m [1;32mlwal0006.int[0m 
+Images: lwal0006.int
+1243: 		[1;36mSize:[0m [1;32m1,1[0m 
+Size: 1,1
+1244: 		[1;36mCategories:[0m [1;32mWall[0m 
+1245: 		[1;36mTiles:[0m 
+1246: 			[1;31m0:[0m [1;33mWall[0m 
+0: Wall
+1247: 	[1;35mTemplate@297:[0m 
+Template@297: Wall
+1248: 		[1;36mId:[0m [1;32m297[0m 
+Id: 297
+1249: 		[1;36mImages:[0m [1;32mlwal0007.int[0m 
+Images: lwal0007.int
+1250: 		[1;36mSize:[0m [1;32m1,1[0m 
+Size: 1,1
+1251: 		[1;36mCategories:[0m [1;32mWall[0m 
+1252: 		[1;36mTiles:[0m 
+1253: 			[1;31m0:[0m [1;33mWall[0m 
+0: Wall
+1254: 	[1;35mTemplate@298:[0m 
+Template@298: Wall
+1255: 		[1;36mId:[0m [1;32m298[0m 
+Id: 298
+1256: 		[1;36mImages:[0m [1;32mlwal0008.int[0m 
+Images: lwal0008.int
+1257: 		[1;36mSize:[0m [1;32m1,1[0m 
+Size: 1,1
+1258: 		[1;36mCategories:[0m [1;32mWall[0m 
+1259: 		[1;36mTiles:[0m 
+1260: 			[1;31m0:[0m [1;33mWall[0m 
+0: Wall
+1261: 	[1;35mTemplate@299:[0m 
+Template@299: Wall
+1262: 		[1;36mId:[0m [1;32m299[0m 
+Id: 299
+1263: 		[1;36mImages:[0m [1;32mlwal0009.int[0m 
+Images: lwal0009.int
+1264: 		[1;36mSize:[0m [1;32m1,1[0m 
+Size: 1,1
+1265: 		[1;36mCategories:[0m [1;32mWall[0m 
+1266: 		[1;36mTiles:[0m 
+1267: 			[1;31m0:[0m [1;33mWall[0m 
+0: Wall
+1268: 	[1;35mTemplate@300:[0m 
+Template@300: Wall
+1269: 		[1;36mId:[0m [1;32m300[0m 
+Id: 300
+1270: 		[1;36mImages:[0m [1;32mlwal0010.int[0m 
+Images: lwal0010.int
+1271: 		[1;36mSize:[0m [1;32m1,1[0m 
+Size: 1,1
+1272: 		[1;36mCategories:[0m [1;32mWall[0m 
+1273: 		[1;36mTiles:[0m 
+1274: 			[1;31m0:[0m [1;33mWall[0m 
+0: Wall
+1275: 	[1;35mTemplate@301:[0m 
+Template@301: Wall
+1276: 		[1;36mId:[0m [1;32m301[0m 
+Id: 301
+1277: 		[1;36mImages:[0m [1;32mlwal0011.int[0m 
+Images: lwal0011.int
+1278: 		[1;36mSize:[0m [1;32m1,1[0m 
+Size: 1,1
+1279: 		[1;36mCategories:[0m [1;32mWall[0m 
+1280: 		[1;36mTiles:[0m 
+1281: 			[1;31m0:[0m [1;33mWall[0m 
+0: Wall
+1282: 	[1;35mTemplate@302:[0m 
+Template@302: Wall
+1283: 		[1;36mId:[0m [1;32m302[0m 
+Id: 302
+1284: 		[1;36mImages:[0m [1;32mlwal0012.int[0m 
+Images: lwal0012.int
+1285: 		[1;36mSize:[0m [1;32m1,1[0m 
+Size: 1,1
+1286: 		[1;36mCategories:[0m [1;32mWall[0m 
+1287: 		[1;36mTiles:[0m 
+1288: 			[1;31m0:[0m [1;33mWall[0m 
+0: Wall
+1289: 	[1;35mTemplate@303:[0m 
+Template@303: Wall
+1290: 		[1;36mId:[0m [1;32m303[0m 
+Id: 303
+1291: 		[1;36mImages:[0m [1;32mlwal0013.int[0m 
+Images: lwal0013.int
+1292: 		[1;36mSize:[0m [1;32m1,1[0m 
+Size: 1,1
+1293: 		[1;36mCategories:[0m [1;32mWall[0m 
+1294: 		[1;36mTiles:[0m 
+1295: 			[1;31m0:[0m [1;33mWall[0m 
+0: Wall
+1296: 	[1;35mTemplate@304:[0m 
+Template@304: Wall
+1297: 		[1;36mId:[0m [1;32m304[0m 
+Id: 304
+1298: 		[1;36mImages:[0m [1;32mlwal0014.int[0m 
+Images: lwal0014.int
+1299: 		[1;36mSize:[0m [1;32m1,1[0m 
+Size: 1,1
+1300: 		[1;36mCategories:[0m [1;32mWall[0m 
+1301: 		[1;36mTiles:[0m 
+1302: 			[1;31m0:[0m [1;33mWall[0m 
+0: Wall
+1303: 	[1;35mTemplate@305:[0m 
+Template@305: Wall
+1304: 		[1;36mId:[0m [1;32m305[0m 
+Id: 305
+1305: 		[1;36mImages:[0m [1;32mlwal0015.int[0m 
+Images: lwal0015.int
+1306: 		[1;36mSize:[0m [1;32m1,1[0m 
+Size: 1,1
+1307: 		[1;36mCategories:[0m [1;32mWall[0m 
+1308: 		[1;36mTiles:[0m 
+1309: 			[1;31m0:[0m [1;33mWall[0m 
+0: Wall
+1310: 	[1;35mTemplate@306:[0m 
+Template@306: Wall
+1311: 		[1;36mId:[0m [1;32m306[0m 
+Id: 306
+1312: 		[1;36mImages:[0m [1;32mlwal0016.int[0m 
+Images: lwal0016.int
+1313: 		[1;36mSize:[0m [1;32m1,1[0m 
+Size: 1,1
+1314: 		[1;36mCategories:[0m [1;32mWall[0m 
+1315: 		[1;36mTiles:[0m 
+1316: 			[1;31m0:[0m [1;33mWall[0m 
+0: Wall
+1317: 	[1;35mTemplate@307:[0m 
+Template@307: Wall
+1318: 		[1;36mId:[0m [1;32m307[0m 
+Id: 307
+1319: 		[1;36mImages:[0m [1;32mlwal0017.int[0m 
+Images: lwal0017.int
+1320: 		[1;36mSize:[0m [1;32m1,1[0m 
+Size: 1,1
+1321: 		[1;36mCategories:[0m [1;32mWall[0m 
+1322: 		[1;36mTiles:[0m 
+1323: 			[1;31m0:[0m [1;33mWall[0m 
+0: Wall
+1324: 	[1;35mTemplate@308:[0m 
+Template@308: Wall
+1325: 		[1;36mId:[0m [1;32m308[0m 
+Id: 308
+1326: 		[1;36mImages:[0m [1;32mlwal0018.int[0m 
+Images: lwal0018.int
+1327: 		[1;36mSize:[0m [1;32m1,1[0m 
+Size: 1,1
+1328: 		[1;36mCategories:[0m [1;32mWall[0m 
+1329: 		[1;36mTiles:[0m 
+1330: 			[1;31m0:[0m [1;33mWall[0m 
+0: Wall
+1331: 	[1;35mTemplate@309:[0m 
+Template@309: Wall
+1332: 		[1;36mId:[0m [1;32m309[0m 
+Id: 309
+1333: 		[1;36mImages:[0m [1;32mlwal0019.int[0m 
+Images: lwal0019.int
+1334: 		[1;36mSize:[0m [1;32m1,1[0m 
+Size: 1,1
+1335: 		[1;36mCategories:[0m [1;32mWall[0m 
+1336: 		[1;36mTiles:[0m 
+1337: 			[1;31m0:[0m [1;33mWall[0m 
+0: Wall
+1338: 	[1;35mTemplate@310:[0m 
+Template@310: Wall
+1339: 		[1;36mId:[0m [1;32m310[0m 
+Id: 310
+1340: 		[1;36mImages:[0m [1;32mlwal0020.int[0m 
+Images: lwal0020.int
+1341: 		[1;36mSize:[0m [1;32m1,1[0m 
+Size: 1,1
+1342: 		[1;36mCategories:[0m [1;32mWall[0m 
+1343: 		[1;36mTiles:[0m 
+1344: 			[1;31m0:[0m [1;33mWall[0m 
+0: Wall
+1345: 	[1;35mTemplate@311:[0m 
+Template@311: Wall
+1346: 		[1;36mId:[0m [1;32m311[0m 
+Id: 311
+1347: 		[1;36mImages:[0m [1;32mlwal0021.int[0m 
+Images: lwal0021.int
+1348: 		[1;36mSize:[0m [1;32m1,1[0m 
+Size: 1,1
+1349: 		[1;36mCategories:[0m [1;32mWall[0m 
+1350: 		[1;36mTiles:[0m 
+1351: 			[1;31m0:[0m [1;33mWall[0m 
+0: Wall
+1352: 	[1;35mTemplate@312:[0m 
+Template@312: Wall
+1353: 		[1;36mId:[0m [1;32m312[0m 
+Id: 312
+1354: 		[1;36mImages:[0m [1;32mlwal0022.int[0m 
+Images: lwal0022.int
+1355: 		[1;36mSize:[0m [1;32m1,1[0m 
+Size: 1,1
+1356: 		[1;36mCategories:[0m [1;32mWall[0m 
+1357: 		[1;36mTiles:[0m 
+1358: 			[1;31m0:[0m [1;33mWall[0m 
+0: Wall
+1359: 	[1;35mTemplate@313:[0m 
+Template@313: Wall
+1360: 		[1;36mId:[0m [1;32m313[0m 
+Id: 313
+1361: 		[1;36mImages:[0m [1;32mlwal0023.int[0m 
+Images: lwal0023.int
+1362: 		[1;36mSize:[0m [1;32m1,1[0m 
+Size: 1,1
+1363: 		[1;36mCategories:[0m [1;32mWall[0m 
+1364: 		[1;36mTiles:[0m 
+1365: 			[1;31m0:[0m [1;33mWall[0m 
+0: Wall
+1366: 	[1;35mTemplate@314:[0m 
+Template@314: Wall
+1367: 		[1;36mId:[0m [1;32m314[0m 
+Id: 314
+1368: 		[1;36mImages:[0m [1;32mlwal0024.int[0m 
+Images: lwal0024.int
+1369: 		[1;36mSize:[0m [1;32m1,1[0m 
+Size: 1,1
+1370: 		[1;36mCategories:[0m [1;32mWall[0m 
+1371: 		[1;36mTiles:[0m 
+1372: 			[1;31m0:[0m [1;33mWall[0m 
+0: Wall
+1373: 	[1;35mTemplate@315:[0m 
+Template@315: Wall
+1374: 		[1;36mId:[0m [1;32m315[0m 
+Id: 315
+1375: 		[1;36mImages:[0m [1;32mlwal0025.int[0m 
+Images: lwal0025.int
+1376: 		[1;36mSize:[0m [1;32m1,1[0m 
+Size: 1,1
+1377: 		[1;36mCategories:[0m [1;32mWall[0m 
+1378: 		[1;36mTiles:[0m 
+1379: 			[1;31m0:[0m [1;33mWall[0m 
+0: Wall
+1380: 	[1;35mTemplate@316:[0m 
+Template@316: Wall
+1381: 		[1;36mId:[0m [1;32m316[0m 
+Id: 316
+1382: 		[1;36mImages:[0m [1;32mlwal0026.int[0m 
+Images: lwal0026.int
+1383: 		[1;36mSize:[0m [1;32m1,1[0m 
+Size: 1,1
+1384: 		[1;36mCategories:[0m [1;32mWall[0m 
+1385: 		[1;36mTiles:[0m 
+1386: 			[1;31m0:[0m [1;33mWall[0m 
+0: Wall
+1387: 	[1;35mTemplate@317:[0m 
+Template@317: Wall
+1388: 		[1;36mId:[0m [1;32m317[0m 
+Id: 317
+1389: 		[1;36mImages:[0m [1;32mlwal0027.int[0m 
+Images: lwal0027.int
+1390: 		[1;36mSize:[0m [1;32m1,1[0m 
+Size: 1,1
+1391: 		[1;36mCategories:[0m [1;32mWall[0m 
+1392: 		[1;36mTiles:[0m 
+1393: 			[1;31m0:[0m [1;33mWall[0m 
+0: Wall
+
+SIZE=142
+Id:   253     Size: 1,1     Images:    arro0001.int  0: Clear
+                                                     1: Clear
+                                                     2: Clear
+                                                     3: Clear
+                                                     4: Clear
+                                                     5: Clear
+Loading image Id: 253  tiles/arro0001.png Ok. Size: 1,1 / 1,6  Resolution: 24 x 144
+Id:   254     Size: 1,1     Images:    arro0002.int  0: Clear
+                                                     1: Clear
+                                                     2: Clear
+                                                     3: Clear
+                                                     4: Clear
+                                                     5: Clear
+Loading image Id: 254  tiles/arro0002.png Ok. Size: 1,1 / 1,6  Resolution: 24 x 144
+Id:   255     Size: 1,1     Images:      clear1.int  0: ClearNoSmudges
+                                                     1: ClearNoSmudges
+                                                     2: ClearNoSmudges
+                                                     3: ClearNoSmudges
+                                                     4: ClearNoSmudges
+                                                     5: ClearNoSmudges
+                                                     6: ClearNoSmudges
+                                                     7: ClearNoSmudges
+                                                     8: ClearNoSmudges
+                                                     9: ClearNoSmudges
+                                                    10: ClearNoSmudges
+                                                    11: ClearNoSmudges
+                                                    12: ClearNoSmudges
+                                                    13: ClearNoSmudges
+                                                    14: ClearNoSmudges
+                                                    15: ClearNoSmudges
+Loading image Id: 255  tiles/clear1.png Ok. Size: 1,1 / 1,16  Resolution: 24 x 384
+Id:   256     Size: 1,1     Images:    arro0004.int  0: Clear
+                                                     1: Clear
+                                                     2: Clear
+                                                     3: Clear
+                                                     4: Clear
+                                                     5: Clear
+Loading image Id: 256  tiles/arro0004.png Ok. Size: 1,1 / 1,6  Resolution: 24 x 144
+Id:   257     Size: 1,1     Images:    arro0005.int  0: Clear
+                                                     1: Clear
+                                                     2: Clear
+                                                     3: Clear
+                                                     4: Clear
+                                                     5: Clear
+Loading image Id: 257  tiles/arro0005.png Ok. Size: 1,1 / 1,6  Resolution: 24 x 144
+Id:   258     Size: 1,1     Images:    arro0006.int  0: Clear
+                                                     1: Clear
+                                                     2: Clear
+                                                     3: Clear
+                                                     4: Clear
+                                                     5: Clear
+Loading image Id: 258  tiles/arro0006.png Ok. Size: 1,1 / 1,6  Resolution: 24 x 144
+Id:   259     Size: 1,1     Images:    arro0007.int  0: Clear
+Loading image Id: 259  tiles/arro0007.png Ok. Size: 1,1 / 1,1  Resolution: 24 x 24
+Id:   260     Size: 1,1     Images:    arro0008.int  0: Clear
+Loading image Id: 260  tiles/arro0008.png Ok. Size: 1,1 / 1,1  Resolution: 24 x 24
+Id:   261     Size: 1,1     Images:    arro0009.int  0: Clear
+Loading image Id: 261  tiles/arro0009.png Ok. Size: 1,1 / 1,1  Resolution: 24 x 24
+Id:   262     Size: 1,1     Images:    arro0010.int  0: Clear
+Loading image Id: 262  tiles/arro0010.png Ok. Size: 1,1 / 1,1  Resolution: 24 x 24
+Id:   263     Size: 1,1     Images:    arro0011.int  0: Clear
+Loading image Id: 263  tiles/arro0011.png Ok. Size: 1,1 / 1,1  Resolution: 24 x 24
+Id:   264     Size: 1,1     Images:    arro0012.int  0: Clear
+Loading image Id: 264  tiles/arro0012.png Ok. Size: 1,1 / 1,1  Resolution: 24 x 24
+Id:   265     Size: 1,1     Images:    arro0013.int  0: Clear
+Loading image Id: 265  tiles/arro0013.png Ok. Size: 1,1 / 1,1  Resolution: 24 x 24
+Id:   266     Size: 1,1     Images:    arro0014.int  0: Clear
+Loading image Id: 266  tiles/arro0014.png Ok. Size: 1,1 / 1,1  Resolution: 24 x 24
+Id:   267     Size: 1,1     Images:    arro0015.int  0: Clear
+Loading image Id: 267  tiles/arro0015.png Ok. Size: 1,1 / 1,1  Resolution: 24 x 24
+Id:   268     Size: 1,1     Images:    flor0001.int  0: Clear
+                                                     1: Clear
+                                                     2: Clear
+                                                     3: Clear
+                                                     4: Clear
+                                                     5: Clear
+                                                     6: Clear
+                                                     7: Clear
+                                                     8: Clear
+                                                     9: Clear
+                                                    10: Clear
+                                                    11: Clear
+Loading image Id: 268  tiles/flor0001.png Ok. Size: 1,1 / 1,12  Resolution: 24 x 288
+Id:   269     Size: 1,1     Images:    flor0002.int  0: Clear
+                                                     1: Clear
+                                                     2: Clear
+                                                     3: Clear
+                                                     4: Clear
+                                                     5: Clear
+                                                     6: Clear
+                                                     7: Clear
+                                                     8: Clear
+                                                     9: Clear
+                                                    10: Clear
+                                                    11: Clear
+Loading image Id: 269  tiles/flor0002.png Ok. Size: 1,1 / 1,12  Resolution: 24 x 288
+Id:   270     Size: 1,1     Images:    flor0003.int  0: Clear
+                                                     1: Clear
+                                                     2: Clear
+                                                     3: Clear
+                                                     4: Clear
+                                                     5: Clear
+                                                     6: Clear
+                                                     7: Clear
+                                                     8: Clear
+                                                     9: Clear
+                                                    10: Clear
+                                                    11: Clear
+Loading image Id: 270  tiles/flor0003.png Ok. Size: 1,1 / 1,12  Resolution: 24 x 288
+Id:   271     Size: 1,1     Images:    flor0004.int  0: Clear
+                                                     1: Clear
+                                                     2: Clear
+                                                     3: Clear
+                                                     4: Clear
+                                                     5: Clear
+                                                     6: Clear
+                                                     7: Clear
+                                                     8: Clear
+                                                     9: Clear
+                                                    10: Clear
+                                                    11: Clear
+Loading image Id: 271  tiles/flor0004.png Ok. Size: 1,1 / 1,12  Resolution: 24 x 288
+Id:   272     Size: 1,1     Images:    flor0005.int  0: Clear
+                                                     1: Clear
+                                                     2: Clear
+                                                     3: Clear
+                                                     4: Clear
+                                                     5: Clear
+                                                     6: Clear
+                                                     7: Clear
+                                                     8: Clear
+                                                     9: Clear
+                                                    10: Clear
+                                                    11: Clear
+Loading image Id: 272  tiles/flor0005.png Ok. Size: 1,1 / 1,12  Resolution: 24 x 288
+Id:   273     Size: 1,1     Images:    flor0006.int  0: Clear
+                                                     1: Clear
+                                                     2: Clear
+                                                     3: Clear
+                                                     4: Clear
+                                                     5: Clear
+                                                     6: Clear
+                                                     7: Clear
+                                                     8: Clear
+                                                     9: Clear
+                                                    10: Clear
+                                                    11: Clear
+Loading image Id: 273  tiles/flor0006.png Ok. Size: 1,1 / 1,12  Resolution: 24 x 288
+Id:   274     Size: 1,1     Images:    flor0007.int  0: Clear
+                                                     1: Clear
+                                                     2: Clear
+                                                     3: Clear
+                                                     4: Clear
+                                                     5: Clear
+                                                     6: Clear
+                                                     7: Clear
+                                                     8: Clear
+                                                     9: Clear
+                                                    10: Clear
+                                                    11: Clear
+Loading image Id: 274  tiles/flor0007.png Ok. Size: 1,1 / 1,12  Resolution: 24 x 288
+Id:   275     Size: 1,1     Images:    gflr0001.int  0: Clear
+                                                     1: Clear
+                                                     2: Clear
+                                                     3: Clear
+                                                     4: Clear
+                                                     5: Clear
+                                                     6: Clear
+                                                     7: Clear
+                                                     8: Clear
+                                                     9: Clear
+                                                    10: Clear
+                                                    11: Clear
+                                                    12: Clear
+Loading image Id: 275  tiles/gflr0001.png Ok. Size: 1,1 / 1,13  Resolution: 24 x 312
+Id:   276     Size: 1,1     Images:    gflr0002.int  0: Clear
+                                                     1: Clear
+                                                     2: Clear
+                                                     3: Clear
+                                                     4: Clear
+                                                     5: Clear
+                                                     6: Clear
+                                                     7: Clear
+                                                     8: Clear
+                                                     9: Clear
+                                                    10: Clear
+                                                    11: Clear
+                                                    12: Clear
+Loading image Id: 276  tiles/gflr0002.png Ok. Size: 1,1 / 1,13  Resolution: 24 x 312
+Id:   277     Size: 1,1     Images:    gflr0003.int  0: Clear
+                                                     1: Clear
+                                                     2: Clear
+                                                     3: Clear
+                                                     4: Clear
+                                                     5: Clear
+                                                     6: Clear
+                                                     7: Clear
+                                                     8: Clear
+                                                     9: Clear
+                                                    10: Clear
+                                                    11: Clear
+                                                    12: Clear
+Loading image Id: 277  tiles/gflr0003.png Ok. Size: 1,1 / 1,13  Resolution: 24 x 312
+Id:   278     Size: 1,1     Images:    gflr0004.int  0: Clear
+                                                     1: Clear
+                                                     2: Clear
+                                                     3: Clear
+                                                     4: Clear
+                                                     5: Clear
+                                                     6: Clear
+                                                     7: Clear
+                                                     8: Clear
+                                                     9: Clear
+                                                    10: Clear
+                                                    11: Clear
+                                                    12: Clear
+Loading image Id: 278  tiles/gflr0004.png Ok. Size: 1,1 / 1,13  Resolution: 24 x 312
+Id:   279     Size: 1,1     Images:    gflr0005.int  0: Clear
+                                                     1: Clear
+                                                     2: Clear
+                                                     3: Clear
+                                                     4: Clear
+                                                     5: Clear
+                                                     6: Clear
+                                                     7: Clear
+                                                     8: Clear
+                                                     9: Clear
+                                                    10: Clear
+                                                    11: Clear
+                                                    12: Clear
+Loading image Id: 279  tiles/gflr0005.png Ok. Size: 1,1 / 1,13  Resolution: 24 x 312
+Id:   280     Size: 1,1     Images:    gstr0001.int  0: Clear
+                                                     1: Clear
+                                                     2: Clear
+                                                     3: Clear
+                                                     4: Clear
+                                                     5: Clear
+Loading image Id: 280  tiles/gstr0001.png Ok. Size: 1,1 / 1,6  Resolution: 24 x 144
+Id:   281     Size: 1,1     Images:    gstr0002.int  0: Clear
+                                                     1: Clear
+                                                     2: Clear
+                                                     3: Clear
+                                                     4: Clear
+                                                     5: Clear
+                                                     6: Clear
+                                                     7: Clear
+Loading image Id: 281  tiles/gstr0002.png Ok. Size: 1,1 / 1,8  Resolution: 24 x 192
+Id:   282     Size: 1,1     Images:    gstr0003.int  0: Clear
+Loading image Id: 282  tiles/gstr0003.png Ok. Size: 1,1 / 1,1  Resolution: 24 x 24
+Id:   283     Size: 1,1     Images:    gstr0004.int  0: Clear
+Loading image Id: 283  tiles/gstr0004.png Ok. Size: 1,1 / 1,1  Resolution: 24 x 24
+Id:   284     Size: 1,1     Images:    gstr0005.int  0: Clear
+Loading image Id: 284  tiles/gstr0005.png Ok. Size: 1,1 / 1,1  Resolution: 24 x 24
+Id:   285     Size: 1,1     Images:    gstr0006.int  0: Clear
+Loading image Id: 285  tiles/gstr0006.png Ok. Size: 1,1 / 1,1  Resolution: 24 x 24
+Id:   286     Size: 1,1     Images:    gstr0007.int  0: Clear
+Loading image Id: 286  tiles/gstr0007.png Ok. Size: 1,1 / 1,1  Resolution: 24 x 24
+Id:   287     Size: 1,1     Images:    gstr0008.int  0: Clear
+Loading image Id: 287  tiles/gstr0008.png Ok. Size: 1,1 / 1,1  Resolution: 24 x 24
+Id:   288     Size: 1,1     Images:    gstr0009.int  0: Clear
+Loading image Id: 288  tiles/gstr0009.png Ok. Size: 1,1 / 1,1  Resolution: 24 x 24
+Id:   289     Size: 1,1     Images:    gstr0010.int  0: Clear
+Loading image Id: 289  tiles/gstr0010.png Ok. Size: 1,1 / 1,1  Resolution: 24 x 24
+Id:   290     Size: 1,1     Images:    gstr0011.int  0: Clear
+Loading image Id: 290  tiles/gstr0011.png Ok. Size: 1,1 / 1,1  Resolution: 24 x 24
+Id:   291     Size: 1,1     Images:    lwal0001.int  0: Wall
+                                                     1: Wall
+                                                     2: Wall
+                                                     3: Wall
+Loading image Id: 291  tiles/lwal0001.png Ok. Size: 1,1 / 1,4  Resolution: 24 x 96
+Id:   292     Size: 1,1     Images:    lwal0002.int  0: Wall
+                                                     1: Wall
+                                                     2: Wall
+                                                     3: Wall
+Loading image Id: 292  tiles/lwal0002.png Ok. Size: 1,1 / 1,4  Resolution: 24 x 96
+Id:   293     Size: 1,1     Images:    lwal0003.int  0: Wall
+                                                     1: Wall
+                                                     2: Wall
+                                                     3: Wall
+Loading image Id: 293  tiles/lwal0003.png Ok. Size: 1,1 / 1,4  Resolution: 24 x 96
+Id:   294     Size: 1,1     Images:    lwal0004.int  0: Wall
+                                                     1: Wall
+                                                     2: Wall
+                                                     3: Wall
+Loading image Id: 294  tiles/lwal0004.png Ok. Size: 1,1 / 1,4  Resolution: 24 x 96
+Id:   295     Size: 1,1     Images:    lwal0005.int  0: Wall
+                                                     1: Wall
+                                                     2: Wall
+                                                     3: Wall
+                                                     4: Wall
+                                                     5: Wall
+Loading image Id: 295  tiles/lwal0005.png Ok. Size: 1,1 / 1,7  Resolution: 24 x 168
+Id:   296     Size: 1,1     Images:    lwal0006.int  0: Wall
+Loading image Id: 296  tiles/lwal0006.png Ok. Size: 1,1 / 1,1  Resolution: 24 x 24
+Id:   297     Size: 1,1     Images:    lwal0007.int  0: Wall
+Loading image Id: 297  tiles/lwal0007.png Ok. Size: 1,1 / 1,1  Resolution: 24 x 24
+Id:   298     Size: 1,1     Images:    lwal0008.int  0: Wall
+Loading image Id: 298  tiles/lwal0008.png Ok. Size: 1,1 / 1,1  Resolution: 24 x 24
+Id:   299     Size: 1,1     Images:    lwal0009.int  0: Wall
+Loading image Id: 299  tiles/lwal0009.png Ok. Size: 1,1 / 1,1  Resolution: 24 x 24
+Id:   300     Size: 1,1     Images:    lwal0010.int  0: Wall
+Loading image Id: 300  tiles/lwal0010.png Ok. Size: 1,1 / 1,1  Resolution: 24 x 24
+Id:   301     Size: 1,1     Images:    lwal0011.int  0: Wall
+Loading image Id: 301  tiles/lwal0011.png Ok. Size: 1,1 / 1,1  Resolution: 24 x 24
+Id:   302     Size: 1,1     Images:    lwal0012.int  0: Wall
+Loading image Id: 302  tiles/lwal0012.png Ok. Size: 1,1 / 1,1  Resolution: 24 x 24
+Id:   303     Size: 1,1     Images:    lwal0013.int  0: Wall
+Loading image Id: 303  tiles/lwal0013.png Ok. Size: 1,1 / 1,1  Resolution: 24 x 24
+Id:   304     Size: 1,1     Images:    lwal0014.int  0: Wall
+Loading image Id: 304  tiles/lwal0014.png Ok. Size: 1,1 / 1,1  Resolution: 24 x 24
+Id:   305     Size: 1,1     Images:    lwal0015.int  0: Wall
+Loading image Id: 305  tiles/lwal0015.png Ok. Size: 1,1 / 1,1  Resolution: 24 x 24
+Id:   306     Size: 1,1     Images:    lwal0016.int  0: Wall
+Loading image Id: 306  tiles/lwal0016.png Ok. Size: 1,1 / 1,1  Resolution: 24 x 24
+Id:   307     Size: 1,1     Images:    lwal0017.int  0: Wall
+Loading image Id: 307  tiles/lwal0017.png Ok. Size: 1,1 / 1,1  Resolution: 24 x 24
+Id:   308     Size: 1,1     Images:    lwal0018.int  0: Wall
+Loading image Id: 308  tiles/lwal0018.png Ok. Size: 1,1 / 1,1  Resolution: 24 x 24
+Id:   309     Size: 1,1     Images:    lwal0019.int  0: Wall
+Loading image Id: 309  tiles/lwal0019.png Ok. Size: 1,1 / 1,1  Resolution: 24 x 24
+Id:   310     Size: 1,1     Images:    lwal0020.int  0: Wall
+Loading image Id: 310  tiles/lwal0020.png Ok. Size: 1,1 / 1,1  Resolution: 24 x 24
+Id:   311     Size: 1,1     Images:    lwal0021.int  0: Wall
+Loading image Id: 311  tiles/lwal0021.png Ok. Size: 1,1 / 1,1  Resolution: 24 x 24
+Id:   312     Size: 1,1     Images:    lwal0022.int  0: Wall
+Loading image Id: 312  tiles/lwal0022.png Ok. Size: 1,1 / 1,1  Resolution: 24 x 24
+Id:   313     Size: 1,1     Images:    lwal0023.int  0: Wall
+Loading image Id: 313  tiles/lwal0023.png Ok. Size: 1,1 / 1,1  Resolution: 24 x 24
+Id:   314     Size: 1,1     Images:    lwal0024.int  0: Wall
+Loading image Id: 314  tiles/lwal0024.png Ok. Size: 1,1 / 1,1  Resolution: 24 x 24
+Id:   315     Size: 1,1     Images:    lwal0025.int  0: Wall
+Loading image Id: 315  tiles/lwal0025.png Ok. Size: 1,1 / 1,1  Resolution: 24 x 24
+Id:   316     Size: 1,1     Images:    lwal0026.int  0: Wall
+Loading image Id: 316  tiles/lwal0026.png Ok. Size: 1,1 / 1,1  Resolution: 24 x 24
+Id:   317     Size: 1,1     Images:    lwal0027.int  0: Wall
+Loading image Id: 317  tiles/lwal0027.png Ok. Size: 1,1 / 1,1  Resolution: 24 x 24
+Id:   318     Size: 1,1     Images:    strp0001.int  0: Clear
+                                                     1: Clear
+                                                     2: Clear
+                                                     3: Clear
+                                                     4: Clear
+                                                     5: Clear
+                                                     6: Clear
+                                                     7: Clear
+                                                     8: Clear
+                                                     9: Clear
+                                                    10: Clear
+                                                    11: Clear
+Loading image Id: 318  tiles/strp0001.png Ok. Size: 1,1 / 1,12  Resolution: 24 x 288
+Id:   319     Size: 1,1     Images:    strp0002.int  0: Clear
+                                                     1: Clear
+                                                     2: Clear
+                                                     3: Clear
+                                                     4: Clear
+                                                     5: Clear
+                                                     6: Clear
+                                                     7: Clear
+                                                     8: Clear
+                                                     9: Clear
+                                                    10: Clear
+                                                    11: Clear
+Loading image Id: 319  tiles/strp0002.png Ok. Size: 1,1 / 1,12  Resolution: 24 x 288
+Id:   320     Size: 1,1     Images:    strp0003.int  0: Clear
+Loading image Id: 320  tiles/strp0003.png Ok. Size: 1,1 / 1,1  Resolution: 24 x 24
+Id:   321     Size: 1,1     Images:    strp0004.int  0: Clear
+Loading image Id: 321  tiles/strp0004.png Ok. Size: 1,1 / 1,1  Resolution: 24 x 24
+Id:   322     Size: 1,1     Images:    strp0005.int  0: Clear
+Loading image Id: 322  tiles/strp0005.png Ok. Size: 1,1 / 1,1  Resolution: 24 x 24
+Id:   323     Size: 1,1     Images:    strp0006.int  0: Clear
+Loading image Id: 323  tiles/strp0006.png Ok. Size: 1,1 / 1,1  Resolution: 24 x 24
+Id:   324     Size: 1,1     Images:    strp0007.int  0: Clear
+Loading image Id: 324  tiles/strp0007.png Ok. Size: 1,1 / 1,1  Resolution: 24 x 24
+Id:   325     Size: 1,1     Images:    strp0008.int  0: Clear
+Loading image Id: 325  tiles/strp0008.png Ok. Size: 1,1 / 1,1  Resolution: 24 x 24
+Id:   326     Size: 1,1     Images:    strp0009.int  0: Clear
+Loading image Id: 326  tiles/strp0009.png Ok. Size: 1,1 / 1,1  Resolution: 24 x 24
+Id:   327     Size: 1,1     Images:    strp0010.int  0: Clear
+Loading image Id: 327  tiles/strp0010.png Ok. Size: 1,1 / 1,1  Resolution: 24 x 24
+Id:   328     Size: 1,1     Images:    strp0011.int  0: Clear
+Loading image Id: 328  tiles/strp0011.png Ok. Size: 1,1 / 1,1  Resolution: 24 x 24
+Id:   329     Size: 1,1     Images:    wall0001.int  0: Wall
+Loading image Id: 329  tiles/wall0001.png Ok. Size: 1,1 / 1,1  Resolution: 24 x 24
+Id:   330     Size: 1,1     Images:    wall0002.int  0: Wall
+Loading image Id: 330  tiles/wall0002.png Ok. Size: 1,1 / 1,1  Resolution: 24 x 24
+Id:   331     Size: 1,1     Images:    wall0003.int  0: Wall
+Loading image Id: 331  tiles/wall0003.png Ok. Size: 1,1 / 1,1  Resolution: 24 x 24
+Id:   332     Size: 1,1     Images:    wall0004.int  0: Wall
+Loading image Id: 332  tiles/wall0004.png Ok. Size: 1,1 / 1,1  Resolution: 24 x 24
+Id:   333     Size: 1,1     Images:    wall0005.int  0: Wall
+Loading image Id: 333  tiles/wall0005.png Ok. Size: 1,1 / 1,1  Resolution: 24 x 24
+Id:   334     Size: 1,1     Images:    wall0006.int  0: Wall
+Loading image Id: 334  tiles/wall0006.png Ok. Size: 1,1 / 1,1  Resolution: 24 x 24
+Id:   335     Size: 1,1     Images:    wall0007.int  0: Wall
+Loading image Id: 335  tiles/wall0007.png Ok. Size: 1,1 / 1,1  Resolution: 24 x 24
+Id:   336     Size: 1,1     Images:    wall0008.int  0: Wall
+Loading image Id: 336  tiles/wall0008.png Ok. Size: 1,1 / 1,1  Resolution: 24 x 24
+Id:   337     Size: 1,1     Images:    wall0009.int  0: Wall
+Loading image Id: 337  tiles/wall0009.png Ok. Size: 1,1 / 1,1  Resolution: 24 x 24
+Id:   338     Size: 1,1     Images:    wall0010.int  0: Wall
+Loading image Id: 338  tiles/wall0010.png Ok. Size: 1,1 / 1,1  Resolution: 24 x 24
+Id:   339     Size: 1,1     Images:    wall0011.int  0: Wall
+Loading image Id: 339  tiles/wall0011.png Ok. Size: 1,1 / 1,1  Resolution: 24 x 24
+Id:   340     Size: 1,1     Images:    wall0012.int  0: Wall
+Loading image Id: 340  tiles/wall0012.png Ok. Size: 1,1 / 1,1  Resolution: 24 x 24
+Id:   341     Size: 1,1     Images:    wall0013.int  0: Wall
+Loading image Id: 341  tiles/wall0013.png Ok. Size: 1,1 / 1,1  Resolution: 24 x 24
+Id:   342     Size: 1,1     Images:    wall0014.int  0: Wall
+Loading image Id: 342  tiles/wall0014.png Ok. Size: 1,1 / 1,1  Resolution: 24 x 24
+Id:   343     Size: 1,1     Images:    wall0015.int  0: Wall
+Loading image Id: 343  tiles/wall0015.png Ok. Size: 1,1 / 1,1  Resolution: 24 x 24
+Id:   344     Size: 1,1     Images:    wall0016.int  0: Wall
+Loading image Id: 344  tiles/wall0016.png Ok. Size: 1,1 / 1,1  Resolution: 24 x 24
+Id:   345     Size: 1,1     Images:    wall0017.int  0: Wall
+Loading image Id: 345  tiles/wall0017.png Ok. Size: 1,1 / 1,1  Resolution: 24 x 24
+Id:   346     Size: 1,1     Images:    wall0018.int  0: Wall
+Loading image Id: 346  tiles/wall0018.png Ok. Size: 1,1 / 1,1  Resolution: 24 x 24
+Id:   347     Size: 1,1     Images:    wall0019.int  0: Wall
+Loading image Id: 347  tiles/wall0019.png Ok. Size: 1,1 / 1,1  Resolution: 24 x 24
+Id:   348     Size: 1,1     Images:    wall0020.int  0: Wall
+Loading image Id: 348  tiles/wall0020.png Ok. Size: 1,1 / 1,1  Resolution: 24 x 24
+Id:   349     Size: 1,1     Images:    wall0021.int  0: Wall
+Loading image Id: 349  tiles/wall0021.png Ok. Size: 1,1 / 1,1  Resolution: 24 x 24
+Id:   350     Size: 1,1     Images:    wall0022.int  0: Wall
+Loading image Id: 350  tiles/wall0022.png Ok. Size: 1,1 / 1,1  Resolution: 24 x 24
+Id:   351     Size: 2,2     Images:    wall0023.int  0: Wall
+                                                     1: Wall
+                                                     2: Wall
+Loading image Id: 351  tiles/wall0023.png Ok. Size: 2,2 / 2,2  Resolution: 48 x 48
+Id:   352     Size: 2,2     Images:    wall0024.int  0: Wall
+                                                     1: Wall
+                                                     2: Wall
+Loading image Id: 352  tiles/wall0024.png Ok. Size: 2,2 / 2,2  Resolution: 48 x 48
+Id:   353     Size: 2,2     Images:    wall0025.int  0: Wall
+                                                     1: Wall
+                                                     2: Wall
+Loading image Id: 353  tiles/wall0025.png Ok. Size: 2,2 / 2,2  Resolution: 48 x 48
+Id:   354     Size: 2,2     Images:    wall0026.int  0: Wall
+                                                     1: Wall
+                                                     2: Wall
+Loading image Id: 354  tiles/wall0026.png Ok. Size: 2,2 / 2,2  Resolution: 48 x 48
+Id:   355     Size: 2,2     Images:    wall0027.int  0: Wall
+                                                     1: Wall
+                                                     3: Wall
+Loading image Id: 355  tiles/wall0027.png Ok. Size: 2,2 / 2,2  Resolution: 48 x 48
+Id:   356     Size: 2,2     Images:    wall0028.int  0: Wall
+                                                     1: Wall
+                                                     3: Wall
+Loading image Id: 356  tiles/wall0028.png Ok. Size: 2,2 / 2,2  Resolution: 48 x 48
+Id:   357     Size: 2,2     Images:    wall0029.int  0: Wall
+                                                     1: Wall
+                                                     3: Wall
+Loading image Id: 357  tiles/wall0029.png Ok. Size: 2,2 / 2,2  Resolution: 48 x 48
+Id:   358     Size: 2,2     Images:    wall0030.int  0: Wall
+                                                     1: Wall
+                                                     3: Wall
+Loading image Id: 358  tiles/wall0030.png Ok. Size: 2,2 / 2,2  Resolution: 48 x 48
+Id:   359     Size: 2,2     Images:    wall0031.int  0: Wall
+                                                     2: Wall
+                                                     3: Wall
+Loading image Id: 359  tiles/wall0031.png Ok. Size: 2,2 / 2,2  Resolution: 48 x 48
+Id:   360     Size: 2,2     Images:    wall0032.int  0: Wall
+                                                     2: Wall
+                                                     3: Wall
+Loading image Id: 360  tiles/wall0032.png Ok. Size: 2,2 / 2,2  Resolution: 48 x 48
+Id:   361     Size: 2,2     Images:    wall0033.int  0: Wall
+                                                     2: Wall
+                                                     3: Wall
+Loading image Id: 361  tiles/wall0033.png Ok. Size: 2,2 / 2,2  Resolution: 48 x 48
+Id:   362     Size: 2,2     Images:    wall0034.int  0: Wall
+                                                     2: Wall
+                                                     3: Wall
+Loading image Id: 362  tiles/wall0034.png Ok. Size: 2,2 / 2,2  Resolution: 48 x 48
+Id:   363     Size: 2,2     Images:    wall0035.int  0: Wall
+                                                     1: Wall
+                                                     2: Wall
+                                                     3: Wall
+Loading image Id: 363  tiles/wall0035.png Ok. Size: 2,2 / 2,2  Resolution: 48 x 48
+Id:   364     Size: 2,2     Images:    wall0036.int  0: Wall
+                                                     1: Wall
+                                                     2: Wall
+                                                     3: Wall
+Loading image Id: 364  tiles/wall0036.png Ok. Size: 2,2 / 2,2  Resolution: 48 x 48
+Id:   365     Size: 2,2     Images:    wall0037.int  0: Wall
+                                                     1: Wall
+                                                     2: Wall
+                                                     3: Wall
+Loading image Id: 365  tiles/wall0037.png Ok. Size: 2,2 / 2,2  Resolution: 48 x 48
+Id:   366     Size: 2,2     Images:    wall0038.int  0: Wall
+                                                     1: Wall
+                                                     2: Wall
+                                                     3: Wall
+Loading image Id: 366  tiles/wall0038.png Ok. Size: 2,2 / 2,2  Resolution: 48 x 48
+Id:   367     Size: 2,3     Images:    wall0039.int  0: Wall
+                                                     2: Wall
+                                                     3: Wall
+                                                     4: Wall
+Loading image Id: 367  tiles/wall0039.png Ok. Size: 2,3 / 2,3  Resolution: 48 x 72
+Id:   368     Size: 2,3     Images:    wall0040.int  0: Wall
+                                                     2: Wall
+                                                     3: Wall
+                                                     4: Wall
+Loading image Id: 368  tiles/wall0040.png Ok. Size: 2,3 / 2,3  Resolution: 48 x 72
+Id:   369     Size: 2,3     Images:    wall0041.int  0: Wall
+                                                     1: Wall
+                                                     2: Wall
+                                                     3: Wall
+                                                     5: Wall
+Loading image Id: 369  tiles/wall0041.png Ok. Size: 2,3 / 2,3  Resolution: 48 x 72
+Id:   370     Size: 2,3     Images:    wall0042.int  0: Wall
+                                                     1: Wall
+                                                     2: Wall
+                                                     3: Wall
+                                                     5: Wall
+Loading image Id: 370  tiles/wall0042.png Ok. Size: 2,3 / 2,3  Resolution: 48 x 72
+Id:   371     Size: 3,2     Images:    wall0043.int  0: Wall
+                                                     1: Wall
+                                                     3: Wall
+                                                     4: Wall
+                                                     5: Wall
+Loading image Id: 371  tiles/wall0043.png Ok. Size: 3,2 / 3,2  Resolution: 72 x 48
+Id:   372     Size: 3,2     Images:    wall0044.int  0: Wall
+                                                     1: Wall
+                                                     3: Wall
+                                                     4: Wall
+                                                     5: Wall
+Loading image Id: 372  tiles/wall0044.png Ok. Size: 3,2 / 3,2  Resolution: 72 x 48
+Id:   373     Size: 3,2     Images:    wall0045.int  0: Wall
+                                                     1: Wall
+                                                     3: Wall
+                                                     4: Wall
+                                                     5: Wall
+Loading image Id: 373  tiles/wall0045.png Ok. Size: 3,2 / 3,2  Resolution: 72 x 48
+Id:   374     Size: 3,2     Images:    wall0046.int  0: Wall
+                                                     1: Wall
+                                                     3: Wall
+                                                     4: Wall
+                                                     5: Wall
+Loading image Id: 374  tiles/wall0046.png Ok. Size: 3,2 / 3,2  Resolution: 72 x 48
+Id:   375     Size: 3,2     Images:    wall0047.int  0: Wall
+                                                     1: Wall
+                                                     2: Wall
+                                                     4: Wall
+Loading image Id: 375  tiles/wall0047.png Ok. Size: 3,2 / 3,2  Resolution: 72 x 48
+Id:   376     Size: 3,2     Images:    wall0048.int  0: Wall
+                                                     1: Wall
+                                                     2: Wall
+                                                     4: Wall
+Loading image Id: 376  tiles/wall0048.png Ok. Size: 3,2 / 3,2  Resolution: 72 x 48
+Id:   377     Size: 3,3     Images:    wall0049.int  0: Wall
+                                                     1: Wall
+                                                     3: Wall
+                                                     4: Wall
+                                                     5: Wall
+                                                     7: Wall
+Loading image Id: 377  tiles/wall0049.png Ok. Size: 3,3 / 3,3  Resolution: 72 x 72
+Id:   384     Size: 1,1     Images:    xtra0001.int  0: Wall
+Loading image Id: 384  tiles/xtra0001.png Ok. Size: 1,1 / 1,1  Resolution: 24 x 24
+Id:   385     Size: 2,1     Images:    xtra0002.int  0: Wall
+                                                     1: Clear
+Loading image Id: 385  tiles/xtra0002.png Ok. Size: 2,1 / 2,1  Resolution: 48 x 24
+Id:   386     Size: 1,1     Images:    xtra0003.int  0: Wall
+Loading image Id: 386  tiles/xtra0003.png Ok. Size: 1,1 / 1,1  Resolution: 24 x 24
+Id:   387     Size: 1,2     Images:    xtra0004.int  0: Wall
+                                                     1: Clear
+Loading image Id: 387  tiles/xtra0004.png Ok. Size: 1,2 / 1,2  Resolution: 24 x 48
+Id:   388     Size: 1,1     Images:    xtra0005.int  0: Wall
+Loading image Id: 388  tiles/xtra0005.png Ok. Size: 1,1 / 1,1  Resolution: 24 x 24
+Id:   389     Size: 2,1     Images:    xtra0006.int  0: Wall
+                                                     1: Clear
+Loading image Id: 389  tiles/xtra0006.png Ok. Size: 2,1 / 2,1  Resolution: 48 x 24
+Id:   390     Size: 1,1     Images:    xtra0007.int  0: Wall
+Loading image Id: 390  tiles/xtra0007.png Ok. Size: 1,1 / 1,1  Resolution: 24 x 24
+Id:   391     Size: 1,2     Images:    xtra0008.int  0: Wall
+                                                     1: Clear
+Loading image Id: 391  tiles/xtra0008.png Ok. Size: 1,2 / 1,2  Resolution: 24 x 48
+Id:   392     Size: 1,1     Images:    xtra0009.int  0: Wall
+Loading image Id: 392  tiles/xtra0009.png Ok. Size: 1,1 / 1,1  Resolution: 24 x 24
+Id:   393     Size: 1,1     Images:    xtra0010.int  0: Wall
+Loading image Id: 393  tiles/xtra0010.png Ok. Size: 1,1 / 1,1  Resolution: 24 x 24
+Id:   394     Size: 1,1     Images:    xtra0011.int  0: Wall
+Loading image Id: 394  tiles/xtra0011.png Ok. Size: 1,1 / 1,1  Resolution: 24 x 24
+Id:   395     Size: 1,2     Images:    xtra0012.int  0: Wall
+                                                     1: Clear
+Loading image Id: 395  tiles/xtra0012.png Ok. Size: 1,2 / 1,2  Resolution: 24 x 48
+Id:   396     Size: 1,2     Images:    xtra0013.int  0: Wall
+                                                     1: Clear
+Loading image Id: 396  tiles/xtra0013.png Ok. Size: 1,2 / 1,2  Resolution: 24 x 48
+Id:   397     Size: 3,2     Images:    xtra0014.int  0: Clear
+                                                     1: Wall
+                                                     2: Clear
+                                                     3: Clear
+                                                     4: Clear
+                                                     5: Clear
+Loading image Id: 397  tiles/xtra0014.png Ok. Size: 3,2 / 3,2  Resolution: 72 x 48
+Id:   398     Size: 3,2     Images:    xtra0015.int  0: Wall
+                                                     1: Wall
+                                                     2: Wall
+                                                     3: Wall
+                                                     4: Wall
+                                                     5: Wall
+Loading image Id: 398  tiles/xtra0015.png Ok. Size: 3,2 / 3,2  Resolution: 72 x 48
+Id:   399     Size: 2,4     Images:    xtra0016.int  0: Wall
+                                                     1: Wall
+                                                     2: Wall
+                                                     3: Wall
+                                                     4: Wall
+                                                     5: Wall
+                                                     6: Wall
+                                                     7: Wall
+Loading image Id: 399  tiles/xtra0016.png Ok. Size: 2,4 / 2,4  Resolution: 48 x 96
+Id: 65535     Size: 1,1     Images:      clear1.int  0: ClearNoSmudges
+                                                     1: ClearNoSmudges
+                                                     2: ClearNoSmudges
+                                                     3: ClearNoSmudges
+                                                     4: ClearNoSmudges
+                                                     5: ClearNoSmudges
+                                                     6: ClearNoSmudges
+                                                     7: ClearNoSmudges
+                                                     8: ClearNoSmudges
+                                                     9: ClearNoSmudges
+                                                    10: ClearNoSmudges
+                                                    11: ClearNoSmudges
+                                                    12: ClearNoSmudges
+                                                    13: ClearNoSmudges
+                                                    14: ClearNoSmudges
+                                                    15: ClearNoSmudges
+Loading image Id: 65535  tiles/clear1.png Ok. Size: 1,1 / 1,16  Resolution: 24 x 384
+Id:   253	Size: 1,1 / 1,6 	Resolution: 24 x 144
+                                                     0: pos(  0,  0) Clear
+                                                     1: pos(  0, 24) Clear
+                                                     2: pos(  0, 48) Clear
+                                                     3: pos(  0, 72) Clear
+                                                     4: pos(  0, 96) Clear
+                                                     5: pos(  0,120) Clear
+Id:   254	Size: 1,1 / 1,6 	Resolution: 24 x 144
+                                                     0: pos(  0,  0) Clear
+                                                     1: pos(  0, 24) Clear
+                                                     2: pos(  0, 48) Clear
+                                                     3: pos(  0, 72) Clear
+                                                     4: pos(  0, 96) Clear
+                                                     5: pos(  0,120) Clear
+Id:   255	Size: 1,1 / 1,16 	Resolution: 24 x 384
+                                                     0: pos(  0,  0) ClearNoSmudges
+                                                     1: pos(  0, 24) ClearNoSmudges
+                                                     2: pos(  0, 48) ClearNoSmudges
+                                                     3: pos(  0, 72) ClearNoSmudges
+                                                     4: pos(  0, 96) ClearNoSmudges
+                                                     5: pos(  0,120) ClearNoSmudges
+                                                     6: pos(  0,144) ClearNoSmudges
+                                                     7: pos(  0,168) ClearNoSmudges
+                                                     8: pos(  0,192) ClearNoSmudges
+                                                     9: pos(  0,216) ClearNoSmudges
+                                                    10: pos(  0,240) ClearNoSmudges
+                                                    11: pos(  0,264) ClearNoSmudges
+                                                    12: pos(  0,288) ClearNoSmudges
+                                                    13: pos(  0,312) ClearNoSmudges
+                                                    14: pos(  0,336) ClearNoSmudges
+                                                    15: pos(  0,360) ClearNoSmudges
+Id:   256	Size: 1,1 / 1,6 	Resolution: 24 x 144
+                                                     0: pos(  0,  0) Clear
+                                                     1: pos(  0, 24) Clear
+                                                     2: pos(  0, 48) Clear
+                                                     3: pos(  0, 72) Clear
+                                                     4: pos(  0, 96) Clear
+                                                     5: pos(  0,120) Clear
+Id:   257	Size: 1,1 / 1,6 	Resolution: 24 x 144
+                                                     0: pos(  0,  0) Clear
+                                                     1: pos(  0, 24) Clear
+                                                     2: pos(  0, 48) Clear
+                                                     3: pos(  0, 72) Clear
+                                                     4: pos(  0, 96) Clear
+                                                     5: pos(  0,120) Clear
+Id:   258	Size: 1,1 / 1,6 	Resolution: 24 x 144
+                                                     0: pos(  0,  0) Clear
+                                                     1: pos(  0, 24) Clear
+                                                     2: pos(  0, 48) Clear
+                                                     3: pos(  0, 72) Clear
+                                                     4: pos(  0, 96) Clear
+                                                     5: pos(  0,120) Clear
+Id:   259	Size: 1,1 / 1,1 	Resolution: 24 x 24
+                                                     0: pos(  0,  0) Clear
+Id:   260	Size: 1,1 / 1,1 	Resolution: 24 x 24
+                                                     0: pos(  0,  0) Clear
+Id:   261	Size: 1,1 / 1,1 	Resolution: 24 x 24
+                                                     0: pos(  0,  0) Clear
+Id:   262	Size: 1,1 / 1,1 	Resolution: 24 x 24
+                                                     0: pos(  0,  0) Clear
+Id:   263	Size: 1,1 / 1,1 	Resolution: 24 x 24
+                                                     0: pos(  0,  0) Clear
+Id:   264	Size: 1,1 / 1,1 	Resolution: 24 x 24
+                                                     0: pos(  0,  0) Clear
+Id:   265	Size: 1,1 / 1,1 	Resolution: 24 x 24
+                                                     0: pos(  0,  0) Clear
+Id:   266	Size: 1,1 / 1,1 	Resolution: 24 x 24
+                                                     0: pos(  0,  0) Clear
+Id:   267	Size: 1,1 / 1,1 	Resolution: 24 x 24
+                                                     0: pos(  0,  0) Clear
+Id:   268	Size: 1,1 / 1,12 	Resolution: 24 x 288
+                                                     0: pos(  0,  0) Clear
+                                                     1: pos(  0, 24) Clear
+                                                     2: pos(  0, 48) Clear
+                                                     3: pos(  0, 72) Clear
+                                                     4: pos(  0, 96) Clear
+                                                     5: pos(  0,120) Clear
+                                                     6: pos(  0,144) Clear
+                                                     7: pos(  0,168) Clear
+                                                     8: pos(  0,192) Clear
+                                                     9: pos(  0,216) Clear
+                                                    10: pos(  0,240) Clear
+                                                    11: pos(  0,264) Clear
+Id:   269	Size: 1,1 / 1,12 	Resolution: 24 x 288
+                                                     0: pos(  0,  0) Clear
+                                                     1: pos(  0, 24) Clear
+                                                     2: pos(  0, 48) Clear
+                                                     3: pos(  0, 72) Clear
+                                                     4: pos(  0, 96) Clear
+                                                     5: pos(  0,120) Clear
+                                                     6: pos(  0,144) Clear
+                                                     7: pos(  0,168) Clear
+                                                     8: pos(  0,192) Clear
+                                                     9: pos(  0,216) Clear
+                                                    10: pos(  0,240) Clear
+                                                    11: pos(  0,264) Clear
+Id:   270	Size: 1,1 / 1,12 	Resolution: 24 x 288
+                                                     0: pos(  0,  0) Clear
+                                                     1: pos(  0, 24) Clear
+                                                     2: pos(  0, 48) Clear
+                                                     3: pos(  0, 72) Clear
+                                                     4: pos(  0, 96) Clear
+                                                     5: pos(  0,120) Clear
+                                                     6: pos(  0,144) Clear
+                                                     7: pos(  0,168) Clear
+                                                     8: pos(  0,192) Clear
+                                                     9: pos(  0,216) Clear
+                                                    10: pos(  0,240) Clear
+                                                    11: pos(  0,264) Clear
+Id:   271	Size: 1,1 / 1,12 	Resolution: 24 x 288
+                                                     0: pos(  0,  0) Clear
+                                                     1: pos(  0, 24) Clear
+                                                     2: pos(  0, 48) Clear
+                                                     3: pos(  0, 72) Clear
+                                                     4: pos(  0, 96) Clear
+                                                     5: pos(  0,120) Clear
+                                                     6: pos(  0,144) Clear
+                                                     7: pos(  0,168) Clear
+                                                     8: pos(  0,192) Clear
+                                                     9: pos(  0,216) Clear
+                                                    10: pos(  0,240) Clear
+                                                    11: pos(  0,264) Clear
+Id:   272	Size: 1,1 / 1,12 	Resolution: 24 x 288
+                                                     0: pos(  0,  0) Clear
+                                                     1: pos(  0, 24) Clear
+                                                     2: pos(  0, 48) Clear
+                                                     3: pos(  0, 72) Clear
+                                                     4: pos(  0, 96) Clear
+                                                     5: pos(  0,120) Clear
+                                                     6: pos(  0,144) Clear
+                                                     7: pos(  0,168) Clear
+                                                     8: pos(  0,192) Clear
+                                                     9: pos(  0,216) Clear
+                                                    10: pos(  0,240) Clear
+                                                    11: pos(  0,264) Clear
+Id:   273	Size: 1,1 / 1,12 	Resolution: 24 x 288
+                                                     0: pos(  0,  0) Clear
+                                                     1: pos(  0, 24) Clear
+                                                     2: pos(  0, 48) Clear
+                                                     3: pos(  0, 72) Clear
+                                                     4: pos(  0, 96) Clear
+                                                     5: pos(  0,120) Clear
+                                                     6: pos(  0,144) Clear
+                                                     7: pos(  0,168) Clear
+                                                     8: pos(  0,192) Clear
+                                                     9: pos(  0,216) Clear
+                                                    10: pos(  0,240) Clear
+                                                    11: pos(  0,264) Clear
+Id:   274	Size: 1,1 / 1,12 	Resolution: 24 x 288
+                                                     0: pos(  0,  0) Clear
+                                                     1: pos(  0, 24) Clear
+                                                     2: pos(  0, 48) Clear
+                                                     3: pos(  0, 72) Clear
+                                                     4: pos(  0, 96) Clear
+                                                     5: pos(  0,120) Clear
+                                                     6: pos(  0,144) Clear
+                                                     7: pos(  0,168) Clear
+                                                     8: pos(  0,192) Clear
+                                                     9: pos(  0,216) Clear
+                                                    10: pos(  0,240) Clear
+                                                    11: pos(  0,264) Clear
+Id:   275	Size: 1,1 / 1,13 	Resolution: 24 x 312
+                                                     0: pos(  0,  0) Clear
+                                                     1: pos(  0, 24) Clear
+                                                     2: pos(  0, 48) Clear
+                                                     3: pos(  0, 72) Clear
+                                                     4: pos(  0, 96) Clear
+                                                     5: pos(  0,120) Clear
+                                                     6: pos(  0,144) Clear
+                                                     7: pos(  0,168) Clear
+                                                     8: pos(  0,192) Clear
+                                                     9: pos(  0,216) Clear
+                                                    10: pos(  0,240) Clear
+                                                    11: pos(  0,264) Clear
+                                                    12: pos(  0,288) Clear
+Id:   276	Size: 1,1 / 1,13 	Resolution: 24 x 312
+                                                     0: pos(  0,  0) Clear
+                                                     1: pos(  0, 24) Clear
+                                                     2: pos(  0, 48) Clear
+                                                     3: pos(  0, 72) Clear
+                                                     4: pos(  0, 96) Clear
+                                                     5: pos(  0,120) Clear
+                                                     6: pos(  0,144) Clear
+                                                     7: pos(  0,168) Clear
+                                                     8: pos(  0,192) Clear
+                                                     9: pos(  0,216) Clear
+                                                    10: pos(  0,240) Clear
+                                                    11: pos(  0,264) Clear
+                                                    12: pos(  0,288) Clear
+Id:   277	Size: 1,1 / 1,13 	Resolution: 24 x 312
+                                                     0: pos(  0,  0) Clear
+                                                     1: pos(  0, 24) Clear
+                                                     2: pos(  0, 48) Clear
+                                                     3: pos(  0, 72) Clear
+                                                     4: pos(  0, 96) Clear
+                                                     5: pos(  0,120) Clear
+                                                     6: pos(  0,144) Clear
+                                                     7: pos(  0,168) Clear
+                                                     8: pos(  0,192) Clear
+                                                     9: pos(  0,216) Clear
+                                                    10: pos(  0,240) Clear
+                                                    11: pos(  0,264) Clear
+                                                    12: pos(  0,288) Clear
+Id:   278	Size: 1,1 / 1,13 	Resolution: 24 x 312
+                                                     0: pos(  0,  0) Clear
+                                                     1: pos(  0, 24) Clear
+                                                     2: pos(  0, 48) Clear
+                                                     3: pos(  0, 72) Clear
+                                                     4: pos(  0, 96) Clear
+                                                     5: pos(  0,120) Clear
+                                                     6: pos(  0,144) Clear
+                                                     7: pos(  0,168) Clear
+                                                     8: pos(  0,192) Clear
+                                                     9: pos(  0,216) Clear
+                                                    10: pos(  0,240) Clear
+                                                    11: pos(  0,264) Clear
+                                                    12: pos(  0,288) Clear
+Id:   279	Size: 1,1 / 1,13 	Resolution: 24 x 312
+                                                     0: pos(  0,  0) Clear
+                                                     1: pos(  0, 24) Clear
+                                                     2: pos(  0, 48) Clear
+                                                     3: pos(  0, 72) Clear
+                                                     4: pos(  0, 96) Clear
+                                                     5: pos(  0,120) Clear
+                                                     6: pos(  0,144) Clear
+                                                     7: pos(  0,168) Clear
+                                                     8: pos(  0,192) Clear
+                                                     9: pos(  0,216) Clear
+                                                    10: pos(  0,240) Clear
+                                                    11: pos(  0,264) Clear
+                                                    12: pos(  0,288) Clear
+Id:   280	Size: 1,1 / 1,6 	Resolution: 24 x 144
+                                                     0: pos(  0,  0) Clear
+                                                     1: pos(  0, 24) Clear
+                                                     2: pos(  0, 48) Clear
+                                                     3: pos(  0, 72) Clear
+                                                     4: pos(  0, 96) Clear
+                                                     5: pos(  0,120) Clear
+Id:   281	Size: 1,1 / 1,8 	Resolution: 24 x 192
+                                                     0: pos(  0,  0) Clear
+                                                     1: pos(  0, 24) Clear
+                                                     2: pos(  0, 48) Clear
+                                                     3: pos(  0, 72) Clear
+                                                     4: pos(  0, 96) Clear
+                                                     5: pos(  0,120) Clear
+                                                     6: pos(  0,144) Clear
+                                                     7: pos(  0,168) Clear
+Id:   282	Size: 1,1 / 1,1 	Resolution: 24 x 24
+                                                     0: pos(  0,  0) Clear
+Id:   283	Size: 1,1 / 1,1 	Resolution: 24 x 24
+                                                     0: pos(  0,  0) Clear
+Id:   284	Size: 1,1 / 1,1 	Resolution: 24 x 24
+                                                     0: pos(  0,  0) Clear
+Id:   285	Size: 1,1 / 1,1 	Resolution: 24 x 24
+                                                     0: pos(  0,  0) Clear
+Id:   286	Size: 1,1 / 1,1 	Resolution: 24 x 24
+                                                     0: pos(  0,  0) Clear
+Id:   287	Size: 1,1 / 1,1 	Resolution: 24 x 24
+                                                     0: pos(  0,  0) Clear
+Id:   288	Size: 1,1 / 1,1 	Resolution: 24 x 24
+                                                     0: pos(  0,  0) Clear
+Id:   289	Size: 1,1 / 1,1 	Resolution: 24 x 24
+                                                     0: pos(  0,  0) Clear
+Id:   290	Size: 1,1 / 1,1 	Resolution: 24 x 24
+                                                     0: pos(  0,  0) Clear
+Id:   291	Size: 1,1 / 1,4 	Resolution: 24 x 96
+                                                     0: pos(  0,  0) Wall
+                                                     1: pos(  0, 24) Wall
+                                                     2: pos(  0, 48) Wall
+                                                     3: pos(  0, 72) Wall
+Id:   292	Size: 1,1 / 1,4 	Resolution: 24 x 96
+                                                     0: pos(  0,  0) Wall
+                                                     1: pos(  0, 24) Wall
+                                                     2: pos(  0, 48) Wall
+                                                     3: pos(  0, 72) Wall
+Id:   293	Size: 1,1 / 1,4 	Resolution: 24 x 96
+                                                     0: pos(  0,  0) Wall
+                                                     1: pos(  0, 24) Wall
+                                                     2: pos(  0, 48) Wall
+                                                     3: pos(  0, 72) Wall
+Id:   294	Size: 1,1 / 1,4 	Resolution: 24 x 96
+                                                     0: pos(  0,  0) Wall
+                                                     1: pos(  0, 24) Wall
+                                                     2: pos(  0, 48) Wall
+                                                     3: pos(  0, 72) Wall
+Id:   295	Size: 1,1 / 1,7 	Resolution: 24 x 168
+                                                     0: pos(  0,  0) Wall
+                                                     1: pos(  0, 24) Wall
+                                                     2: pos(  0, 48) Wall
+                                                     3: pos(  0, 72) Wall
+                                                     4: pos(  0, 96) Wall
+                                                     5: pos(  0,120) Wall
+Id:   296	Size: 1,1 / 1,1 	Resolution: 24 x 24
+                                                     0: pos(  0,  0) Wall
+Id:   297	Size: 1,1 / 1,1 	Resolution: 24 x 24
+                                                     0: pos(  0,  0) Wall
+Id:   298	Size: 1,1 / 1,1 	Resolution: 24 x 24
+                                                     0: pos(  0,  0) Wall
+Id:   299	Size: 1,1 / 1,1 	Resolution: 24 x 24
+                                                     0: pos(  0,  0) Wall
+Id:   300	Size: 1,1 / 1,1 	Resolution: 24 x 24
+                                                     0: pos(  0,  0) Wall
+Id:   301	Size: 1,1 / 1,1 	Resolution: 24 x 24
+                                                     0: pos(  0,  0) Wall
+Id:   302	Size: 1,1 / 1,1 	Resolution: 24 x 24
+                                                     0: pos(  0,  0) Wall
+Id:   303	Size: 1,1 / 1,1 	Resolution: 24 x 24
+                                                     0: pos(  0,  0) Wall
+Id:   304	Size: 1,1 / 1,1 	Resolution: 24 x 24
+                                                     0: pos(  0,  0) Wall
+Id:   305	Size: 1,1 / 1,1 	Resolution: 24 x 24
+                                                     0: pos(  0,  0) Wall
+Id:   306	Size: 1,1 / 1,1 	Resolution: 24 x 24
+                                                     0: pos(  0,  0) Wall
+Id:   307	Size: 1,1 / 1,1 	Resolution: 24 x 24
+                                                     0: pos(  0,  0) Wall
+Id:   308	Size: 1,1 / 1,1 	Resolution: 24 x 24
+                                                     0: pos(  0,  0) Wall
+Id:   309	Size: 1,1 / 1,1 	Resolution: 24 x 24
+                                                     0: pos(  0,  0) Wall
+Id:   310	Size: 1,1 / 1,1 	Resolution: 24 x 24
+                                                     0: pos(  0,  0) Wall
+Id:   311	Size: 1,1 / 1,1 	Resolution: 24 x 24
+                                                     0: pos(  0,  0) Wall
+Id:   312	Size: 1,1 / 1,1 	Resolution: 24 x 24
+                                                     0: pos(  0,  0) Wall
+Id:   313	Size: 1,1 / 1,1 	Resolution: 24 x 24
+                                                     0: pos(  0,  0) Wall
+Id:   314	Size: 1,1 / 1,1 	Resolution: 24 x 24
+                                                     0: pos(  0,  0) Wall
+Id:   315	Size: 1,1 / 1,1 	Resolution: 24 x 24
+                                                     0: pos(  0,  0) Wall
+Id:   316	Size: 1,1 / 1,1 	Resolution: 24 x 24
+                                                     0: pos(  0,  0) Wall
+Id:   317	Size: 1,1 / 1,1 	Resolution: 24 x 24
+                                                     0: pos(  0,  0) Wall
+Id:   318	Size: 1,1 / 1,12 	Resolution: 24 x 288
+                                                     0: pos(  0,  0) Clear
+                                                     1: pos(  0, 24) Clear
+                                                     2: pos(  0, 48) Clear
+                                                     3: pos(  0, 72) Clear
+                                                     4: pos(  0, 96) Clear
+                                                     5: pos(  0,120) Clear
+                                                     6: pos(  0,144) Clear
+                                                     7: pos(  0,168) Clear
+                                                     8: pos(  0,192) Clear
+                                                     9: pos(  0,216) Clear
+                                                    10: pos(  0,240) Clear
+                                                    11: pos(  0,264) Clear
+Id:   319	Size: 1,1 / 1,12 	Resolution: 24 x 288
+                                                     0: pos(  0,  0) Clear
+                                                     1: pos(  0, 24) Clear
+                                                     2: pos(  0, 48) Clear
+                                                     3: pos(  0, 72) Clear
+                                                     4: pos(  0, 96) Clear
+                                                     5: pos(  0,120) Clear
+                                                     6: pos(  0,144) Clear
+                                                     7: pos(  0,168) Clear
+                                                     8: pos(  0,192) Clear
+                                                     9: pos(  0,216) Clear
+                                                    10: pos(  0,240) Clear
+                                                    11: pos(  0,264) Clear
+Id:   320	Size: 1,1 / 1,1 	Resolution: 24 x 24
+                                                     0: pos(  0,  0) Clear
+Id:   321	Size: 1,1 / 1,1 	Resolution: 24 x 24
+                                                     0: pos(  0,  0) Clear
+Id:   322	Size: 1,1 / 1,1 	Resolution: 24 x 24
+                                                     0: pos(  0,  0) Clear
+Id:   323	Size: 1,1 / 1,1 	Resolution: 24 x 24
+                                                     0: pos(  0,  0) Clear
+Id:   324	Size: 1,1 / 1,1 	Resolution: 24 x 24
+                                                     0: pos(  0,  0) Clear
+Id:   325	Size: 1,1 / 1,1 	Resolution: 24 x 24
+                                                     0: pos(  0,  0) Clear
+Id:   326	Size: 1,1 / 1,1 	Resolution: 24 x 24
+                                                     0: pos(  0,  0) Clear
+Id:   327	Size: 1,1 / 1,1 	Resolution: 24 x 24
+                                                     0: pos(  0,  0) Clear
+Id:   328	Size: 1,1 / 1,1 	Resolution: 24 x 24
+                                                     0: pos(  0,  0) Clear
+Id:   329	Size: 1,1 / 1,1 	Resolution: 24 x 24
+                                                     0: pos(  0,  0) Wall
+Id:   330	Size: 1,1 / 1,1 	Resolution: 24 x 24
+                                                     0: pos(  0,  0) Wall
+Id:   331	Size: 1,1 / 1,1 	Resolution: 24 x 24
+                                                     0: pos(  0,  0) Wall
+Id:   332	Size: 1,1 / 1,1 	Resolution: 24 x 24
+                                                     0: pos(  0,  0) Wall
+Id:   333	Size: 1,1 / 1,1 	Resolution: 24 x 24
+                                                     0: pos(  0,  0) Wall
+Id:   334	Size: 1,1 / 1,1 	Resolution: 24 x 24
+                                                     0: pos(  0,  0) Wall
+Id:   335	Size: 1,1 / 1,1 	Resolution: 24 x 24
+                                                     0: pos(  0,  0) Wall
+Id:   336	Size: 1,1 / 1,1 	Resolution: 24 x 24
+                                                     0: pos(  0,  0) Wall
+Id:   337	Size: 1,1 / 1,1 	Resolution: 24 x 24
+                                                     0: pos(  0,  0) Wall
+Id:   338	Size: 1,1 / 1,1 	Resolution: 24 x 24
+                                                     0: pos(  0,  0) Wall
+Id:   339	Size: 1,1 / 1,1 	Resolution: 24 x 24
+                                                     0: pos(  0,  0) Wall
+Id:   340	Size: 1,1 / 1,1 	Resolution: 24 x 24
+                                                     0: pos(  0,  0) Wall
+Id:   341	Size: 1,1 / 1,1 	Resolution: 24 x 24
+                                                     0: pos(  0,  0) Wall
+Id:   342	Size: 1,1 / 1,1 	Resolution: 24 x 24
+                                                     0: pos(  0,  0) Wall
+Id:   343	Size: 1,1 / 1,1 	Resolution: 24 x 24
+                                                     0: pos(  0,  0) Wall
+Id:   344	Size: 1,1 / 1,1 	Resolution: 24 x 24
+                                                     0: pos(  0,  0) Wall
+Id:   345	Size: 1,1 / 1,1 	Resolution: 24 x 24
+                                                     0: pos(  0,  0) Wall
+Id:   346	Size: 1,1 / 1,1 	Resolution: 24 x 24
+                                                     0: pos(  0,  0) Wall
+Id:   347	Size: 1,1 / 1,1 	Resolution: 24 x 24
+                                                     0: pos(  0,  0) Wall
+Id:   348	Size: 1,1 / 1,1 	Resolution: 24 x 24
+                                                     0: pos(  0,  0) Wall
+Id:   349	Size: 1,1 / 1,1 	Resolution: 24 x 24
+                                                     0: pos(  0,  0) Wall
+Id:   350	Size: 1,1 / 1,1 	Resolution: 24 x 24
+                                                     0: pos(  0,  0) Wall
+Id:   351	Size: 2,2 / 2,2 	Resolution: 48 x 48
+                                                     0: pos(  0,  0) Wall
+                                                     1: pos( 24,  0) Wall
+                                                     2: pos(  0, 24) Wall
+Id:   352	Size: 2,2 / 2,2 	Resolution: 48 x 48
+                                                     0: pos(  0,  0) Wall
+                                                     1: pos( 24,  0) Wall
+                                                     2: pos(  0, 24) Wall
+Id:   353	Size: 2,2 / 2,2 	Resolution: 48 x 48
+                                                     0: pos(  0,  0) Wall
+                                                     1: pos( 24,  0) Wall
+                                                     2: pos(  0, 24) Wall
+Id:   354	Size: 2,2 / 2,2 	Resolution: 48 x 48
+                                                     0: pos(  0,  0) Wall
+                                                     1: pos( 24,  0) Wall
+                                                     2: pos(  0, 24) Wall
+Id:   355	Size: 2,2 / 2,2 	Resolution: 48 x 48
+                                                     0: pos(  0,  0) Wall
+                                                     1: pos( 24,  0) Wall
+                                                     3: pos( 24, 24) Wall
+Id:   356	Size: 2,2 / 2,2 	Resolution: 48 x 48
+                                                     0: pos(  0,  0) Wall
+                                                     1: pos( 24,  0) Wall
+                                                     3: pos( 24, 24) Wall
+Id:   357	Size: 2,2 / 2,2 	Resolution: 48 x 48
+                                                     0: pos(  0,  0) Wall
+                                                     1: pos( 24,  0) Wall
+                                                     3: pos( 24, 24) Wall
+Id:   358	Size: 2,2 / 2,2 	Resolution: 48 x 48
+                                                     0: pos(  0,  0) Wall
+                                                     1: pos( 24,  0) Wall
+                                                     3: pos( 24, 24) Wall
+Id:   359	Size: 2,2 / 2,2 	Resolution: 48 x 48
+                                                     0: pos(  0,  0) Wall
+                                                     2: pos(  0, 24) Wall
+                                                     3: pos( 24, 24) Wall
+Id:   360	Size: 2,2 / 2,2 	Resolution: 48 x 48
+                                                     0: pos(  0,  0) Wall
+                                                     2: pos(  0, 24) Wall
+                                                     3: pos( 24, 24) Wall
+Id:   361	Size: 2,2 / 2,2 	Resolution: 48 x 48
+                                                     0: pos(  0,  0) Wall
+                                                     2: pos(  0, 24) Wall
+                                                     3: pos( 24, 24) Wall
+Id:   362	Size: 2,2 / 2,2 	Resolution: 48 x 48
+                                                     0: pos(  0,  0) Wall
+                                                     2: pos(  0, 24) Wall
+                                                     3: pos( 24, 24) Wall
+Id:   363	Size: 2,2 / 2,2 	Resolution: 48 x 48
+                                                     0: pos(  0,  0) Wall
+                                                     1: pos( 24,  0) Wall
+                                                     2: pos(  0, 24) Wall
+                                                     3: pos( 24, 24) Wall
+Id:   364	Size: 2,2 / 2,2 	Resolution: 48 x 48
+                                                     0: pos(  0,  0) Wall
+                                                     1: pos( 24,  0) Wall
+                                                     2: pos(  0, 24) Wall
+                                                     3: pos( 24, 24) Wall
+Id:   365	Size: 2,2 / 2,2 	Resolution: 48 x 48
+                                                     0: pos(  0,  0) Wall
+                                                     1: pos( 24,  0) Wall
+                                                     2: pos(  0, 24) Wall
+                                                     3: pos( 24, 24) Wall
+Id:   366	Size: 2,2 / 2,2 	Resolution: 48 x 48
+                                                     0: pos(  0,  0) Wall
+                                                     1: pos( 24,  0) Wall
+                                                     2: pos(  0, 24) Wall
+                                                     3: pos( 24, 24) Wall
+Id:   367	Size: 2,3 / 2,3 	Resolution: 48 x 72
+                                                     0: pos(  0,  0) Wall
+                                                     2: pos(  0, 24) Wall
+                                                     3: pos( 24, 24) Wall
+                                                     4: pos(  0, 48) Wall
+Id:   368	Size: 2,3 / 2,3 	Resolution: 48 x 72
+                                                     0: pos(  0,  0) Wall
+                                                     2: pos(  0, 24) Wall
+                                                     3: pos( 24, 24) Wall
+                                                     4: pos(  0, 48) Wall
+Id:   369	Size: 2,3 / 2,3 	Resolution: 48 x 72
+                                                     0: pos(  0,  0) Wall
+                                                     1: pos( 24,  0) Wall
+                                                     2: pos(  0, 24) Wall
+                                                     3: pos( 24, 24) Wall
+                                                     5: pos( 24, 48) Wall
+Id:   370	Size: 2,3 / 2,3 	Resolution: 48 x 72
+                                                     0: pos(  0,  0) Wall
+                                                     1: pos( 24,  0) Wall
+                                                     2: pos(  0, 24) Wall
+                                                     3: pos( 24, 24) Wall
+                                                     5: pos( 24, 48) Wall
+Id:   371	Size: 3,2 / 3,2 	Resolution: 72 x 48
+                                                     0: pos(  0,  0) Wall
+                                                     1: pos( 24,  0) Wall
+                                                     3: pos(  0, 24) Wall
+                                                     4: pos( 24, 24) Wall
+                                                     5: pos( 48, 24) Wall
+Id:   372	Size: 3,2 / 3,2 	Resolution: 72 x 48
+                                                     0: pos(  0,  0) Wall
+                                                     1: pos( 24,  0) Wall
+                                                     3: pos(  0, 24) Wall
+                                                     4: pos( 24, 24) Wall
+                                                     5: pos( 48, 24) Wall
+Id:   373	Size: 3,2 / 3,2 	Resolution: 72 x 48
+                                                     0: pos(  0,  0) Wall
+                                                     1: pos( 24,  0) Wall
+                                                     3: pos(  0, 24) Wall
+                                                     4: pos( 24, 24) Wall
+                                                     5: pos( 48, 24) Wall
+Id:   374	Size: 3,2 / 3,2 	Resolution: 72 x 48
+                                                     0: pos(  0,  0) Wall
+                                                     1: pos( 24,  0) Wall
+                                                     3: pos(  0, 24) Wall
+                                                     4: pos( 24, 24) Wall
+                                                     5: pos( 48, 24) Wall
+Id:   375	Size: 3,2 / 3,2 	Resolution: 72 x 48
+                                                     0: pos(  0,  0) Wall
+                                                     1: pos( 24,  0) Wall
+                                                     2: pos( 48,  0) Wall
+                                                     4: pos( 24, 24) Wall
+Id:   376	Size: 3,2 / 3,2 	Resolution: 72 x 48
+                                                     0: pos(  0,  0) Wall
+                                                     1: pos( 24,  0) Wall
+                                                     2: pos( 48,  0) Wall
+                                                     4: pos( 24, 24) Wall
+Id:   377	Size: 3,3 / 3,3 	Resolution: 72 x 72
+                                                     0: pos(  0,  0) Wall
+                                                     1: pos( 24,  0) Wall
+                                                     3: pos(  0, 24) Wall
+                                                     4: pos( 24, 24) Wall
+                                                     5: pos( 48, 24) Wall
+                                                     7: pos( 24, 48) Wall
+Id:   384	Size: 1,1 / 1,1 	Resolution: 24 x 24
+                                                     0: pos(  0,  0) Wall
+Id:   385	Size: 2,1 / 2,1 	Resolution: 48 x 24
+                                                     0: pos(  0,  0) Wall
+                                                     1: pos( 24,  0) Clear
+Id:   386	Size: 1,1 / 1,1 	Resolution: 24 x 24
+                                                     0: pos(  0,  0) Wall
+Id:   387	Size: 1,2 / 1,2 	Resolution: 24 x 48
+                                                     0: pos(  0,  0) Wall
+                                                     1: pos(  0, 24) Clear
+Id:   388	Size: 1,1 / 1,1 	Resolution: 24 x 24
+                                                     0: pos(  0,  0) Wall
+Id:   389	Size: 2,1 / 2,1 	Resolution: 48 x 24
+                                                     0: pos(  0,  0) Wall
+                                                     1: pos( 24,  0) Clear
+Id:   390	Size: 1,1 / 1,1 	Resolution: 24 x 24
+                                                     0: pos(  0,  0) Wall
+Id:   391	Size: 1,2 / 1,2 	Resolution: 24 x 48
+                                                     0: pos(  0,  0) Wall
+                                                     1: pos(  0, 24) Clear
+Id:   392	Size: 1,1 / 1,1 	Resolution: 24 x 24
+                                                     0: pos(  0,  0) Wall
+Id:   393	Size: 1,1 / 1,1 	Resolution: 24 x 24
+                                                     0: pos(  0,  0) Wall
+Id:   394	Size: 1,1 / 1,1 	Resolution: 24 x 24
+                                                     0: pos(  0,  0) Wall
+Id:   395	Size: 1,2 / 1,2 	Resolution: 24 x 48
+                                                     0: pos(  0,  0) Wall
+                                                     1: pos(  0, 24) Clear
+Id:   396	Size: 1,2 / 1,2 	Resolution: 24 x 48
+                                                     0: pos(  0,  0) Wall
+                                                     1: pos(  0, 24) Clear
+Id:   397	Size: 3,2 / 3,2 	Resolution: 72 x 48
+                                                     0: pos(  0,  0) Clear
+                                                     1: pos( 24,  0) Wall
+                                                     2: pos( 48,  0) Clear
+                                                     3: pos(  0, 24) Clear
+                                                     4: pos( 24, 24) Clear
+                                                     5: pos( 48, 24) Clear
+Id:   398	Size: 3,2 / 3,2 	Resolution: 72 x 48
+                                                     0: pos(  0,  0) Wall
+                                                     1: pos( 24,  0) Wall
+                                                     2: pos( 48,  0) Wall
+                                                     3: pos(  0, 24) Wall
+                                                     4: pos( 24, 24) Wall
+                                                     5: pos( 48, 24) Wall
+Id:   399	Size: 2,4 / 2,4 	Resolution: 48 x 96
+                                                     0: pos(  0,  0) Wall
+                                                     1: pos( 24,  0) Wall
+                                                     2: pos(  0, 24) Wall
+                                                     3: pos( 24, 24) Wall
+                                                     4: pos(  0, 48) Wall
+                                                     5: pos( 24, 48) Wall
+                                                     6: pos(  0, 72) Wall
+                                                     7: pos( 24, 72) Wall
+Id: 65535	Size: 1,1 / 1,16 	Resolution: 24 x 384
+                                                     0: pos(  0,  0) ClearNoSmudges
+                                                     1: pos(  0, 24) ClearNoSmudges
+                                                     2: pos(  0, 48) ClearNoSmudges
+                                                     3: pos(  0, 72) ClearNoSmudges
+                                                     4: pos(  0, 96) ClearNoSmudges
+                                                     5: pos(  0,120) ClearNoSmudges
+                                                     6: pos(  0,144) ClearNoSmudges
+                                                     7: pos(  0,168) ClearNoSmudges
+                                                     8: pos(  0,192) ClearNoSmudges
+                                                     9: pos(  0,216) ClearNoSmudges
+                                                    10: pos(  0,240) ClearNoSmudges
+                                                    11: pos(  0,264) ClearNoSmudges
+                                                    12: pos(  0,288) ClearNoSmudges
+                                                    13: pos(  0,312) ClearNoSmudges
+                                                    14: pos(  0,336) ClearNoSmudges
+                                                    15: pos(  0,360) ClearNoSmudges
+0 errors loading 142 images.
+Templates.size()=142
+n2=0 Id=0
+n2=1 Id=0
+n2=2 Id=0
+n2=3 Id=0
+n2=4 Id=0
+n2=5 Id=0
+n2=6 Id=0
+n2=7 Id=0
+n2=8 Id=0
+n2=9 Id=0
+n2=10 Id=0
+n2=11 Id=0
+n2=12 Id=0
+n2=13 Id=0
+n2=14 Id=0
+n2=15 Id=0
+n2=16 Id=0
+n2=17 Id=0
+n2=18 Id=0
+n2=19 Id=0
+n2=20 Id=0
+n2=21 Id=0
+n2=22 Id=0
+n2=23 Id=0
+n2=24 Id=0
+n2=25 Id=0
+n2=26 Id=0
+n2=27 Id=0
+n2=28 Id=0
+n2=29 Id=0
+n2=30 Id=0
+n2=31 Id=0
+n2=32 Id=0
+n2=33 Id=0
+n2=34 Id=0
+n2=35 Id=0
+n2=36 Id=0
+n2=37 Id=0
+n2=38 Id=0
+n2=39 Id=0
+n2=40 Id=0
+n2=41 Id=0
+n2=42 Id=0
+n2=43 Id=0
+n2=44 Id=0
+n2=45 Id=0
+n2=46 Id=0
+n2=47 Id=0
+n2=48 Id=0
+n2=49 Id=0
+n2=50 Id=0
+n2=51 Id=0
+n2=52 Id=0
+n2=53 Id=0
+n2=54 Id=0
+n2=55 Id=0
+n2=56 Id=0
+n2=57 Id=0
+n2=58 Id=0
+n2=59 Id=0
+n2=60 Id=0
+n2=61 Id=0
+n2=62 Id=0
+n2=63 Id=0
+n2=64 Id=0
+n2=65 Id=0
+n2=66 Id=0
+n2=67 Id=0
+n2=68 Id=0
+n2=69 Id=0
+n2=70 Id=0
+n2=71 Id=0
+n2=72 Id=0
+n2=73 Id=0
+n2=74 Id=0
+n2=75 Id=0
+n2=76 Id=0
+n2=77 Id=0
+n2=78 Id=0
+n2=79 Id=0
+n2=80 Id=0
+n2=81 Id=0
+n2=82 Id=0
+n2=83 Id=0
+n2=84 Id=0
+n2=85 Id=0
+n2=86 Id=0
+n2=87 Id=0
+n2=88 Id=0
+n2=89 Id=0
+n2=90 Id=0
+n2=91 Id=0
+n2=92 Id=0
+n2=93 Id=0
+n2=94 Id=0
+n2=95 Id=0
+n2=96 Id=0
+n2=97 Id=0
+n2=98 Id=0
+n2=99 Id=0
+n2=100 Id=0
+n2=101 Id=0
+n2=102 Id=0
+n2=103 Id=0
+n2=104 Id=0
+n2=105 Id=0
+n2=106 Id=0
+n2=107 Id=0
+n2=108 Id=0
+n2=109 Id=0
+n2=110 Id=0
+n2=111 Id=0
+n2=112 Id=0
+n2=113 Id=0
+n2=114 Id=0
+n2=115 Id=0
+n2=116 Id=0
+n2=117 Id=0
+n2=118 Id=0
+n2=119 Id=0
+n2=120 Id=0
+n2=121 Id=0
+n2=122 Id=0
+n2=123 Id=0
+n2=124 Id=0
+n2=125 Id=0
+n2=126 Id=0
+n2=127 Id=0
+n2=128 Id=0
+n2=129 Id=0
+n2=130 Id=0
+n2=131 Id=0
+n2=132 Id=0
+n2=133 Id=0
+n2=134 Id=0
+n2=135 Id=0
+n2=136 Id=0
+n2=137 Id=0
+n2=138 Id=0
+n2=139 Id=0
+n2=140 Id=0
+n2=141 Id=0
