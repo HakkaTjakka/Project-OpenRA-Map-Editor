@@ -10,6 +10,12 @@ int main(int argc, char ** argv) {
     std::string option=std::string() + argv[1];
     transform(option.begin(), option.end(), option.begin(), ::tolower);
 
+//    printf("option=\"%s\"\n",option.c_str());
+    if ( option == "test2" ) {
+        main4();
+        return 0;
+    }
+
     if (option == "readbin") {
 
         unsigned char* bin = NULL;
