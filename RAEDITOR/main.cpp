@@ -159,7 +159,7 @@ int main(int argc, char ** argv) {
 
         if ( bin != NULL ) free( bin );
 
-extern int my_window_running;
+//extern int my_window_running;
 
 //        while ( my_window_running == 1 ) {
 //            sf::sleep(sf::seconds(0.1));

@@ -103,10 +103,10 @@ int edit_bin(unsigned char* bin, long filesize) {
     unsigned int offset;
     uint16_t val1a;
     uint8_t  val1b;
-    uint16_t val2;
+//    uint16_t val2;
 
     FILE* scan;
-    char str[4096];
+//    char str[4096];
 
     if ( ( scan = fopen( "scan.txt", "w" ) ) == NULL ) {
 
@@ -123,7 +123,7 @@ int edit_bin(unsigned char* bin, long filesize) {
 
             val1a = (int16_t) ( *( (uint16_t*) ( bin + 17                            + offset*3  )  ) );
             val1b = (int8_t)  ( *( (uint8_t*)  ( bin + 17 + 2                        + offset*3  )  ) );
-            val2  = (int16_t) ( *( (uint16_t*) ( bin + 17 + ( size_x * size_y ) * 3  + offset*3  )  ) );
+//            val2  = (int16_t) ( *( (uint16_t*) ( bin + 17 + ( size_x * size_y ) * 3  + offset*3  )  ) );
 
 
             if ( val1a >= 351 && val1a <= 377 ) {
@@ -660,7 +660,7 @@ int showbin(unsigned char* bin, sf::RenderTexture &tiles_texture, std::map<int, 
 //    }
 
     int16_t size_x = *(int16_t*)(bin + 1);
-    int16_t size_y = *(int16_t*)(bin + 3);
+//    int16_t size_y = *(int16_t*)(bin + 3);
 
     my_window_update = 2;
     while ( ! my_window_update == 0 ) sf::sleep(sf::seconds(0.001));
@@ -678,7 +678,7 @@ int showbin(unsigned char* bin, sf::RenderTexture &tiles_texture, std::map<int, 
     sf::sleep(sf::seconds(0.5));
 */
     sf::Texture* tiles = &(drawing->tiles);
-    sf::RenderTexture* rendertexture = &(drawing->rendertexture);
+//    sf::RenderTexture* rendertexture = &(drawing->rendertexture);
     sf::Sprite* sprite = &(drawing->sprite);
     sf::Sprite s;
 /*
