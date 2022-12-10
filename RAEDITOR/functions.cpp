@@ -4,26 +4,19 @@
 #include <SFML/Graphics.hpp>
 #include <SFML/Graphics/Sprite.hpp>
 
-long main_readbin(int argc, char ** argv, unsigned char* &bin) {
+long main_readbin(char* filename, unsigned char* &bin) {
     long size;
 
-    if (argc<3) {
 
-        printf("%s option <filename>'\n",argv[0]);
-        return -2;
-
-    } else {
-
-        if ( ( size = read_bin_file( std::string() + argv[2], bin ) ) >= 0 ) {
+        if ( ( size = read_bin_file( std::string() + filename, bin ) ) >= 0 ) {
 //                printf( "%ld bytes read.\n", size );
             return size;
         } else {
-            printf("Error %ld reading file %s\n", size, argv[2]);
+            printf("Error %ld reading file %s\n", size, filename);
             if ( bin != NULL ) free( bin );
             return (int)size;
         }
 
-    }
 }
 
 // File layout .bin file (inside the .oramap files, .zip file...)
@@ -149,20 +142,20 @@ int edit_bin(unsigned char* bin, long filesize) {
 
             } else {
 
-                if ( val1a >= 351 && val1a <= 377 ) {
+//                if ( val1a >= 351 && val1a <= 377 ) {
 //                    printf("x=%4d y=%4d val1a=%04X=%5d val1b=%02X=%3d val2=%04X=%5d\n", x, y, val1a, val1a, val1b, val1b, val2, val2 );
 
-                    sprintf( str, "echo \"| x=%4d y=%4d | val1a=0x%04X (%5d) | val1b=0x%02X (%3d) | val2=0x%04X (%5d) |\" >> fail.txt\n", x, y, val1a, val1a, val1b, val1b, val2, val2 );
-                    int ret = system( str );
-                    if ( ret != 0 ) printf( "Error system( %s )\n" ,str);
+//                    sprintf( str, "echo \"| x=%4d y=%4d | val1a=0x%04X (%5d) | val1b=0x%02X (%3d) | val2=0x%04X (%5d) |\" >> fail.txt\n", x, y, val1a, val1a, val1b, val1b, val2, val2 );
+//                    int ret = system( str );
+//                    if ( ret != 0 ) printf( "Error system( %s )\n" ,str);
 
-                    printf( "\033[1;31m*\033[0m" );
+//                    printf( "\033[1;31m*\033[0m" );
 
-                } else {
+//                } else {
 
                     printf( "*" );
 
-                }
+//                }
 
             }
         }
@@ -410,36 +403,18 @@ int save_bin(unsigned char* bin, long filesize) {
 //			2: Wall
 //			3: Wall
 
-struct Template {
-    int Id;
-    std::string Images;
-    sf::Vector2i Size;
-    sf::Vector2i Realsize;
-    std::string Catagories;
-    std::map< int, std::string > Tiles;
-    sf::Image Image;
-
-    bool operator < (const Template &B) const
-    {
-        return Id < B.Id;
-    }
-};
-
-struct Tileset {
-    long Lookup;    // id * 256 + tile (3 bytes ( * (x + x*y) ) from first block (offset 17) from .bin file)
-};
-
-int main_readtileset(char* filename) {
+int main_readtileset( char* filename, sf::RenderTexture &my_rendertexture, std::map<int, int> &Tileset ) {
 
 //    std::vector< struct Template > Templates;
 //    std::vector< struct Template >::iterator it_Templates;
 
     struct Template Template;
-    struct Tileset Tile;
+//    struct Tileset Tile;
     std::map<int, struct Template> Templates;
     std::map<int, struct Template>::iterator it_Templates;
     std::map<int, std::string>::iterator it_Tiles;
-    std::vector<struct Tileset> Tileset;
+    std::map<int, int>::iterator it_Tileset;
+//    std::vector<struct Tileset> Tileset;
 
     if ( !file_exists( filename ) ) {
 
@@ -492,20 +467,20 @@ int main_readtileset(char* filename) {
                 }
 
                 tiles = false;
-                printf( "Id: %s\n", a[2] );
+//                printf( "Id: %s\n", a[2] );
                 Template.Id = atoi(a[2]);
 
             } else if ( strcmp( a[1], "Images:" ) == 0 ) {
 
                 tiles = false;
                 Template.Images = std::string() + a[2];
-                printf( "Images: %s\n", a[2] );
+//                printf( "Images: %s\n", a[2] );
 
             } else if ( strcmp( a[1], "Size:") == 0) {
 
                 tiles = false;
                 sscanf( a[2], "%d,%d", &(Template.Size.x), &(Template.Size.y ) );
-                printf( "Size: %d,%d\n", Template.Size.x, Template.Size.y );
+//                printf( "Size: %d,%d\n", Template.Size.x, Template.Size.y );
 
             } else if ( strcmp( a[1], "Tiles:") == 0) {
 
@@ -513,7 +488,7 @@ int main_readtileset(char* filename) {
 
             } else if ( tiles == true) {
 
-                printf( "%s %s\n", a[1], a[2] );
+//                printf( "%s %s\n", a[1], a[2] );
                 Template.Tiles.insert( std::make_pair( atoi( a[1] ), a[2] ) );
 
             }
@@ -583,13 +558,13 @@ int main_readtileset(char* filename) {
 //            printf( "\n" );
 //    std::map< int, std::string>::iterator it_tiles;
 
-
-
         }
-         sf::RenderTexture my_rendertexture;
-        my_rendertexture.create( 32 * 24, 32 * 24 );
+
+//        sf::RenderTexture my_rendertexture;
+
+        my_rendertexture.create( 32 * 24, 16 * 24 );
 //my_rendertexture.create()
-        my_rendertexture.clear(sf::Color(0,0,0,0));
+        my_rendertexture.clear(sf::Color(255,0,0,0));
         sf::Sprite my_sprite;
         sf::Texture my_texture;
         int tile_num = 0;
@@ -620,28 +595,31 @@ int main_readtileset(char* filename) {
                 my_sprite.setPosition( x_pos * 24, y_pos * 24 );
                 my_rendertexture.draw(my_sprite);
 
-                Tile.Lookup = Template.Id * 256 + it_Tiles->first;
-                Tileset.push_back(Tile);
+//                Tile.Lookup = Template.Id * 256 + it_Tiles->first;
+
+                Tileset.insert( std::make_pair( Template.Id * 256 + it_Tiles->first, tile_num ) );
+
+//                Tileset.push_back(Tile);
 //                if (  it_Tiles == Template.Tiles.begin() ) {
                     printf( "                                                    " );
 //                }
-                printf( "%2d: pos(%3d,%3d) %s\n", it_Tiles->first, X_START, Y_START, it_Tiles->second.c_str()  );
+                printf( "%2d: pos(%3d,%3d) -> (%3d,%3d)  %s\n",
+                    it_Tiles->first, X_START, Y_START,
+                    x_pos * 24, y_pos * 24,
+                    it_Tiles->second.c_str()  );
 
                 tile_num++;
             }
 
         }
         my_rendertexture.display();
-        my_rendertexture.getTexture().copyToImage().saveToFile("out.png");
-        my_window_update = 1;
         printf( "%d errors loading %d images.\n", error, loaded );
 
         printf("Templates.size()=%lu\n",Templates.size());
+        printf("Tileset.size()=%lu\n",Tileset.size());
 
-        int n1=Tileset.size();
-        for ( int n2=0; n2 < n1; n2++ ) {
-            Tile = Tileset[ n2 ];
-            printf( "Tile #%d = 0x%06X\n", n2, (int)Tile.Lookup );
+        for (it_Tileset = Tileset.begin(); it_Tileset != Tileset.end(); it_Tileset++) {
+            printf( "Tile #%d = 0x%06X\n", it_Tileset->second, it_Tileset->first );
         }
 /*
         int n1=Templates.size();
@@ -666,6 +644,173 @@ int main_readtileset(char* filename) {
     return 0;
 }
 
+//extern sf::RenderTexture backgroundRenderTexture;
+extern sf::RenderTexture* backgroundRenderTexturePointer;
+extern sf::RenderTexture* backgroundTexturePointer;
+extern sf::Mutex window_mutex;
+
+
+//int showbin(unsigned char* bin, sf::RenderTexture &tiles_texture,  std::map<int, int> &Tileset) {
+int showbin(unsigned char* bin, sf::RenderTexture &tiles_texture, std::map<int, int> &Tileset, struct Drawing* drawing ) {
+    printf("Tileset.size()=%lu\n",Tileset.size());
+    std::map<int, int>::iterator it_Tileset;
+
+//    for (it_Tileset = Tileset.begin(); it_Tileset != Tileset.end(); it_Tileset++) {
+//        printf( "Tile #%d = 0x%06X\n", it_Tileset->second, it_Tileset->first );
+//    }
+
+    int16_t size_x = *(int16_t*)(bin + 1);
+    int16_t size_y = *(int16_t*)(bin + 3);
+
+    my_window_update = 2;
+    while ( ! my_window_update == 0 ) sf::sleep(sf::seconds(0.001));
+    sf::sleep(sf::seconds(1.0));
+
+/*
+    backgroundRenderTexturePointer->create(1920,1080);
+    backgroundRenderTexturePointer->clear(sf::Color(255,0,0,255));
+//    backgroundRenderTexturePointer->display();
+    printf("set red\n");
+    my_window_update = 3;
+    while ( ! my_window_update == 0 ) sf::sleep(sf::seconds(0.001));
+//    backgroundRenderTexturePointer->getTexture().copyToImage().saveToFile("pointer1a.png");
+//    backgroundTexturePointer->getTexture().copyToImage().saveToFile("pointer1b.png");
+    sf::sleep(sf::seconds(0.5));
+*/
+    sf::Texture* tiles = &(drawing->tiles);
+    sf::RenderTexture* rendertexture = &(drawing->rendertexture);
+    sf::Sprite* sprite = &(drawing->sprite);
+    sf::Sprite s;
+/*
+
+    s.setTexture(*tiles, true);
+    s.setPosition(200,200);
+    rendertexture->clear(sf::Color(0,255,0,255));
+    rendertexture->draw(s);
+    rendertexture->display();
+//    rendertexture->getTexture().copyToImage().saveToFile("pointer1a.png");
+
+*/
+//    rendertexture->setActive(false);
+
+    my_window_update = 10;
+    while ( ! my_window_update == 0 ) sf::sleep(sf::seconds(0.001));
+    sf::sleep(sf::seconds(0.5));
+
+//    rendertexture->getTexture().copyToImage().saveToFile("pointer2a.png");
+//    backgroundRenderTexturePointer->getTexture().copyToImage().saveToFile("pointer2a.png");
+//    backgroundTexturePointer->getTexture().copyToImage().saveToFile("pointer2b.png");
+
+//    backgroundRenderTexturePointer->setActive(true);
+
+    my_window_update = 11;
+    while ( ! my_window_update == 0 ) sf::sleep(sf::seconds(0.001));
+    sf::sleep(sf::seconds(0.5));
+
+/*
+    rendertexture->setActive(true);
+    rendertexture->clear(sf::Color(255,0,255,255));
+    rendertexture->display();
+*/
+
+//    rendertexture->getTexture().copyToImage().saveToFile("pointer2a.png");
+
+//    rendertexture->setActive(false);
+
+//    backgroundRenderTexturePointer->getTexture().copyToImage().saveToFile("pointer3a.png");
+//    rendertexture->setActive(false);
+//    my_window_update = 3;
+
+//    backgroundRenderTexturePointer->clear(sf::Color(255,0,255,255));
+//    backgroundRenderTexturePointer->display();
+//    backgroundRenderTexturePointer->setActive(false);
+
+//    my_window_update = 3;
+//    while ( ! my_window_update == 0 ) sf::sleep(sf::seconds(0.001));
+
+//    backgroundRenderTexturePointer->getTexture().copyToImage().saveToFile("pointer3a.png");
+//    backgroundTexturePointer->getTexture().copyToImage().saveToFile("pointer3b.png");
+//    sf::sleep(sf::seconds(0.5));
+
+
+//    window_mutex.lock();
+//    backgroundRenderTexturePointer->setActive(true);
+//    rendertexture->setActive(true);
+
+    for (int y=0; y < 45; y++) {
+        for (int x=0; x < 80; x++) {
+            int offset = x + size_x * y;
+            uint16_t val1a = (uint16_t) ( *( (uint16_t*) ( bin + 17                            + offset*3  )  ) );
+            uint8_t val1b = (uint8_t) ( *( (uint8_t*)  ( bin + 17 + 2                        + offset*3  )  ) );
+            int tile = val1a * 256 + val1b;
+
+            it_Tileset = Tileset.find(tile);
+            if ( it_Tileset != Tileset.end()) {
+                int X_START = ( it_Tileset->second % 32 ) * 24;
+                int Y_START = int( it_Tileset->second / 32 ) * 24;
+
+                // s.setTextureRect( { X_START, Y_START, 24, 24 } );
+                // s.setPosition( x * 24, y * 24 );
+                while ( ! my_window_update == 0 ) sf::sleep(sf::seconds(0.00001));
+                sprite->setTexture(*tiles);
+                sprite->setTextureRect( { X_START, Y_START, 24, 24 } );
+                sprite->setPosition( x * 24, y * 24 );
+                my_window_update = 13;
+
+//                while ( ! my_window_update == 0 ) sf::sleep(sf::seconds(0.001));
+
+//                window_mutex.lock();
+
+//                rendertexture->draw(s);
+
+//                backgroundRenderTexturePointer->draw(s);
+//                backgroundTexturePointer->draw(s);
+//                backgroundTexturePointer->display();
+//                window_mutex.unlock();
+//                backgroundRenderTexturePointer->display();
+
+//                my_window_update = 3;
+//                while ( ! my_window_update == 0 ) sf::sleep(sf::seconds(0.001));
+
+//                printf("x=%3d y=%3d  Index = %6d  Tile=0x%06X  Id=%3d  pos(%3d,%3d)\n ",
+//                    x, y, it_Tileset->second, it_Tileset->first,
+//                    (int)val1a,
+//                    X_START, Y_START );
+            } else {
+                printf("x=%3d y=%3d  TILE NOT FOUND  Tile=0x%06X\n ", x, y,  tile );
+            }
+//cout << distance(mymap.begin(),mymap.find("198765432"));
+//            val2  = (int16_t) ( *( (uint16_t*) ( bin + 17 + ( size_x * size_y ) * 3  + offset*3  )  ) );
+        }
+    }
+    my_window_update = 14;
+
+//    backgroundRenderTexturePointer->display();
+    printf("draw\n");
+
+//    rendertexture->display();
+//    rendertexture->getTexture().copyToImage().saveToFile("pointer4a.png");
+//    rendertexture->setActive(false);
+
+//    backgroundRenderTexturePointer->display();
+//    backgroundRenderTexturePointer->setActive(false);
+
+//    my_window_update = 3;
+//    while ( ! my_window_update == 0 ) sf::sleep(sf::seconds(0.001));
+//    backgroundRenderTexturePointer->getTexture().copyToImage().saveToFile("pointer4a.png");
+//    backgroundTexturePointer->getTexture().copyToImage().saveToFile("pointer4b.png");
+
+    int p=0x016503;
+    it_Tileset = Tileset.find(p);
+    if ( it_Tileset != Tileset.end()) {
+        printf("Index = %6d  Tile=0x%06X\n", it_Tileset->second, it_Tileset->first );
+    } else {
+        printf("TILE NOT FOUND  Tile=0x%06X\n", p );
+    }
+
+    return 0;
+}
+
 
 bool file_exists( const char * filename ) {
 
@@ -674,7 +819,3 @@ bool file_exists( const char * filename ) {
     if ( stat( filename, &stat_buffer ) == 0 ) return true;
     return false;
 }
-
-
-
-
