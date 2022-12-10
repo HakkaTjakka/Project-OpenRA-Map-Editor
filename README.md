@@ -4,6 +4,15 @@
 Created under Ubuntu Linux.
 
 ```
+latest: 10 Dec 2022
+	's': 			smooth on/off
+	pageup/pagedown: 	zoom in/out 5%
+	ctrl + pageup/pagedown:	rotate counter-/clockwise 10 degrees.
+	'v':			verticalsync enabled/disabled
+	
+	SFML graphics / threads: stable!
+	tiles still mess... help
+	
 latest:
 	Fooled around with SFML. For now it reads and displays (part of) a .bin (SHOWBIN.sh)
 	However something is wrong with the tiles.... Time to figure that out...
