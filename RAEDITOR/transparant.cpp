@@ -367,7 +367,34 @@ int do_events(struct Drawing* drawing) {
                 }
             } else {
                 switch(drawing->event.text.unicode) {
-
+                    case sf::Keyboard::Left:
+                        drawing->backgroundsprite.setPosition(
+                            drawing->backgroundsprite.getPosition().x+24,
+                            drawing->backgroundsprite.getPosition().y
+                        );
+                        printf( "Panning left %f\n", drawing->backgroundsprite.getPosition().x );
+                        break;
+                    case sf::Keyboard::Right:
+                        drawing->backgroundsprite.setPosition(
+                            drawing->backgroundsprite.getPosition().x-24,
+                            drawing->backgroundsprite.getPosition().y
+                        );
+                        printf( "Panning right %f\n", drawing->backgroundsprite.getPosition().x );
+                        break;
+                    case sf::Keyboard::Up:
+                        drawing->backgroundsprite.setPosition(
+                            drawing->backgroundsprite.getPosition().x,
+                            drawing->backgroundsprite.getPosition().y+24
+                        );
+                        printf( "Panning up %f\n", drawing->backgroundsprite.getPosition().x );
+                        break;
+                    case sf::Keyboard::Down:
+                        drawing->backgroundsprite.setPosition(
+                            drawing->backgroundsprite.getPosition().x,
+                            drawing->backgroundsprite.getPosition().y-24
+                        );
+                        printf( "Panning down %f\n", drawing->backgroundsprite.getPosition().x );
+                        break;
                     case sf::Keyboard::PageUp:
                         zoom=zoom*1.05;
                         drawing->backgroundsprite.setScale(zoom,zoom);
@@ -378,6 +405,7 @@ int do_events(struct Drawing* drawing) {
                         drawing->backgroundsprite.setScale(zoom,zoom);
                         printf( "Zooming out %f\n", zoom );
                         break;
+
                     case sf::Keyboard::Escape:
                         printf ("Escape pressed, \n");
                         drawing->kill = true;
@@ -597,15 +625,24 @@ void renderingThread(struct Drawing* drawing)
 //        static float r=0.0;
 //        r=r+0.01;
         static float rot=0.0;
+        static float posx=0.0;
+        static float posy=0.0;
 
         float ns = ( backgroundSprite.getScale().x*15.0 + backgroundsprite->getScale().x) / 16.0;
         backgroundSprite.setScale       ( ns, ns );
-        backgroundSprite.setOrigin      ( backgroundsprite->getOrigin() );
-        backgroundSprite.setPosition    ( backgroundsprite->getPosition() );
 
+        backgroundSprite.setOrigin      ( backgroundsprite->getOrigin() );
+
+//        backgroundSprite.setPosition    ( backgroundsprite->getPosition() );
 
         rot = ( rot * 15.0 + drawing->rotation ) / 16.0;
         backgroundSprite.setRotation( rot );
+
+
+        posx = ( posx * 99.0 + backgroundsprite->getPosition().x ) / 100.0;
+        posy = ( posy * 99.0 + backgroundsprite->getPosition().y ) / 100.0;
+
+        backgroundSprite.setPosition( posx, posy );
 
 //        backgroundSprite.setRotation( ( backgroundSprite.getRotation() * 15.0 + backgroundsprite->getRotation() ) / 16.0 );
 

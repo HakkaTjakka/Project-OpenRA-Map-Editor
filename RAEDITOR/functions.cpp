@@ -756,30 +756,30 @@ int showbin(unsigned char* bin, sf::RenderTexture &tiles_texture, std::map<int, 
 
                 // s.setTextureRect( { X_START, Y_START, 24, 24 } );
                 // s.setPosition( x * 24, y * 24 );
-                int cnt=0;
-                int cnt2=0;
-                static float avg=0.0;
-                static float tot=0.0;
-                static int avg_cnt=1;
+//                int cnt=0;
+//                int cnt2=0;
+//                static float avg=0.0;
+//                static float tot=0.0;
+//                static int avg_cnt=1;
 
                 while ( ! my_window_update == 0 ) {
                     sf::sleep(sf::seconds(0.0001));
-                    cnt++;
-                    cnt2++;
-                    if (cnt2 == 100) {
-                        printf("n=%d, avg=%7f Wait %d\r",avg_cnt, avg, cnt);
-                        cnt2=0;
-                    }
+//                    cnt++;
+//                    cnt2++;
+//                    if (cnt2 == 100) {
+//                        printf("n=%d, avg=%7f Wait %d\r",avg_cnt, avg, cnt);
+//                        cnt2=0;
+//                    }
 //                    sf::sleep(sf::seconds(0.0000001));
                 }
-                tot+=cnt;
-                avg=tot / avg_cnt;
-                avg_cnt++;
+//                tot+=cnt;
+//                avg=tot / avg_cnt;
+//                avg_cnt++;
 
-                printf("n=%d, avg=%7f Wait %d\n",avg_cnt, avg, cnt);
+//                printf("n=%d, avg=%7f Wait %d\n",avg_cnt, avg, cnt);
 
 
-                printf("             \r");
+//                printf("             \r");
 //                while ( ! my_window_update == 0 ) sf::sleep(sf::seconds(0.000001));
                 sprite->setTextureRect( { X_START, Y_START, 24, 24 } );
                 sprite->setPosition( x * 24, y * 24 );
