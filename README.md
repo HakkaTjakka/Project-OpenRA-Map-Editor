@@ -5,6 +5,12 @@ Created under Ubuntu Linux.
 
 ```
 latest:
+	Fooled around with SFML. For now it reads and displays (part of) a .bin (SHOWBIN.sh)
+	However something is wrong with the tiles.... Time to figure that out...
+	Hia!
+	Any questions / idea's? Ring the bell.
+
+latest:
 	Added a 251 x 251 (249 x 249) map MAZE
 	program now converts output33.txt and adds this maze to the map.bin file.
 	Then writes new bin file and outputs some actor data for the map.yaml file.
