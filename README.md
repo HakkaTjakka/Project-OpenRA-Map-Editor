@@ -9,7 +9,9 @@ latest: 10 Dec 2022
 	pageup/pagedown: 	zoom in/out 5%
 	ctrl + pageup/pagedown:	rotate counter-/clockwise 10 degrees.
 	'v':			verticalsync enabled/disabled
-	
+	cursor left/right:	pan left/right
+	cursor up/down:		pan up/down
+	(need code to make it smooth.... keyboard speed / refresh_rate / timing) 
 	SFML graphics / threads: stable!
 	tiles still mess... help
 	
