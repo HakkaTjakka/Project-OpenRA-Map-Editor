@@ -71,6 +71,11 @@ struct Drawing {
     bool kill=false;
     sf::Event event;
     sf::Sprite backgroundsprite;
+    bool smooth=true;
+    bool setverticalsync=true;
+    bool wantsetverticalsync=true;
+    float rotation=0.0;
+
 };
 
 int showbin(unsigned char* bin, sf::RenderTexture &tiles_texture, std::map<int, int> &Tileset, struct Drawing* drawing );

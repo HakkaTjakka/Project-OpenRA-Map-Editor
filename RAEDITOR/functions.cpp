@@ -737,6 +737,8 @@ int showbin(unsigned char* bin, sf::RenderTexture &tiles_texture, std::map<int, 
 //    backgroundRenderTexturePointer->setActive(true);
 //    rendertexture->setActive(true);
 
+    sprite->setTexture(*tiles);
+
     for (int y=0; y < 45; y++) {
         for (int x=0; x < 80; x++) {
             int offset = x + size_x * y;
@@ -745,14 +747,40 @@ int showbin(unsigned char* bin, sf::RenderTexture &tiles_texture, std::map<int, 
             int tile = val1a * 256 + val1b;
 
             it_Tileset = Tileset.find(tile);
+
+            if (drawing->kill) return (0);
+
             if ( it_Tileset != Tileset.end()) {
                 int X_START = ( it_Tileset->second % 32 ) * 24;
                 int Y_START = int( it_Tileset->second / 32 ) * 24;
 
                 // s.setTextureRect( { X_START, Y_START, 24, 24 } );
                 // s.setPosition( x * 24, y * 24 );
-                while ( ! my_window_update == 0 ) sf::sleep(sf::seconds(0.00001));
-                sprite->setTexture(*tiles);
+                int cnt=0;
+                int cnt2=0;
+                static float avg=0.0;
+                static float tot=0.0;
+                static int avg_cnt=1;
+
+                while ( ! my_window_update == 0 ) {
+                    sf::sleep(sf::seconds(0.0001));
+                    cnt++;
+                    cnt2++;
+                    if (cnt2 == 100) {
+                        printf("n=%d, avg=%7f Wait %d\r",avg_cnt, avg, cnt);
+                        cnt2=0;
+                    }
+//                    sf::sleep(sf::seconds(0.0000001));
+                }
+                tot+=cnt;
+                avg=tot / avg_cnt;
+                avg_cnt++;
+
+                printf("n=%d, avg=%7f Wait %d\n",avg_cnt, avg, cnt);
+
+
+                printf("             \r");
+//                while ( ! my_window_update == 0 ) sf::sleep(sf::seconds(0.000001));
                 sprite->setTextureRect( { X_START, Y_START, 24, 24 } );
                 sprite->setPosition( x * 24, y * 24 );
                 my_window_update = 13;
@@ -783,6 +811,7 @@ int showbin(unsigned char* bin, sf::RenderTexture &tiles_texture, std::map<int, 
 //            val2  = (int16_t) ( *( (uint16_t*) ( bin + 17 + ( size_x * size_y ) * 3  + offset*3  )  ) );
         }
     }
+    while ( ! my_window_update == 0 ) sf::sleep(sf::seconds(0.00001));
     my_window_update = 14;
 
 //    backgroundRenderTexturePointer->display();
@@ -810,7 +839,6 @@ int showbin(unsigned char* bin, sf::RenderTexture &tiles_texture, std::map<int, 
 
     return 0;
 }
-
 
 bool file_exists( const char * filename ) {
 

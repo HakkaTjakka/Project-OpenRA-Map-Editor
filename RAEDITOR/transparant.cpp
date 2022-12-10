@@ -339,10 +339,12 @@ bool setTransparency2(HWND hWnd, unsigned char alpha)
 bool active = true;
 
 int do_events(struct Drawing* drawing) {
+//    sf::Context context;
 
     while (drawing->window.pollEvent(drawing->event)) {
         if ( drawing->event.type == sf::Event::KeyPressed ) {
             static float zoom = 1.0;
+            static float rotating = 0.0;
 
             if ( drawing->event.type == sf::Event::Closed) {
                 if ( drawing->event.key.code == sf::Keyboard::Escape )
@@ -350,21 +352,51 @@ int do_events(struct Drawing* drawing) {
                 drawing->kill = true;
             }
 
-            switch(drawing->event.text.unicode) {
+            if ( drawing->event.key.control ) {
+                switch(drawing->event.text.unicode) {
                     case sf::Keyboard::PageUp:
-                        zoom=zoom*1.01;
+                        rotating += 10.0;
+                        drawing->rotation=rotating;
+                        printf( "Rotated %f\n", rotating );
+                        break;
+                    case sf::Keyboard::PageDown:
+                        rotating -= 10.0;
+                        drawing->rotation=rotating;
+                        printf( "Rotated %f\n", rotating );
+                        break;
+                }
+            } else {
+                switch(drawing->event.text.unicode) {
+
+                    case sf::Keyboard::PageUp:
+                        zoom=zoom*1.05;
                         drawing->backgroundsprite.setScale(zoom,zoom);
                         printf( "Zooming in %f\n", zoom );
                         break;
                     case sf::Keyboard::PageDown:
-                        zoom=zoom/1.01;
+                        zoom=zoom/1.05;
                         drawing->backgroundsprite.setScale(zoom,zoom);
                         printf( "Zooming out %f\n", zoom );
                         break;
                     case sf::Keyboard::Escape:
-                        printf ("Escape pressed, leaving thread.\n");
+                        printf ("Escape pressed, \n");
                         drawing->kill = true;
                         break;
+                    case sf::Keyboard::S:
+                        drawing->smooth = ! drawing->smooth;
+                        if (drawing->smooth) printf ("Toggle smooth: ON.\n");
+                        else printf ("Toggle smooth: OFF.\n");
+                        break;
+                    case sf::Keyboard::V:
+                        if ( drawing->setverticalsync ) {
+                            drawing->wantsetverticalsync = false;
+                        } else {
+                            drawing->wantsetverticalsync = true;
+                        }
+                        if (drawing->wantsetverticalsync) printf ("Wanting verticalSync: ON.\n");
+                        else printf ("Wanting verticalSync: OFF.\n");
+                        break;
+                }
             }
         }
     }
@@ -374,6 +406,8 @@ int do_events(struct Drawing* drawing) {
 
 void renderingThread(struct Drawing* drawing)
 {
+//    sf::Context context;
+
     sf::Window* window = &(drawing->window);
     sf::RenderTexture* rendertexture = &(drawing->rendertexture);
     sf::Sprite* sprite = &(drawing->sprite);
@@ -422,7 +456,7 @@ void renderingThread(struct Drawing* drawing)
 //    tiles->setSmooth(true);
 //    t.setSmooth(true);
 //    rendertexture->setSmooth(true);
-    backgroundTexture.setSmooth(true);
+    backgroundTexture.setSmooth(drawing->smooth);
 
     window->setActive(true);
 
@@ -432,8 +466,22 @@ void renderingThread(struct Drawing* drawing)
     while (window->isOpen() && drawing->kill == false)
     {
 
+        if (backgroundTexture.isSmooth() != drawing->smooth) backgroundTexture.setSmooth(drawing->smooth);
+
         if ( active ) {
-            do_events(drawing);
+            do_events( drawing );
+            if ( drawing->wantsetverticalsync != drawing->setverticalsync ) {
+                if ( drawing->wantsetverticalsync == true ) {
+                    printf ("Setting verticalSync: ON.\n");
+                    window->setVerticalSyncEnabled( true );
+                    drawing->setverticalsync = true;
+                } else {
+                    printf ("Setting verticalSync: OFF.\n");
+                    window->setVerticalSyncEnabled( false );
+                    drawing->setverticalsync = false;
+                }
+
+            }
         }
         if (my_window_update >= 1) {
             if (my_window_update == 1) {
@@ -444,33 +492,29 @@ void renderingThread(struct Drawing* drawing)
 
                 s.setOrigin(t.getSize().x/2.0, t.getSize().y/2.0 );
                 s.setPosition(backgroundTexture.getTexture().getSize().x/2.0, backgroundTexture.getTexture().getSize().y/2.0 );
-//                s.setPosition(window->getSize().x/2.0, window->getSize().y/2.0 );
 
                 backgroundTexture.create(t.getSize().x,t.getSize().y);
-                backgroundTexture.setSmooth(true);
+                backgroundTexture.setSmooth(drawing->smooth);
 
                 backgroundTexture.clear(sf::Color::Blue);
                 backgroundTexture.draw(s);
                 backgroundTexture.display();
                 backgroundSprite.setTexture(backgroundTexture.getTexture(),true);
 
-//                backgroundsprite->setPosition(window->getSize().x/2.0, window->getSize().y/2.0 );
                 backgroundsprite->setOrigin(backgroundTexture.getTexture().getSize().x/2.0, backgroundTexture.getTexture().getSize().y/2.0 );
 
                 my_window_update = 0;
             } else if (my_window_update == 2) { //full
 
-//                backgroundImage.create(1920,1080,sf::Color(255,255,255,255));
 
                 t.create(backgroundTexture.getTexture().getSize().x,backgroundTexture.getTexture().getSize().y);
                 t.update(backgroundTexture.getTexture());
 
                 backgroundTexture.create(1920,1080);
-                backgroundTexture.setSmooth(true);
+                backgroundTexture.setSmooth(drawing->smooth);
                 backgroundTexture.clear(sf::Color::Cyan);
 
                 backgroundsprite->setOrigin(backgroundTexture.getTexture().getSize().x/2.0, backgroundTexture.getTexture().getSize().y/2.0 );
-//                backgroundsprite->setOrigin(backgroundTexture.getTexture().getSize().x/2.0, backgroundTexture.getTexture().getSize().y/2.0 );
 
                 s.setOrigin(t.getSize().x/2.0, t.getSize().y/2.0 );
                 s.setPosition(backgroundTexture.getTexture().getSize().x/2.0, backgroundTexture.getTexture().getSize().y/2.0 );
@@ -484,9 +528,7 @@ void renderingThread(struct Drawing* drawing)
             } else if (my_window_update == 3) { //replace - update ?
                 printf(".");
 
-//                backgroundRenderTexture.setActive(true);
-//                rendertexture.setActive(true);
-                rendertexture->setActive(true);
+//                rendertexture->setActive(true);
 
                 s.setTexture(rendertexture->getTexture(), true);
                 s.setTextureRect({0,0,1920,1080});
@@ -494,7 +536,7 @@ void renderingThread(struct Drawing* drawing)
                 backgroundTexture.draw(s);
                 backgroundTexture.display();
 
-                rendertexture->setActive(true);
+//                rendertexture->setActive(true);
 
                 backgroundSprite.setTexture(backgroundTexture.getTexture(),true);
                 backgroundSprite.setTextureRect({0,0,1920,1080});
@@ -527,39 +569,59 @@ void renderingThread(struct Drawing* drawing)
                 backgroundTexture.display();
                 my_window_update = 0;
             } else if (my_window_update == 13) {
-                window->setVerticalSyncEnabled(false);
-                while (my_window_update == 13) {
-                    backgroundTexture.draw(*sprite);
-                    backgroundTexture.display();
-                    my_window_update = 0;
-                    sf::sleep(sf::seconds(0.00001));
+                if ( drawing->setverticalsync ) {
+                    window->setVerticalSyncEnabled( false );
+                    drawing->setverticalsync = false;
+                    drawing->wantsetverticalsync = false;
                 }
+//                while (my_window_update == 13) {
+                    backgroundTexture.draw(*sprite);
+//                    my_window_update = 0;
+//                    sf::sleep(sf::seconds(0.001));
+//                }
+                    backgroundTexture.display();
+                my_window_update = 0;
             } else if (my_window_update == 14) {
-                window->setVerticalSyncEnabled(true);
+                if ( ! drawing->setverticalsync ) {
+                    window->setVerticalSyncEnabled( true );
+                    drawing->setverticalsync = true;
+                    drawing->wantsetverticalsync = true;
+                }
+                my_window_update = 0;
             }
         }
 
         drawing->window.clear(sf::Color::Transparent);
 
 //        window_mutex.lock();
-        static float r=0.0;
-        backgroundSprite.setScale       ( backgroundsprite->getScale() );
-        backgroundSprite.setRotation    ( backgroundsprite->getRotation() );
+//        static float r=0.0;
+//        r=r+0.01;
+        static float rot=0.0;
+
+        float ns = ( backgroundSprite.getScale().x*15.0 + backgroundsprite->getScale().x) / 16.0;
+        backgroundSprite.setScale       ( ns, ns );
         backgroundSprite.setOrigin      ( backgroundsprite->getOrigin() );
         backgroundSprite.setPosition    ( backgroundsprite->getPosition() );
 
-//        backgroundSprite.setRotation(r);
+
+        rot = ( rot * 15.0 + drawing->rotation ) / 16.0;
+        backgroundSprite.setRotation( rot );
+
+//        backgroundSprite.setRotation( ( backgroundSprite.getRotation() * 15.0 + backgroundsprite->getRotation() ) / 16.0 );
+
+
+//        backgroundSprite.setRotation    ( backgroundsprite->getRotation() );
 //        backgroundSprite.setOrigin(backgroundTexture.getTexture().getSize().x/2.0, backgroundTexture.getTexture().getSize().y/2.0 );
 //        backgroundSprite.setPosition(window->getSize().x/2.0, window->getSize().y/2.0 );
 
-        r=r+0.01;
 
         drawing->window.draw(backgroundSprite);
         drawing->window.display();
 //        window_mutex.unlock();
     }
     window->setActive(false);
-    sf::Context context;
+//    sf::Context context;
+    printf (" leaving thread.\n");
     drawing->kill = false;
 }
 
@@ -604,6 +666,7 @@ int main_window(unsigned char* bin, sf::RenderTexture &tiles_texture, std::map<i
     sf::sleep(sf::seconds(2.0));
     active = true;
     showbin( bin, tiles_texture, Tileset, &drawing);
+    drawing.kill = false;
 //    active = false;
 
 //    showbin( bin, tiles_texture, Tileset);
