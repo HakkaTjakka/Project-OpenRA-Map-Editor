@@ -3,6 +3,15 @@
 
 Created under Ubuntu Linux.
 
+***
+How i get it:
+![clipboard_small](https://github.com/HakkaTjakka/Project-OpenRA-Map-Editor/blob/main/my_production.png)
+***
+How it should look:
+![clipboard_small](https://github.com/HakkaTjakka/Project-OpenRA-Map-Editor/blob/main/how_it_should_be.png)
+***
+
+
 ```
 latest: 10 Dec 2022
 	's': 			smooth on/off
