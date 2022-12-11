@@ -71,10 +71,13 @@ int edit_bin(unsigned char* bin, long filesize) {
     }
     printf("\n");
 
-    int16_t size_x = *(int16_t*)(bin + 1);
-    int16_t size_y = *(int16_t*)(bin + 3);
+//    uint16_t size_x = (uint16_t) ( *( (uint16_t*) ( bin + 1 ) ) );
+//    uint16_t size_y = (uint16_t) ( *( (uint16_t*) ( bin + 3 ) ) );
 
-    printf("size_x=%4d (%04X)\nsize_y=%4d (%04X)\n", size_x, size_y, size_x, size_y);
+    uint16_t size_x = *(uint16_t*)(bin + 1);
+    uint16_t size_y = *(uint16_t*)(bin + 3);
+
+    printf("size_x=%4d (%04X)\nsize_y=%4d (%04X)\n", size_x, size_x, size_y, size_y);
 
     int bytes=17 + 5 * size_x * size_y;
 
@@ -121,42 +124,28 @@ int edit_bin(unsigned char* bin, long filesize) {
         for (int x=0; x < size_x; x++) {
             offset = x + size_x * y;
 
-            val1a = (int16_t) ( *( (uint16_t*) ( bin + 17                            + offset*3  )  ) );
-            val1b = (int8_t)  ( *( (uint8_t*)  ( bin + 17 + 2                        + offset*3  )  ) );
+            val1a = (uint16_t) ( *( (uint16_t*) ( bin + 17                            + offset*3  )  ) );
+            val1b = (uint8_t)  ( *( (uint8_t*)  ( bin + 17 + 2                        + offset*3  )  ) );
 //            val2  = (int16_t) ( *( (uint16_t*) ( bin + 17 + ( size_x * size_y ) * 3  + offset*3  )  ) );
 
-
             if ( val1a >= 351 && val1a <= 377 ) {
-
                 fprintf( scan, "*%04X-%02X",  val1a, val1b );
-
             } else {
-
                 fprintf( scan, "|%04X-%02X",  val1a, val1b );
-
             }
 
             if ( val1a == 275 ) {
-
                 printf( "." );
-
             } else {
-
 //                if ( val1a >= 351 && val1a <= 377 ) {
 //                    printf("x=%4d y=%4d val1a=%04X=%5d val1b=%02X=%3d val2=%04X=%5d\n", x, y, val1a, val1a, val1b, val1b, val2, val2 );
-
 //                    sprintf( str, "echo \"| x=%4d y=%4d | val1a=0x%04X (%5d) | val1b=0x%02X (%3d) | val2=0x%04X (%5d) |\" >> fail.txt\n", x, y, val1a, val1a, val1b, val1b, val2, val2 );
 //                    int ret = system( str );
 //                    if ( ret != 0 ) printf( "Error system( %s )\n" ,str);
-
 //                    printf( "\033[1;31m*\033[0m" );
-
 //                } else {
-
                     printf( "*" );
-
 //                }
-
             }
         }
         printf( "\n" );
@@ -439,6 +428,7 @@ int main_readtileset( char* filename, sf::RenderTexture &my_rendertexture, std::
         char a[5][50];
         bool tiles = false;
 
+        int nnn=0;
         while ( fgets( line, 65000, f ) != NULL ) {
 //            printf( "%d: ", 0);
 //            printf( "%s", line );
@@ -485,11 +475,12 @@ int main_readtileset( char* filename, sf::RenderTexture &my_rendertexture, std::
             } else if ( strcmp( a[1], "Tiles:") == 0) {
 
                 tiles = true;
-
+                nnn=0;
             } else if ( tiles == true) {
 
 //                printf( "%s %s\n", a[1], a[2] );
                 Template.Tiles.insert( std::make_pair( atoi( a[1] ), a[2] ) );
+                nnn++;
 
             }
             n++;
@@ -568,11 +559,26 @@ int main_readtileset( char* filename, sf::RenderTexture &my_rendertexture, std::
         sf::Sprite my_sprite;
         sf::Texture my_texture;
         int tile_num = 0;
+
+        sf::RenderTexture my_tiny_texture;
+        sf::Sprite my_tiny_sprite;
+        sf::Sprite my_tiny_sprite2;
+
+        my_tiny_texture.create(24,24);
+        my_tiny_texture.clear(sf::Color::Transparent);
+        my_tiny_texture.display();
+        my_tiny_sprite2.setTexture( my_tiny_texture.getTexture(), true );
+//        my_tiny_sprite2.setScale(1.0,-1.0);
+
+//        my_tiny_sprite2.setScale( 1.0,-1.0 );
         for (it_Templates = Templates.begin(); it_Templates != Templates.end(); it_Templates++) {
 
             Template = it_Templates->second;
-            my_texture.loadFromImage(Template.Image);
-            my_sprite.setTexture(my_texture);
+//            Template.Image.flipVertically();
+            my_texture.loadFromImage( Template.Image );
+            my_sprite.setTexture( my_texture );
+            my_tiny_sprite.setTexture( my_texture );
+
 
             printf( "Id: %5d\tSize: %d,%d / %d,%d \tResolution: %d x %d\n",
                 Template.Id,
@@ -583,17 +589,35 @@ int main_readtileset( char* filename, sf::RenderTexture &my_rendertexture, std::
                 Template.Image.getSize().x,
                 Template.Image.getSize().y
             );
+
+
             for (it_Tiles = Template.Tiles.begin(); it_Tiles != Template.Tiles.end(); it_Tiles++) {
+
                 int X_START = ( it_Tiles->first % Template.Realsize.x ) * 24;
                 int Y_START = (int)( it_Tiles->first / Template.Realsize.x ) * 24;
 
-                my_sprite.setTextureRect( { X_START, Y_START, 24, 24 } );
+//                my_sprite.setTextureRect( { X_START, Y_START, 24, 24 } );
+                my_tiny_sprite.setTextureRect( { X_START, Y_START, 24, 24 } );
+                my_tiny_texture.draw(my_tiny_sprite);
+                my_tiny_texture.display();
+
+//                char str[100];
+//                Template.Id * 256 + it_Tiles->first
+//                sprintf( str, "test/0x%06x.png", Template.Id * 256 + it_Tiles->first );
+
+//              int tile = (int)val1a * 256 + (int)val1b;
+
+//                mkdir( "test", S_IRWXU | S_IRWXG | S_IROTH | S_IXOTH );
+//                my_tiny_texture.getTexture().copyToImage().saveToFile(str);
 
                 int x_pos = tile_num % 32;
                 int y_pos = tile_num / 32;
 
-                my_sprite.setPosition( x_pos * 24, y_pos * 24 );
-                my_rendertexture.draw(my_sprite);
+                my_tiny_sprite2.setPosition( x_pos * 24, y_pos * 24 );
+                my_rendertexture.draw(my_tiny_sprite2);
+
+//                my_sprite.setPosition( x_pos * 24, y_pos * 24 );
+//                my_rendertexture.draw(my_sprite);
 
 //                Tile.Lookup = Template.Id * 256 + it_Tiles->first;
 
@@ -621,6 +645,7 @@ int main_readtileset( char* filename, sf::RenderTexture &my_rendertexture, std::
         for (it_Tileset = Tileset.begin(); it_Tileset != Tileset.end(); it_Tileset++) {
             printf( "Tile #%d = 0x%06X\n", it_Tileset->second, it_Tileset->first );
         }
+
 /*
         int n1=Templates.size();
         it_Templates=Templates.begin();
@@ -655,112 +680,78 @@ int showbin(unsigned char* bin, sf::RenderTexture &tiles_texture, std::map<int, 
     printf("Tileset.size()=%lu\n",Tileset.size());
     std::map<int, int>::iterator it_Tileset;
 
-//    for (it_Tileset = Tileset.begin(); it_Tileset != Tileset.end(); it_Tileset++) {
-//        printf( "Tile #%d = 0x%06X\n", it_Tileset->second, it_Tileset->first );
-//    }
+    uint16_t size_x = *(uint16_t*)(bin + 1);
 
-    int16_t size_x = *(int16_t*)(bin + 1);
 //    int16_t size_y = *(int16_t*)(bin + 3);
 
     my_window_update = 2;
     while ( ! my_window_update == 0 ) sf::sleep(sf::seconds(0.001));
     sf::sleep(sf::seconds(1.0));
 
-/*
-    backgroundRenderTexturePointer->create(1920,1080);
-    backgroundRenderTexturePointer->clear(sf::Color(255,0,0,255));
-//    backgroundRenderTexturePointer->display();
-    printf("set red\n");
-    my_window_update = 3;
-    while ( ! my_window_update == 0 ) sf::sleep(sf::seconds(0.001));
-//    backgroundRenderTexturePointer->getTexture().copyToImage().saveToFile("pointer1a.png");
-//    backgroundTexturePointer->getTexture().copyToImage().saveToFile("pointer1b.png");
-    sf::sleep(sf::seconds(0.5));
-*/
     sf::Texture* tiles = &(drawing->tiles);
-//    sf::RenderTexture* rendertexture = &(drawing->rendertexture);
     sf::Sprite* sprite = &(drawing->sprite);
     sf::Sprite s;
-/*
-
-    s.setTexture(*tiles, true);
-    s.setPosition(200,200);
-    rendertexture->clear(sf::Color(0,255,0,255));
-    rendertexture->draw(s);
-    rendertexture->display();
-//    rendertexture->getTexture().copyToImage().saveToFile("pointer1a.png");
-
-*/
-//    rendertexture->setActive(false);
 
     my_window_update = 10;
     while ( ! my_window_update == 0 ) sf::sleep(sf::seconds(0.001));
     sf::sleep(sf::seconds(0.5));
 
-//    rendertexture->getTexture().copyToImage().saveToFile("pointer2a.png");
-//    backgroundRenderTexturePointer->getTexture().copyToImage().saveToFile("pointer2a.png");
-//    backgroundTexturePointer->getTexture().copyToImage().saveToFile("pointer2b.png");
-
-//    backgroundRenderTexturePointer->setActive(true);
 
     my_window_update = 11;
     while ( ! my_window_update == 0 ) sf::sleep(sf::seconds(0.001));
     sf::sleep(sf::seconds(0.5));
 
-/*
-    rendertexture->setActive(true);
-    rendertexture->clear(sf::Color(255,0,255,255));
-    rendertexture->display();
-*/
-
-//    rendertexture->getTexture().copyToImage().saveToFile("pointer2a.png");
-
-//    rendertexture->setActive(false);
-
-//    backgroundRenderTexturePointer->getTexture().copyToImage().saveToFile("pointer3a.png");
-//    rendertexture->setActive(false);
-//    my_window_update = 3;
-
-//    backgroundRenderTexturePointer->clear(sf::Color(255,0,255,255));
-//    backgroundRenderTexturePointer->display();
-//    backgroundRenderTexturePointer->setActive(false);
-
-//    my_window_update = 3;
-//    while ( ! my_window_update == 0 ) sf::sleep(sf::seconds(0.001));
-
-//    backgroundRenderTexturePointer->getTexture().copyToImage().saveToFile("pointer3a.png");
-//    backgroundTexturePointer->getTexture().copyToImage().saveToFile("pointer3b.png");
-//    sf::sleep(sf::seconds(0.5));
-
-
-//    window_mutex.lock();
-//    backgroundRenderTexturePointer->setActive(true);
-//    rendertexture->setActive(true);
-
     sprite->setTexture(*tiles);
 
+    uint16_t val1a;
+    uint8_t  val1b;
+
+    FILE* scan;
+    if ( ( scan = fopen( "scan2.txt", "w" ) ) == NULL ) {
+
+        printf( "Can't open %s for writing.\n", "scan.txt " );
+        return -1;
+
+    }
+
     for (int y=0; y < 45; y++) {
+
+        fprintf( scan, "%04d ", y );
+
         for (int x=0; x < 80; x++) {
-            int offset = x + size_x * y;
-            uint16_t val1a = (uint16_t) ( *( (uint16_t*) ( bin + 17                            + offset*3  )  ) );
-            uint8_t val1b = (uint8_t) ( *( (uint8_t*)  ( bin + 17 + 2                        + offset*3  )  ) );
-            int tile = val1a * 256 + val1b;
+            unsigned int offset = x + size_x * y;
+
+            val1a = (uint16_t) ( *( (uint16_t*) ( bin + 17                            + offset*3  )  ) );
+            val1b = (uint8_t)  ( *( (uint8_t*)  ( bin + 17 + 2                        + offset*3  )  ) );
+//            uint16_t val1a = (uint16_t) ( *( (uint16_t*) ( bin + 17                            + offset*3  )  ) );
+//            uint8_t val1b  = (uint8_t)  ( *( (uint8_t*)  ( bin + 17 + 2                        + offset*3  )  ) );
+            int tile = (int)val1a * 256 + (int)val1b;
+
+            bool found=false;
 
             it_Tileset = Tileset.find(tile);
+            if ( it_Tileset != Tileset.end()) {
+                found = true;
+                if ( val1a >= 351 && val1a <= 377 ) {
+                    fprintf( scan, "*%04X-%02X",  val1a, val1b );
+                } else {
+                    fprintf( scan, "|%04X-%02X",  val1a, val1b );
+                }
+            } else {
+                if ( val1a >= 351 && val1a <= 377 ) {
+                    fprintf( scan, "*%04X+%02X",  val1a, val1b );
+                } else {
+                    fprintf( scan, "|%04X+%02X",  val1a, val1b );
+                }
+            }
+//            it_Tileset = Tileset.find(tile);
 
             if (drawing->kill) return (0);
 
-            if ( it_Tileset != Tileset.end()) {
+            if ( found ) {
+//            if ( it_Tileset != Tileset.end()) {
                 int X_START = ( it_Tileset->second % 32 ) * 24;
                 int Y_START = int( it_Tileset->second / 32 ) * 24;
-
-                // s.setTextureRect( { X_START, Y_START, 24, 24 } );
-                // s.setPosition( x * 24, y * 24 );
-//                int cnt=0;
-//                int cnt2=0;
-//                static float avg=0.0;
-//                static float tot=0.0;
-//                static int avg_cnt=1;
 
                 while ( ! my_window_update == 0 ) {
                     sf::sleep(sf::seconds(0.0001));
@@ -772,33 +763,16 @@ int showbin(unsigned char* bin, sf::RenderTexture &tiles_texture, std::map<int, 
 //                    }
 //                    sf::sleep(sf::seconds(0.0000001));
                 }
-//                tot+=cnt;
-//                avg=tot / avg_cnt;
-//                avg_cnt++;
 
-//                printf("n=%d, avg=%7f Wait %d\n",avg_cnt, avg, cnt);
-
-
-//                printf("             \r");
-//                while ( ! my_window_update == 0 ) sf::sleep(sf::seconds(0.000001));
                 sprite->setTextureRect( { X_START, Y_START, 24, 24 } );
                 sprite->setPosition( x * 24, y * 24 );
                 my_window_update = 13;
-
-//                while ( ! my_window_update == 0 ) sf::sleep(sf::seconds(0.001));
-
-//                window_mutex.lock();
-
-//                rendertexture->draw(s);
-
-//                backgroundRenderTexturePointer->draw(s);
-//                backgroundTexturePointer->draw(s);
-//                backgroundTexturePointer->display();
-//                window_mutex.unlock();
-//                backgroundRenderTexturePointer->display();
-
-//                my_window_update = 3;
-//                while ( ! my_window_update == 0 ) sf::sleep(sf::seconds(0.001));
+//                tot+=cnt;
+//                avg=tot / avg_cnt;
+//                avg_cnt++;
+//                printf("n=%d, avg=%7f Wait %d\n",avg_cnt, avg, cnt);
+//                printf("             \r");
+//                while ( ! my_window_update == 0 ) sf::sleep(sf::seconds(0.000001));
 
 //                printf("x=%3d y=%3d  Index = %6d  Tile=0x%06X  Id=%3d  pos(%3d,%3d)\n ",
 //                    x, y, it_Tileset->second, it_Tileset->first,
@@ -810,7 +784,10 @@ int showbin(unsigned char* bin, sf::RenderTexture &tiles_texture, std::map<int, 
 //cout << distance(mymap.begin(),mymap.find("198765432"));
 //            val2  = (int16_t) ( *( (uint16_t*) ( bin + 17 + ( size_x * size_y ) * 3  + offset*3  )  ) );
         }
+        fprintf( scan, "|\n" );
     }
+    fclose( scan );
+
     while ( ! my_window_update == 0 ) sf::sleep(sf::seconds(0.00001));
     my_window_update = 14;
 

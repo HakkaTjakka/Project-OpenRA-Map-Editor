@@ -135,11 +135,11 @@ int main(int argc, char ** argv) {
 
         if ( ( size = main_readbin( argv[2], bin ) ) > 0 ) {
 
-//            int ret = edit_bin( bin, size );
-//            if ( ret != 0 ) {
-//                printf( "Error map-size vs. file-size\n" );
-//                return ret;
-//            }
+            int ret = edit_bin( bin, size );
+            if ( ret != 0 ) {
+                printf( "Error map-size vs. file-size\n" );
+                return ret;
+            }
 
 //            make_bin( bin, size );
 

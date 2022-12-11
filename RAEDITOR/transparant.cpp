@@ -556,7 +556,7 @@ void renderingThread(struct Drawing* drawing)
                 backgroundTexture.display();
                 backgroundSprite.setTexture(backgroundTexture.getTexture(),true);
 
-            my_window_update = 0;
+                my_window_update = 0;
             } else if (my_window_update == 3) { //replace - update ?
                 printf(".");
 
@@ -577,14 +577,14 @@ void renderingThread(struct Drawing* drawing)
 //                backgroundTexture.getTexture().copyToImage().saveToFile(fname);
 //                backgroundRenderTexture.setActive(false);
 
-            my_window_update = 0;
+                my_window_update = 0;
             } else if (my_window_update == 4) {
 //                rendertexture->create(1920,1080);
 //                rendertexture->clear(sf::Color(255,0,0,255));
 //                rendertexture->display();
                 printf("set red\n");
 //                backgroundRenderTexture.setActive(false);
-            my_window_update = 0;
+                my_window_update = 0;
             } else if (my_window_update == 10) {
                 s.setTexture(*tiles, true);
 //                s.setPosition(200,200);
@@ -595,7 +595,7 @@ void renderingThread(struct Drawing* drawing)
                 backgroundTexture.clear(sf::Color(0,255,0,255));
                 backgroundTexture.draw(s);
                 backgroundTexture.display();
-            my_window_update = 0;
+                my_window_update = 0;
             } else if (my_window_update == 11) {
                 backgroundTexture.clear(sf::Color(255,0,255,255));
                 backgroundTexture.display();
@@ -607,13 +607,25 @@ void renderingThread(struct Drawing* drawing)
                     drawing->wantsetverticalsync = false;
                 }
 //                while (my_window_update == 13) {
-                    backgroundTexture.draw(*sprite);
+                sprite->setTexture(*tiles);
+                rendertexture->draw(*sprite);
+                backgroundTexture.draw(*sprite);
+
 //                    my_window_update = 0;
 //                    sf::sleep(sf::seconds(0.001));
 //                }
-                    backgroundTexture.display();
+                backgroundTexture.display();
                 my_window_update = 0;
             } else if (my_window_update == 14) {
+                rendertexture->display();
+                backgroundTexture.clear(sf::Color::Transparent);
+                sprite->setTexture( rendertexture->getTexture(),true );
+                sprite->setTextureRect( { 0,0, 1920,1080 } );
+                sprite->setPosition( 0,0 );
+                sprite->setOrigin( 0,0 );
+                backgroundTexture.draw( *sprite );
+
+                backgroundTexture.display();
                 if ( ! drawing->setverticalsync ) {
                     window->setVerticalSyncEnabled( true );
                     drawing->setverticalsync = true;
