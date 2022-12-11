@@ -10,7 +10,8 @@ How i get it:
 How it should look:
 ![clipboard_small](https://github.com/HakkaTjakka/Project-OpenRA-Map-Editor/blob/main/how_it_should_be.png)
 ***
-
+Other initiatives: https://forum.openra.net/viewtopic.php?f=83&t=21083
+***
 
 ```
 latest: 10 Dec 2022
