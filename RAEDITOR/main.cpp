@@ -5,10 +5,12 @@
 
 extern sf::RenderTexture* backgroundRenderTexturePointer;
 
+char tilesetfile[100] = "tilesets/interior.yaml";
+
 int main(int argc, char ** argv) {
     XInitThreads();
 
-//    sf::RenderTexture backgroundRenderTexture;
+    sf::RenderTexture backgroundRenderTexture;
 //    sf::RenderTexture* backgroundRenderTexturePtr;
 //    backgroundRenderTexturePtr = &backgroundRenderTexture;
 
@@ -79,7 +81,7 @@ int main(int argc, char ** argv) {
 
         if (argc<3) {
             printf("%s readtileset <filename>'\n",argv[0]);
-            printf("Example: %s readtileset tilesets/interior.yaml>'\n",argv[0]);
+            printf("Example: %s readtileset %s>'\n", tilesetfile, argv[0] );
 
             return -1;
         }
@@ -101,9 +103,9 @@ int main(int argc, char ** argv) {
 
 //        if ( ! file_exists("out.png") ) {
 
-            printf( "Creating tileset with: %s readtileset tilesets/interior.yaml\n", argv[0]);
-            if ( main_readtileset( (char*)"tilesets/interior.yaml", my_rendertexture, Tileset ) != 0) {
-                printf( "Error reading tileset %s\n", "tilesets/interior.yaml" );
+            printf( "Creating tileset with: %s readtileset %s\n", tilesetfile, argv[0]);
+            if ( main_readtileset( tilesetfile, my_rendertexture, Tileset ) != 0) {
+                printf( "Error reading tileset %s\n", tilesetfile );
                 if ( bin != NULL ) free( bin );
                 return -1;
             }

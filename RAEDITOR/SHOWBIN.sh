@@ -1,1 +1,1 @@
-./red_alert showbin BattleStart3/map.bin
+./red_alert showbin pharao/map.bin
