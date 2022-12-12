@@ -3,6 +3,12 @@
 
 Created under Ubuntu Linux.
 
+```
+latest: 12 Dec 2022
+Fighting with XCC and https://github.com/OpenRA/OpenRA/wiki/Utility
+.mix files, shapes, images, etc...
+```
+
 ***
 How i get it:
 ![clipboard_small](https://github.com/HakkaTjakka/Project-OpenRA-Map-Editor/blob/main/my_production.png)
