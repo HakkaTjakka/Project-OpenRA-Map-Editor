@@ -2,6 +2,9 @@
  c/c++ code (Linux, CodeBlocks) reading / writing / editing .oramap .bin .yaml of OpenRA Red Alert
 
 Created under Ubuntu Linux.
+```
+Will continue later.. busy...
+```
 
 ```
 latest: 12 Dec 2022
@@ -18,9 +21,6 @@ How it should look:
 ***
 Other initiatives: https://forum.openra.net/viewtopic.php?f=83&t=21083
 ***
-```
-Will continue later.. busy...
-```
 
 ```
 latest: 10 Dec 2022
