@@ -4,6 +4,8 @@
 Created under Ubuntu Linux.
 ```
 Will continue later.. busy...
+See also: https://github.com/HakkaTjakka/OpenRA-Map-Resizer
+For resizing and adding maps to other map code.
 ```
 
 ```
